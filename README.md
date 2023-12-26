@@ -1,25 +1,20 @@
-This is my custom Helm charts that are published under https://helm-charts.adminafk.fr
+## Usage
 
-https://helm-charts.adminafk.fr redirect to https://m0nsterrr.github.io/helm-charts
+[Helm](https://helm.sh) must be installed to use the charts.  Please refer to
+Helm's [documentation](https://helm.sh/docs) to get started.
 
-# Contributing
+Once Helm has been set up correctly, add the repo as follows:
 
-We welcome and encourage contributions to this project! Please read the [Contributing guide](CONTRIBUTING.md). Also make sure to check the [Code of Conduct](CODE_OF_CONDUCT.md) and adhere to its guidelines
+  helm repo add adminafk https://helm-charts.adminafk.fr
 
-# Security
+If you had already added this repo earlier, run `helm repo update` to retrieve
+the latest versions of the packages.  You can then run `helm search repo
+<alias>` to see the charts.
 
-See [SECURITY.md](SECURITY.md) file for details.
+To install the <chart-name> chart:
 
-# Licence
+    helm install my-<chart-name> <alias>/<chart-name>
 
-The code is under CeCILL license.
+To uninstall the chart:
 
-You can find all details here: https://cecill.info/licences/Licence_CeCILL_V2.1-en.html
-
-# Credits
-
-Copyright © Ludovic Ortega, 2023
-
-Contributor(s):
-
--Ortega Ludovic - ludovic.ortega@adminafk.fr
+    helm delete my-<chart-name>
