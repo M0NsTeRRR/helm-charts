@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json
+{
+	"name": "helm-charts",
+	"build": { "dockerfile": "Dockerfile"},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+        "ghcr.io/mpriscella/features/helm-chart-testing:1": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root",
+
+    "mounts": [
+        // mount kubeconfig files
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube,target=/home/vscode/.kube,type=bind,consistency=cached"
+    ],
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-kubernetes-tools.vscode-kubernetes-tools"
+			]
+		}
+	}
+}
