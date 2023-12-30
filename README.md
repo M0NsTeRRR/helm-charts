@@ -1,6 +1,6 @@
 This is my custom Helm charts that are published under https://helm-charts.adminafk.fr
 
-https://helm-charts.adminafk.fr redirect to https://m0nsterrr.github.io/helm-charts
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/m0nsterrr)](https://artifacthub.io/packages/search?repo=m0nsterrr)
 
 # Dev
 ## Requirements
