@@ -1,12 +1,13 @@
 name: Release Charts
 on:
   workflow_run:
-    workflows: ["Lint documentations", "Lint and Test Charts"]
+    workflows: ["Lint and Test Charts"]
     branches: [main]
     types: 
       - completed
 jobs:
   release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
