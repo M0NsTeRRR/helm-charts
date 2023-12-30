@@ -1,8 +1,10 @@
 name: Release Charts
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Lint documentations", "Lint and Test Charts"]
+    branches: [main]
+    types: 
+      - completed
 jobs:
   release:
     permissions:
