@@ -1,19 +1,21 @@
 # as212510-net
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.0.0](https://img.shields.io/badge/AppVersion-2.0.0-informational?style=flat-square)
+![Version: 0.3.0](https://img.shields.io/badge/Version-0.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.0](https://img.shields.io/badge/AppVersion-2.1.0-informational?style=flat-square)
 
 as212510.net helm chart for Kubernetes
 
+**Homepage:** <https://github.com/M0NsTeRRR/as212510.net>
+
 ## Source Code
 
-* <https://github.com/M0NsTeRRR/helm-charts/charts/as212510-net>
+* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net>
 
 ## Chart Repo
 
 Add the following repo to use the chart:
 
 ```console
-helm repo add grafana https://helm-charts.adminafk.fr
+helm repo add adminafk https://helm-charts.adminafk.fr
 ```
 
 ## Values
@@ -32,7 +34,7 @@ helm repo add grafana https://helm-charts.adminafk.fr
 | image.registry | string | `"ghcr.io"` |  |
 | image.repository | string | `"m0nsterrr/as212510.net"` |  |
 | image.sha | string | `""` |  |
-| image.tag | string | `""` |  |
+| image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.enabled | bool | `false` |  |
@@ -51,10 +53,22 @@ helm repo add grafana https://helm-charts.adminafk.fr
 | securityContext | object | `{}` |  |
 | service.port | int | `80` |  |
 | service.type | string | `"ClusterIP"` |  |
-| serviceAccount.annotations | object | `{}` |  |
-| serviceAccount.automount | bool | `true` |  |
-| serviceAccount.create | bool | `true` |  |
-| serviceAccount.name | string | `""` |  |
+| serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
+| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| serviceMonitor.enabled | bool | `false` | If true, a ServiceMonitor CRD is created for a prometheus operator |
+| serviceMonitor.interval | string | `"30s"` |  |
+| serviceMonitor.labels | object | `{}` |  |
+| serviceMonitor.metricRelabelings | list | `[]` |  |
+| serviceMonitor.namespace | string | `nil` | If set create the `ServiceMonitor` in an alternate namespace. |
+| serviceMonitor.path | string | `"/metrics"` |  |
+| serviceMonitor.relabelings | list | `[]` |  |
+| serviceMonitor.scheme | string | `"http"` |  |
+| serviceMonitor.scrapeTimeout | string | `"30s"` |  |
+| serviceMonitor.service.port | int | `10241` | Metrics service port to scrape |
+| serviceMonitor.targetLabels | list | `[]` |  |
+| serviceMonitor.tlsConfig | object | `{}` |  |
 | tolerations | list | `[]` |  |
-| volumeMounts | list | `[]` |  |
-| volumes | list | `[]` |  |
+| volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
+| volumes | list | `[]` | Additional volumes on the output Deployment definition. |
