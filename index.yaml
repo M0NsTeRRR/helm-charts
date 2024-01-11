@@ -2,6 +2,19 @@ apiVersion: v1
 entries:
   as212510-net:
   - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2024-01-11T00:18:12.475024085Z"
+    description: as212510.net helm chart for Kubernetes
+    digest: cceefb6cd3b56b5d38ad286be8012f6f2c8f37ecc9f20d87ba72f9f03cf10c34
+    home: https://github.com/M0NsTeRRR/as212510.net
+    name: as212510-net
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.3.0/as212510-net-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 2.0.0
     created: "2023-12-30T16:08:07.021648139Z"
     description: as212510.net Helm chart for Kubernetes
@@ -27,4 +40,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.1.0/as212510-net-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-30T16:08:07.021662435Z"
+generated: "2024-01-11T00:18:12.475040886Z"
