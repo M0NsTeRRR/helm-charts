@@ -40,4 +40,18 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.1.0/as212510-net-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-11T00:18:12.475040886Z"
+  prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.2.1
+    created: "2024-01-26T16:21:26.016597748Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 8bcf202069df0bc37335b8f74c75dbb072069b73d7d3d674c62aebfb7a4ab0f4
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-26T16:21:26.016612687Z"
