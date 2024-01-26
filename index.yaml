@@ -3,6 +3,20 @@ entries:
   as212510-net:
   - apiVersion: v2
     appVersion: 2.1.0
+    created: "2024-01-26T18:46:59.192897218Z"
+    description: as212510.net helm chart for Kubernetes
+    digest: 0310eba710ad1e36716d5a926b92b1cb747e1645a1c8af315a004efd850559e5
+    home: https://github.com/M0NsTeRRR/as212510.net
+    icon: https://github.com/M0NsTeRRR/helm-charts/tree/main/icons/unicornafk.png
+    name: as212510-net
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.3.2/as212510-net-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
+    appVersion: 2.1.0
     created: "2024-01-26T18:13:54.218070971Z"
     description: as212510.net helm chart for Kubernetes
     digest: a1e7ffd406bb87c8f518a33cad779827526b48f0f0e8c738a92d1a1c0f092762
@@ -57,6 +71,20 @@ entries:
   prometheus-pve-exporter:
   - apiVersion: v2
     appVersion: 3.2.1
+    created: "2024-01-26T18:46:59.313520832Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: ee50d4e9d49a44022b99d07fd242827b3d86e78dd538ba5806687d616b77af71
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://github.com/M0NsTeRRR/helm-charts/tree/main/icons/unicornafk.png
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.2/prometheus-pve-exporter-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 3.2.1
     created: "2024-01-26T18:13:54.307901164Z"
     description: prometheus-pve-exporter helm chart for Kubernetes
     digest: fc629eb465863ec1a7e0facc212e51d61a9e4e0f56a90cf96777b387afb8b642
@@ -82,4 +110,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-26T18:13:54.307926561Z"
+generated: "2024-01-26T18:46:59.313536061Z"
