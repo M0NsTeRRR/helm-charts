@@ -3,6 +3,20 @@ entries:
   as212510-net:
   - apiVersion: v2
     appVersion: 2.1.0
+    created: "2024-01-26T22:07:20.887429026Z"
+    description: as212510.net helm chart for Kubernetes
+    digest: 7c33f8369599accd4b7e2171fe44741ebbb695b15d51ff040c385e8fd7edc5c3
+    home: https://github.com/M0NsTeRRR/as212510.net
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: as212510-net
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.3.3/as212510-net-0.3.3.tgz
+    version: 0.3.3
+  - apiVersion: v2
+    appVersion: 2.1.0
     created: "2024-01-26T18:46:59.192897218Z"
     description: as212510.net helm chart for Kubernetes
     digest: 0310eba710ad1e36716d5a926b92b1cb747e1645a1c8af315a004efd850559e5
@@ -71,6 +85,20 @@ entries:
   prometheus-pve-exporter:
   - apiVersion: v2
     appVersion: 3.2.1
+    created: "2024-01-26T22:07:20.999864265Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 98e2033645ddb70a63a1b46e2aa24d83799638a93aaa810d8c9cf445bed54cc4
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.3/prometheus-pve-exporter-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 3.2.1
     created: "2024-01-26T18:46:59.313520832Z"
     description: prometheus-pve-exporter helm chart for Kubernetes
     digest: ee50d4e9d49a44022b99d07fd242827b3d86e78dd538ba5806687d616b77af71
@@ -110,4 +138,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-26T18:46:59.313536061Z"
+generated: "2024-01-26T22:07:20.999943012Z"
