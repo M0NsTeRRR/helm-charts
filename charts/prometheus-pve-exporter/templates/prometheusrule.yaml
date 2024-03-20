@@ -10,7 +10,7 @@ spec:
     - name: PVEAlerts
       rules:
         - alert: PveNodeDown
-          expr: pve_up{id=~"node/.*"} != 1
+          expr: pve_node_info{id=~"node/.*"} != 1
           for: 5m
           labels:
             severity: critical

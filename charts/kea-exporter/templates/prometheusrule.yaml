@@ -1,0 +1,28 @@
+{{- if .Values.prometheusRule.enabled -}}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "kea-exporter.fullname" . }}
+  labels:
+    {{- include "kea-exporter.labels" . | nindent 4 }}
+spec:
+  groups:
+    - name: KeaAlerts
+      rules:
+        - alert: KeaDhcpV4PoolOutOfLease
+          expr: ((kea_dhcp4_addresses_assigned_total{pool=~".+"} * 100) / kea_dhcp4_addresses_total{pool=~".+"}) > 90
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            description: 'Kea DHCP pool {{`{{`}}$labels.pool{{`}}`}} is 90% full.'
+            summary: Kea dhcp ipv4 pool 90% full.
+        - alert: KeaDhcpV6PoolOutOfLease
+          expr: ((kea_dhcp6_na_assigned_total{pool=~".+"} * 100) / kea_dhcp6_na_total{pool=~".+"}) > 90
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            description: 'Kea DHCP pool {{`{{`}}$labels.pool{{`}}`}} is 90% full.'
+            summary: Kea dhcp ipv6 pool 90% full.
+{{- end }}
