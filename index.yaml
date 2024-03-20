@@ -82,6 +82,21 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.1.0/as212510-net-0.1.0.tgz
     version: 0.1.0
+  kea-exporter:
+  - apiVersion: v2
+    appVersion: v0.6.1
+    created: "2024-03-20T23:00:18.72784083Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: dcf8987cdc0005a18d27ea765a5f99b5ada3b4bb96c60a4e569e303989e78129
+    home: https://github.com/mweinelt/kea-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: kea-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/kea-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.1.0/kea-exporter-0.1.0.tgz
+    version: 0.1.0
   prometheus-pve-exporter:
   - apiVersion: v2
     appVersion: 3.2.1
@@ -138,4 +153,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-26T22:07:20.999943012Z"
+generated: "2024-03-20T23:00:18.82623304Z"
