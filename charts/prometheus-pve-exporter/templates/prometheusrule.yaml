@@ -15,7 +15,7 @@ spec:
           labels:
             severity: critical
           annotations:
-            description: 'PVE exporter instance {{$labels.instance}} from job {{$labels.job}} is down.'
+            description: 'PVE exporter instance {{`{{`}}$labels.instance{{`}}`}} from job {{`{{`}}$labels.job{{`}}`}} is down.'
             summary: PVE exporter instance down.
         - alert: PveNodeDown
           expr: pve_node_info{id=~"node/.*"} != 1
