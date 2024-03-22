@@ -9,6 +9,14 @@ spec:
   groups:
     - name: KeaAlerts
       rules:
+        - alert: KeaExporterDown
+          expr: up{job="kea-exporter-metrics"} != 1
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            description: 'Kea exporter instance {{$labels.instance}} from job {{$labels.job}} is down.'
+            summary: Kea exporter instance down.
         - alert: KeaDhcpV4PoolOutOfLease
           expr: ((kea_dhcp4_addresses_assigned_total{pool=~".+"} * 100) / kea_dhcp4_addresses_total{pool=~".+"}) > 90
           for: 5m
