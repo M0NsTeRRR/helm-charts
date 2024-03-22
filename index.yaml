@@ -85,6 +85,20 @@ entries:
   kea-exporter:
   - apiVersion: v2
     appVersion: v0.7.0
+    created: "2024-03-22T17:06:23.052276626Z"
+    description: kea-exporter helm chart for Kubernetes
+    digest: 114a68bc176692ab88d1489e006795dc8b28966fcab38aa22efe883c59d4bfb4
+    home: https://github.com/mweinelt/kea-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: kea-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/kea-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.1.2/kea-exporter-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: v0.7.0
     created: "2024-03-22T16:56:48.819371719Z"
     description: kea-exporter helm chart for Kubernetes
     digest: b9338e10fbb70e3df393e052ef7fb3dab1c6a90255ea4bb4c969710be8199e5a
@@ -112,6 +126,20 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.1.0/kea-exporter-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.2.2
+    created: "2024-03-22T17:06:23.155730843Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 4d796f31e51b46f97296a304c672a889cf72217c4f1e6ac0c761b63ba2ec4ff9
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.5/prometheus-pve-exporter-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v2
     appVersion: 3.2.2
     created: "2024-03-22T16:56:49.01748945Z"
@@ -181,4 +209,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-22T16:56:49.017527301Z"
+generated: "2024-03-22T17:06:23.155773092Z"
