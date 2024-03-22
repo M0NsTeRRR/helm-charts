@@ -84,6 +84,20 @@ entries:
     version: 0.1.0
   kea-exporter:
   - apiVersion: v2
+    appVersion: v0.7.0
+    created: "2024-03-22T16:56:48.819371719Z"
+    description: kea-exporter helm chart for Kubernetes
+    digest: b9338e10fbb70e3df393e052ef7fb3dab1c6a90255ea4bb4c969710be8199e5a
+    home: https://github.com/mweinelt/kea-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: kea-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/kea-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.1.1/kea-exporter-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: v0.6.1
     created: "2024-03-20T23:00:18.72784083Z"
     description: prometheus-pve-exporter helm chart for Kubernetes
@@ -98,6 +112,20 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.1.0/kea-exporter-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.2.2
+    created: "2024-03-22T16:56:49.01748945Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: dc568a9c50774e066145439b9c7e79779807bfc35dc779219f1c39422a485c78
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.4/prometheus-pve-exporter-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 3.2.1
     created: "2024-01-26T22:07:20.999864265Z"
@@ -153,4 +181,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-20T23:00:18.82623304Z"
+generated: "2024-03-22T16:56:49.017527301Z"
