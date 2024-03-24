@@ -32,5 +32,12 @@
   pin: {
     automerge: true,
   },
-  regexManagers: []
+  customManagers: [
+    {
+      customType: "regex",
+      fileMatch: ["(^|/)Chart\\.yaml$"],
+      matchStrings: ["#\\s+image:\\s+(?<depName>\\S*)\nappVersion:\\s+\"(?<currentValue>\\S*)\""],
+      datasourceTemplate: "docker"
+    }
+  ]
 }
