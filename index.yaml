@@ -209,4 +209,19 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-22T17:06:23.155773092Z"
+  radarr:
+  - apiVersion: v2
+    appVersion: 5.3.6.8612
+    created: "2024-03-25T21:44:24.940575579Z"
+    description: radarr helm chart for Kubernetes
+    digest: c655f3e2013113d4352a7af0a712df4a9f6267b061a3c3e0270f420f884ccdec
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.0/radarr-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-25T21:44:24.940610224Z"
