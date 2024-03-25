@@ -211,6 +211,20 @@ entries:
     version: 0.1.0
   radarr:
   - apiVersion: v2
+    appVersion: 5.3.6.8612-ls210
+    created: "2024-03-25T23:59:19.942478121Z"
+    description: radarr helm chart for Kubernetes
+    digest: 024a5849dd17167221f4137c98977c418b5c794f61e3801a9ae1bf025d8777c2
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.1/radarr-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 5.3.6.8612
     created: "2024-03-25T21:44:24.940575579Z"
     description: radarr helm chart for Kubernetes
@@ -224,4 +238,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.0/radarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-25T21:44:24.940610224Z"
+generated: "2024-03-25T23:59:19.942512986Z"
