@@ -65,5 +65,5 @@ Create the name of the service account to use
 Create the name of the pvc config to use
 */}}
 {{- define "radarr.configPersistenceName" -}}
-{{- printf "%s-config" (include "radarr.fullname" .) -}}
+{{- default (printf "%s-config" (include "radarr.fullname" .)) .Values.config.persistence.name }}
 {{- end }}

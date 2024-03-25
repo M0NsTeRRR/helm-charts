@@ -72,7 +72,7 @@ spec:
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: {{ include "radarr.configPersistenceName" . }}
+            claimName: {{ include "radarr.configPersistenceName" $ }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.nodeSelector }}
