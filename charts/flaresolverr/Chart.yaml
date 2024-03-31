@@ -3,9 +3,9 @@ name: overseerr
 description: overseerr helm chart for Kubernetes
 type: application
 version: 0.1.0
-# image: sct/overseerr
-appVersion: "1.33.2"
+# image: flaresolverr/flaresolverr
+appVersion: "v3.3.16"
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
-home: https://github.com/sct/overseerr
+home: https://github.com/FlareSolverr/FlareSolverr
 icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
