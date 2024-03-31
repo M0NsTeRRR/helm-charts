@@ -2,7 +2,7 @@ apiVersion: v2
 name: bazarr
 description: bazarr helm chart for Kubernetes
 type: application
-version: 0.1.0
+version: 0.1.1
 # image: linuxserver/bazarr
 appVersion: "1.4.2-ls244"
 sources:
