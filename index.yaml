@@ -82,6 +82,21 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.1.0/as212510-net-0.1.0.tgz
     version: 0.1.0
+  bazarr:
+  - apiVersion: v2
+    appVersion: 1.4.2-ls244
+    created: "2024-03-31T20:55:16.500685206Z"
+    description: bazarr helm chart for Kubernetes
+    digest: ff85bc6b78f6b0d9c30159f0370a3d6776ba4d2f3188a8f1680d54fa24b2ae5b
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.0/bazarr-0.1.0.tgz
+    version: 0.1.0
   kea-exporter:
   - apiVersion: v2
     appVersion: v0.7.0
@@ -253,4 +268,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-31T20:43:07.365275451Z"
+generated: "2024-03-31T20:55:16.500725782Z"
