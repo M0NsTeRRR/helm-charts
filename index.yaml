@@ -84,6 +84,20 @@ entries:
     version: 0.1.0
   bazarr:
   - apiVersion: v2
+    appVersion: v1.4.2-ls244
+    created: "2024-03-31T21:33:43.700919985Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 9259d1d61599be327da284c282eedbc2a930c7586b0348cb8a04dc37abb1079d
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.2/bazarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 1.4.2-ls244
     created: "2024-03-31T21:05:07.492629937Z"
     description: bazarr helm chart for Kubernetes
@@ -312,4 +326,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-31T21:17:48.191897165Z"
+generated: "2024-03-31T21:33:43.833764961Z"
