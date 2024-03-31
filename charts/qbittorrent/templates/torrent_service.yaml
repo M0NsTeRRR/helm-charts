@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "qbittorrent.fullname" . }}
+  labels:
+    {{- include "qbittorrent.labels" . | nindent 4 }}
+  {{- with .Values.service.torrent.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  type: {{ .Values.service.torrent.type }}
+  ports:
+    - port: {{ .Values.service.torrent.port }}
+      targetPort: torrent-tcp
+      protocol: TCP
+      name: torrent-tcp
+    - port: {{ .Values.service.torrent.port }}
+      targetPort: torrent-udp
+      protocol: UDP
+      name: torrent-udp
+  selector:
+    {{- include "qbittorrent.selectorLabels" . | nindent 4 }}
