@@ -238,4 +238,19 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.0/radarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-25T23:59:19.942512986Z"
+  sonarr:
+  - apiVersion: v2
+    appVersion: 4.0.2.1183-ls232
+    created: "2024-03-31T20:43:07.365239614Z"
+    description: sonarr helm chart for Kubernetes
+    digest: b0250000ca97222bfb5c8fefa8b5ff0a0528e7bef40710bd803de58ea7e7fc85
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-31T20:43:07.365275451Z"
