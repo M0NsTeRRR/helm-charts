@@ -12,9 +12,9 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-# -- Environment variables to add to the prometheus-pve-exporter pods
+# -- Environment variables to add to the bazarr pods
 extraEnv: []
-# -- Environment variables from secrets or configmaps to add to the prometheus-pve-exporter pods
+# -- Environment variables from secrets or configmaps to add to the bazarr pods
 extraEnvFrom: []
 
 serviceAccount:

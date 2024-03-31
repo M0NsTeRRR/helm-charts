@@ -31,8 +31,8 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
 | config.persistence.size | string | `"5Gi"` | Size of persistent disk |
-| extraEnv | list | `[]` | Environment variables to add to the prometheus-pve-exporter pods |
-| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the prometheus-pve-exporter pods |
+| extraEnv | list | `[]` | Environment variables to add to the radarr pods |
+| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the radarr pods |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"lscr.io"` |  |
