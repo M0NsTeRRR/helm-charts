@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.2.1183-ls232](https://img.shields.io/badge/AppVersion-4.0.2.1183--ls232-informational?style=flat-square)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.4-1](https://img.shields.io/badge/AppVersion-4.6.4--1-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -35,8 +35,8 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.registry | string | `"lscr.io"` |  |
-| image.repository | string | `"linuxserver/qbittorrent"` |  |
+| image.registry | string | `"ghcr.io"` |  |
+| image.repository | string | `"qbittorrent/docker-qbittorrent-nox"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
