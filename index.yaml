@@ -154,6 +154,21 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.1.0/kea-exporter-0.1.0.tgz
     version: 0.1.0
+  overseerr:
+  - apiVersion: v2
+    appVersion: 1.33.2
+    created: "2024-03-31T21:17:48.191861679Z"
+    description: overseerr helm chart for Kubernetes
+    digest: d30a9252a80dade0c91bbc9c720305ad0727bc735c750831868d59bbb34811b1
+    home: https://github.com/sct/overseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: overseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/overseerr-0.1.0/overseerr-0.1.0.tgz
+    version: 0.1.0
   prometheus-pve-exporter:
   - apiVersion: v2
     appVersion: 3.2.2
@@ -297,4 +312,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-31T21:05:07.492671705Z"
+generated: "2024-03-31T21:17:48.191897165Z"
