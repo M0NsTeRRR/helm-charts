@@ -125,6 +125,21 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.0/bazarr-0.1.0.tgz
     version: 0.1.0
+  flaresolverr:
+  - apiVersion: v2
+    appVersion: v3.3.16
+    created: "2024-03-31T21:39:47.732283162Z"
+    description: flaresolverr helm chart for Kubernetes
+    digest: 23c564ceb46ede294a31c8215d84975bd489b0370f9aa286207a6dfb31eefefe
+    home: https://github.com/FlareSolverr/FlareSolverr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: flaresolverr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.1.0/flaresolverr-0.1.0.tgz
+    version: 0.1.0
   kea-exporter:
   - apiVersion: v2
     appVersion: v0.7.0
@@ -326,4 +341,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-31T21:33:43.833764961Z"
+generated: "2024-03-31T21:39:47.732407223Z"
