@@ -57,15 +57,17 @@ spec:
               value: "accept"
             - name: QBT_WEBUI_PORT
               value: "{{ $.Values.service.web.port }}"
+          {{- with .Values.extraEnvFrom }}
             {{- toYaml .Values.extraEnv | nindent 12 }}
+          {{- end }}
           {{- with .Values.extraEnvFrom }}
           envFrom:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          {{- with .Values.volumeMounts }}
           volumeMounts:
             - name: config
               mountPath: /config
+          {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
         {{- if .Values.gluetun.enabled }}
@@ -103,11 +105,11 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
         {{- end }}
-      {{- with .Values.volumes }}
       volumes:
         - name: config
           persistentVolumeClaim:
             claimName: {{ include "qbittorrent.configPersistenceName" $ }}
+      {{- with .Values.volumes }}  
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.nodeSelector }}
