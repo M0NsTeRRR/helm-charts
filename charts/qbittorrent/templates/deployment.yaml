@@ -54,6 +54,10 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.extraEnv }}
           env:
+            - name: QBT_EULA
+              value: "accept"
+            - name: QBT_WEBUI_PORT
+              value: "{{ $.Values.service.web.port }}"
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.extraEnvFrom }}
@@ -90,10 +94,6 @@ spec:
             {{- toYaml .Values.gluetun.resources | nindent 12 }}
           {{- with .Values.gluetun.extraEnv }}
           env:
-            - name: QBT_EULA
-              value: "accept"
-            - name: QBT_WEBUI_PORT
-              value: "{{ $.Values.service.web.port }}"
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.gluetun.extraEnvFrom }}
