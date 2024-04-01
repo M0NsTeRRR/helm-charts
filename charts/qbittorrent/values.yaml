@@ -46,6 +46,8 @@ service:
   web:
     type: ClusterIP
     port: 80
+    # -- Annotations to add to the web service
+    annotations: {}
   torrent:
     type: ClusterIP
     port: 6881
