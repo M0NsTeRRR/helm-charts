@@ -52,14 +52,12 @@ spec:
               protocol: UDP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.extraEnv }}
           env:
             - name: QBT_EULA
               value: "accept"
             - name: QBT_WEBUI_PORT
               value: "{{ $.Values.service.web.port }}"
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
+            {{- toYaml .Values.extraEnv | nindent 12 }}
           {{- with .Values.extraEnvFrom }}
           envFrom:
             {{- toYaml . | nindent 12 }}
