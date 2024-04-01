@@ -84,7 +84,7 @@ spec:
               containerPort: 8388
               protocol: TCP
             - name: shadowsocks-udp
-              containerPort: 6881
+              containerPort: 8388
               protocol: UDP
           resources:
             {{- toYaml .Values.gluetun.resources | nindent 12 }}
