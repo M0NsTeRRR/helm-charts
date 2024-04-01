@@ -42,7 +42,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: {{ .Values.service.web.port }}
               protocol: TCP
             - name: torrent-tcp
               containerPort: 6881
@@ -50,14 +50,6 @@ spec:
             - name: torrent-udp
               containerPort: 6881
               protocol: UDP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: 8080
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 8080
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.extraEnv }}
@@ -74,6 +66,45 @@ spec:
               mountPath: /config
             {{- toYaml . | nindent 12 }}
           {{- end }}
+        {{- if .Values.gluetun.enabled }}
+        - name: gluten
+          securityContext:
+            {{- toYaml .Values.gluetun.securityContext | nindent 12 }}
+          {{- if .Values.gluetun.image.sha }}
+          image: "{{ .Values.gluetun.image.registry }}/{{ .Values.gluetun.image.repository }}:{{ .Values.gluetun.image.tag | default .Chart.AppVersion }}@sha256:{{ .Values.gluetun.image.sha }}"
+          {{- else }}
+          image: "{{ .Values.gluetun.image.registry }}/{{ .Values.gluetun.image.repository }}:{{ .Values.gluetun.image.tag | default .Chart.AppVersion }}"
+          {{- end }}
+          imagePullPolicy: {{ .Values.gluetun.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 8888
+              protocol: TCP
+            - name: shadowsocks-tcp
+              containerPort: 8388
+              protocol: TCP
+            - name: shadowsocks-udp
+              containerPort: 6881
+              protocol: UDP
+          resources:
+            {{- toYaml .Values.gluetun.resources | nindent 12 }}
+          {{- with .Values.gluetun.extraEnv }}
+          env:
+            - name: QBT_EULA
+              value: "accept"
+            - name: QBT_WEBUI_PORT
+              value: "{{ $.Values.service.web.port }}"
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.gluetun.extraEnvFrom }}
+          envFrom:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.gluetun.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+        {{- end }}
       {{- with .Values.volumes }}
       volumes:
         - name: config

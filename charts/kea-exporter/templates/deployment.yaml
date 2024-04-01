@@ -47,11 +47,11 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: 9547
+              port: http
           readinessProbe:
             httpGet:
               path: /
-              port: 9547
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.extraEnv }}

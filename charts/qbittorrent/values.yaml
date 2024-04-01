@@ -115,3 +115,20 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+gluetun:
+  enabled: true
+  image:
+    registry: docker.io
+    repository: qmcgaw/gluetun
+    pullPolicy: IfNotPresent
+    tag: "v3.38.0"
+    sha: ""
+  extraEnv: []
+  extraEnvFrom: []
+  volumeMounts: []
+  securityContext:
+    capabilities:
+      add:
+        - NET_ADMIN
+  resources: {}

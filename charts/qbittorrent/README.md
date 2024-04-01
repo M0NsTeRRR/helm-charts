@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.4-1](https://img.shields.io/badge/AppVersion-4.6.4--1-informational?style=flat-square)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.4-1](https://img.shields.io/badge/AppVersion-4.6.4--1-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -34,6 +34,17 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
 | fullnameOverride | string | `""` |  |
+| gluetun.enabled | bool | `true` |  |
+| gluetun.extraEnv | list | `[]` |  |
+| gluetun.extraEnvFrom | list | `[]` |  |
+| gluetun.image.pullPolicy | string | `"IfNotPresent"` |  |
+| gluetun.image.registry | string | `"docker.io"` |  |
+| gluetun.image.repository | string | `"qmcgaw/gluetun"` |  |
+| gluetun.image.sha | string | `""` |  |
+| gluetun.image.tag | string | `"v3.38.0"` |  |
+| gluetun.resources | object | `{}` |  |
+| gluetun.securityContext.capabilities.add[0] | string | `"NET_ADMIN"` |  |
+| gluetun.volumeMounts | list | `[]` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"ghcr.io"` |  |
 | image.repository | string | `"qbittorrent/docker-qbittorrent-nox"` |  |

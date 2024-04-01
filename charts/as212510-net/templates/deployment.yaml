@@ -44,14 +44,17 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
+            - name: healthcheck
+              containerPort: 10240
+              protocol: TCP
           livenessProbe:
             httpGet:
               path: /healthcheck
-              port: 10240
+              port: healthcheck
           readinessProbe:
             httpGet:
               path: /healthcheck
-              port: 10240
+              port: healthcheck
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.extraEnv }}
