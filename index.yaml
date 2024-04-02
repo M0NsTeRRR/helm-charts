@@ -182,6 +182,21 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.1.0/flaresolverr-0.1.0.tgz
     version: 0.1.0
+  jellyseerr:
+  - apiVersion: v2
+    appVersion: 1.7.0
+    created: "2024-04-02T23:20:58.265836378Z"
+    description: jellyseerr helm chart for Kubernetes
+    digest: cd84774d619a7dc1b875d72591fac10f3cac4a072f192c8d97e2ef3d45465fcc
+    home: https://github.com/sct/jellyseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: jellyseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyseerr-0.1.0/jellyseerr-0.1.0.tgz
+    version: 0.1.0
   kea-exporter:
   - apiVersion: v2
     appVersion: v0.7.0
@@ -580,4 +595,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-01T23:40:56.055907763Z"
+generated: "2024-04-02T23:20:58.265935193Z"
