@@ -1,10 +1,10 @@
-# overseerr
+# jellyseerr
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.33.2](https://img.shields.io/badge/AppVersion-1.33.2-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.7.0](https://img.shields.io/badge/AppVersion-1.7.0-informational?style=flat-square)
 
-overseerr helm chart for Kubernetes
+jellyseerr helm chart for Kubernetes
 
-**Homepage:** <https://github.com/sct/overseerr>
+**Homepage:** <https://github.com/sct/jellyseerr>
 
 ## Source Code
 
@@ -31,12 +31,12 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
 | config.persistence.size | string | `"5Gi"` | Size of persistent disk |
-| extraEnv | list | `[]` | Environment variables to add to the overseerr pods |
-| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the overseerr pods |
+| extraEnv | list | `[]` | Environment variables to add to the jellyseerr pods |
+| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the jellyseerr pods |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"sct/overseerr"` |  |
+| image.registry | string | `"docker.io"` |  |
+| image.repository | string | `"fallenbagel/jellyseerr"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |

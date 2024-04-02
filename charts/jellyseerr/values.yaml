@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  registry: ghcr.io
-  repository: sct/overseerr
+  registry: docker.io
+  repository: fallenbagel/jellyseerr
   pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -12,9 +12,9 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-# -- Environment variables to add to the overseerr pods
+# -- Environment variables to add to the jellyseerr pods
 extraEnv: []
-# -- Environment variables from secrets or configmaps to add to the overseerr pods
+# -- Environment variables from secrets or configmaps to add to the jellyseerr pods
 extraEnvFrom: []
 
 serviceAccount:

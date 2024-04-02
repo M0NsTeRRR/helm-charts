@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "overseerr.fullname" . }}
+  name: {{ include "jellyseerr.fullname" . }}
   labels:
-    {{- include "overseerr.labels" . | nindent 4 }}
+    {{- include "jellyseerr.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "overseerr.selectorLabels" . | nindent 6 }}
+      {{- include "jellyseerr.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,7 +18,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "overseerr.labels" . | nindent 8 }}
+        {{- include "jellyseerr.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -27,7 +27,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "overseerr.serviceAccountName" . }}
+      serviceAccountName: {{ include "jellyseerr.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -68,7 +68,7 @@ spec:
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: {{ include "overseerr.configPersistenceName" . }}
+            claimName: {{ include "jellyseerr.configPersistenceName" . }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
