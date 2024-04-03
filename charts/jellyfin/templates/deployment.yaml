@@ -67,6 +67,9 @@ spec:
               mountPath: /config
             - name: cache
               mountPath: /cache
+          {{- with .Values.volumeMounts }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
       volumes:
         - name: config
           persistentVolumeClaim:
@@ -74,6 +77,9 @@ spec:
         - name: cache
           persistentVolumeClaim:
             claimName: {{ include "jellyfin.cachePersistenceName" . }}
+      {{- with .Values.volumes }}  
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
