@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "jellyfin.cachePersistenceName" . }}
+  labels:
+    {{- include "jellyfin.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  {{- with .Values.cache.persistence.storageClass }}
+  storageClassName: {{ if (eq "-" .) }}""{{ else }}{{ . }}{{ end }}
+  {{- end }}
+  resources:
+    requests:
+      storage: "{{ .Values.cache.persistence.size }}"

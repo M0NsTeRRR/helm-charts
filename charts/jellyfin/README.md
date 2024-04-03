@@ -1,10 +1,10 @@
-# jellyseerr
+# jellyfin
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.7.0](https://img.shields.io/badge/AppVersion-1.7.0-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.8.13-1](https://img.shields.io/badge/AppVersion-10.8.13--1-informational?style=flat-square)
 
-jellyseerr helm chart for Kubernetes
+jellyfin helm chart for Kubernetes
 
-**Homepage:** <https://github.com/Fallenbagel/jellyseerr>
+**Homepage:** <https://github.com/jellyfin/jellyfin>
 
 ## Source Code
 
@@ -27,6 +27,10 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| cache | object | `{"persistence":{"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store cache |
+| cache.persistence.annotations | object | `{}` | Annotations for PVCs |
+| cache.persistence.name | string | `""` | Config name |
+| cache.persistence.size | string | `"5Gi"` | Size of persistent disk |
 | config | object | `{"persistence":{"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store configuration |
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
@@ -36,7 +40,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"docker.io"` |  |
-| image.repository | string | `"fallenbagel/jellyseerr"` |  |
+| image.repository | string | `"jellyfin/jellyfin"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |

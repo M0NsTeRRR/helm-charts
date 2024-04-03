@@ -1,11 +1,11 @@
 apiVersion: v2
-name: jellyseerr
-description: jellyseerr helm chart for Kubernetes
+name: jellyfin
+description: jellyfin helm chart for Kubernetes
 type: application
 version: 0.1.0
-# image: fallenbagel/jellyseerr
-appVersion: "1.7.0"
+# image: jellyfin/jellyfin
+appVersion: "10.8.13-1"
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
-home: https://github.com/Fallenbagel/jellyseerr
+home: https://github.com/jellyfin/jellyfin
 icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
