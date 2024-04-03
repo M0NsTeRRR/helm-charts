@@ -182,6 +182,21 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.1.0/flaresolverr-0.1.0.tgz
     version: 0.1.0
+  jellyfin:
+  - apiVersion: v2
+    appVersion: 10.8.13-1
+    created: "2024-04-03T00:39:35.453836979Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 3470210fcf94ffe520f6ae14dafa7893bc97472ce92242a72635ed68bec4bd87
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.0/jellyfin-0.1.0.tgz
+    version: 0.1.0
   jellyseerr:
   - apiVersion: v2
     appVersion: 1.7.0
@@ -595,4 +610,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-02T23:20:58.265935193Z"
+generated: "2024-04-03T00:39:35.556948537Z"
