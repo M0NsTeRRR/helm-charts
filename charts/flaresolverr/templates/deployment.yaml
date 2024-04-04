@@ -44,7 +44,7 @@ spec:
             - name: http
               containerPort: 8191
               protocol: TCP
-            {{- if not .Values.serviceMonitor.enabled }}
+            {{- if .Values.serviceMonitor.enabled }}
             - name: metrics
               containerPort: 8192
               protocol: TCP
@@ -60,7 +60,7 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-          {{- if not .Values.serviceMonitor.enabled }}
+          {{- if .Values.serviceMonitor.enabled }}
           - name: PROMETHEUS_ENABLED
             value: "true"
           {{- end }}
