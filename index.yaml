@@ -113,6 +113,20 @@ entries:
   bazarr:
   - apiVersion: v2
     appVersion: 1.4.2
+    created: "2024-04-04T23:12:55.890781634Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 88989b5ccca4ad6ebc8c5b9f125d1fb09d37f5c93df2866969313f6a1985db78
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.7/bazarr-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 1.4.2
     created: "2024-04-04T22:09:03.700518029Z"
     description: bazarr helm chart for Kubernetes
     digest: 9669cb7375136e40af17333e3491bb9e9e9c009506839bde2bdc37642d71f21a
@@ -283,6 +297,20 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: 10.8.13-1
+    created: "2024-04-04T23:12:55.994202439Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 16b6624f380025e3ff2c937849875e877c7000d5cc5ef9ed3784d5295241b9dc
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.5/jellyfin-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 10.8.13-1
     created: "2024-04-04T22:09:03.783763439Z"
     description: jellyfin helm chart for Kubernetes
     digest: 3a2fe30fc5102284816d3a0dd77fe8359a3c764edf885bbb5f513096d7446c24
@@ -352,6 +380,20 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.0/jellyfin-0.1.0.tgz
     version: 0.1.0
   jellyseerr:
+  - apiVersion: v2
+    appVersion: 1.7.0
+    created: "2024-04-04T23:12:56.109089927Z"
+    description: jellyseerr helm chart for Kubernetes
+    digest: 2161484c8f978ebd019d1ce63e1dd2167b85ff5dbd54746ed15fcfd489a544cc
+    home: https://github.com/Fallenbagel/jellyseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: jellyseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyseerr-0.1.2/jellyseerr-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 1.7.0
     created: "2024-04-04T22:09:03.872474375Z"
@@ -567,6 +609,20 @@ entries:
   prowlarr:
   - apiVersion: v2
     appVersion: 1.15.0
+    created: "2024-04-04T23:12:56.219497522Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: 559c1b47044f479c11b41c70b39db5641e020a3bdb1449aeb745470bf4667a6f
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.4/prowlarr-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.15.0
     created: "2024-04-04T22:09:03.987716138Z"
     description: prowlarr helm chart for Kubernetes
     digest: 140e22285117eae3de13f0715f6e91b40f7915692e44c5b9b0e44a6202e5f0c0
@@ -622,6 +678,20 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.0/prowlarr-0.1.0.tgz
     version: 0.1.0
   qbittorrent:
+  - apiVersion: v2
+    appVersion: 4.6.4-1
+    created: "2024-04-04T23:12:56.330804287Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: 313514ab99eaf53e0b6bdb3453e246b607758a3e68c483366b045c7042d30b8c
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.2.7/qbittorrent-0.2.7.tgz
+    version: 0.2.7
   - apiVersion: v2
     appVersion: 4.6.4-1
     created: "2024-04-04T22:09:04.08494039Z"
@@ -751,6 +821,20 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: 5.3.6
+    created: "2024-04-04T23:12:56.440014864Z"
+    description: radarr helm chart for Kubernetes
+    digest: d966e7c1745873ef88587b82379b34e2ad3ad130bb5db12a8ce5a0677336291e
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.5/radarr-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 5.3.6
     created: "2024-04-04T22:09:04.189362778Z"
     description: radarr helm chart for Kubernetes
     digest: ecd563c666ef41da930ddc53059858f844ff21a542eabde4fd308060f6deba64
@@ -822,6 +906,20 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 4.0.3
+    created: "2024-04-04T23:12:56.53793325Z"
+    description: sonarr helm chart for Kubernetes
+    digest: 021d9b15dfa7956059e700806208d67d6d477de37dbfb24177c9ba41aa122b3a
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.4/sonarr-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 4.0.3
     created: "2024-04-04T22:09:04.268291683Z"
     description: sonarr helm chart for Kubernetes
     digest: 95612d1512f40ef34a75ac3ad66ef0143dc9e214b9136a3513d4ec0082be3611
@@ -876,4 +974,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-04T22:09:04.268457031Z"
+generated: "2024-04-04T23:12:56.538066941Z"
