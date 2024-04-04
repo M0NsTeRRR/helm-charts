@@ -3,6 +3,20 @@ entries:
   as212510-net:
   - apiVersion: v2
     appVersion: 2.1.0
+    created: "2024-04-04T17:31:21.907789607Z"
+    description: as212510.net helm chart for Kubernetes
+    digest: 0d11f82b60f7d95b2eca1af9c2c0950d964c3216a10c850b4cc43bea997f3eb4
+    home: https://github.com/M0NsTeRRR/as212510.net
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: as212510-net
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.3.5/as212510-net-0.3.5.tgz
+    version: 0.3.5
+  - apiVersion: v2
+    appVersion: 2.1.0
     created: "2024-04-01T14:06:31.88941861Z"
     description: as212510.net helm chart for Kubernetes
     digest: 4c5cf81c886acb5815444e4a0897c0e90621e1fcb6befcff42b0032a1a3ebb39
@@ -98,6 +112,20 @@ entries:
     version: 0.1.0
   bazarr:
   - apiVersion: v2
+    appVersion: 1.4.2
+    created: "2024-04-04T17:31:22.007050383Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 59a4d27bdc319540690028964e7986dcb6348a6dbc9e10c99403c6cd3d4cd809
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.4/bazarr-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: v1.4.2-ls244
     created: "2024-04-01T14:06:31.985540279Z"
     description: bazarr helm chart for Kubernetes
@@ -156,6 +184,20 @@ entries:
   flaresolverr:
   - apiVersion: v2
     appVersion: v3.3.16
+    created: "2024-04-04T17:31:22.127158279Z"
+    description: flaresolverr helm chart for Kubernetes
+    digest: 2f5cebcacea6152b1a753e28e6976ce5281ee5be68ddce7783c862aed5be5988
+    home: https://github.com/FlareSolverr/FlareSolverr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: flaresolverr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.1.2/flaresolverr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: v3.3.16
     created: "2024-04-01T14:06:32.077656622Z"
     description: flaresolverr helm chart for Kubernetes
     digest: fccf374439c48cccbf2aa93f7b0434902d85f293d896308c11fdeab11052957d
@@ -183,6 +225,20 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.1.0/flaresolverr-0.1.0.tgz
     version: 0.1.0
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.8.13-1
+    created: "2024-04-04T17:31:22.262373042Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 09c99e93caaa8bebf9970084f7754bb48fc373b7b2c7b2b4d001abbec061d2fe
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.3/jellyfin-0.1.3.tgz
+    version: 0.1.3
   - apiVersion: v2
     appVersion: 10.8.13-1
     created: "2024-04-03T17:08:58.147719432Z"
@@ -426,6 +482,20 @@ entries:
     version: 0.1.0
   prowlarr:
   - apiVersion: v2
+    appVersion: 1.15.0
+    created: "2024-04-04T17:31:22.356392394Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: 777537a7e1c42342730b59302c98c24a9ffe6a3281dd78c57f1bb8cdad5b891c
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.2/prowlarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 1.15.0.4361-ls62
     created: "2024-04-01T14:06:32.482449151Z"
     description: prowlarr helm chart for Kubernetes
@@ -568,6 +638,20 @@ entries:
     version: 0.1.0
   radarr:
   - apiVersion: v2
+    appVersion: 5.3.6
+    created: "2024-04-04T17:31:22.480017338Z"
+    description: radarr helm chart for Kubernetes
+    digest: 0feb4fd1483f7926ad32be64e2784088c7aae81c90525af408bd8a765db25000
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.3/radarr-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 5.3.6.8612-ls210
     created: "2024-04-01T14:06:32.676051094Z"
     description: radarr helm chart for Kubernetes
@@ -611,6 +695,20 @@ entries:
     version: 0.1.0
   sonarr:
   - apiVersion: v2
+    appVersion: 4.0.3
+    created: "2024-04-04T17:31:22.588727575Z"
+    description: sonarr helm chart for Kubernetes
+    digest: c9007e33d79a943c7afe7d21c0560f61ef42cd912dd842f7995426c9eeffa7d3
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.2/sonarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 4.0.2.1183-ls232
     created: "2024-04-01T14:06:32.784260665Z"
     description: sonarr helm chart for Kubernetes
@@ -638,4 +736,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-03T17:08:58.147841811Z"
+generated: "2024-04-04T17:31:22.588860985Z"
