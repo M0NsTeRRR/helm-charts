@@ -2,9 +2,9 @@ apiVersion: v2
 name: prowlarr
 description: prowlarr helm chart for Kubernetes
 type: application
-version: 0.1.1
+version: 0.1.2
 # image: linuxserver/prowlarr
-appVersion: "1.15.0.4361-ls62"
+appVersion: "1.15.0"
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
 home: https://github.com/prowlarr/prowlarr

@@ -44,6 +44,11 @@ spec:
             - name: http
               containerPort: 8191
               protocol: TCP
+            {{- if not .serviceMonitor.enabled }}
+            - name: metrics
+              containerPort: 8192
+              protocol: TCP
+            {{- end }}
           livenessProbe:
             httpGet:
               path: /
@@ -54,8 +59,12 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.extraEnv }}
           env:
+          {{- if not .serviceMonitor.enabled }}
+          - name: PROMETHEUS_ENABLED
+            value: "true"
+          {{- end }}
+          {{- with .Values.extraEnv }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.extraEnvFrom }}

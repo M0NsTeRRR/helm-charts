@@ -1,6 +1,6 @@
 # flaresolverr
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.16](https://img.shields.io/badge/AppVersion-v3.3.16-informational?style=flat-square)
+![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.16](https://img.shields.io/badge/AppVersion-v3.3.16-informational?style=flat-square)
 
 flaresolverr helm chart for Kubernetes
 
@@ -61,4 +61,16 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| serviceMonitor.enabled | bool | `false` | If true, a ServiceMonitor CRD is created for a prometheus operator |
+| serviceMonitor.interval | string | `"30s"` |  |
+| serviceMonitor.labels | object | `{}` |  |
+| serviceMonitor.metricRelabelings | list | `[]` |  |
+| serviceMonitor.namespace | string | `nil` | If set create the `ServiceMonitor` in an alternate namespace. |
+| serviceMonitor.path | string | `"/metrics"` |  |
+| serviceMonitor.relabelings | list | `[]` |  |
+| serviceMonitor.scheme | string | `"http"` |  |
+| serviceMonitor.scrapeTimeout | string | `"30s"` |  |
+| serviceMonitor.service.port | int | `8192` | Metrics service port to scrape |
+| serviceMonitor.targetLabels | list | `[]` |  |
+| serviceMonitor.tlsConfig | object | `{}` |  |
 | tolerations | list | `[]` |  |

@@ -47,6 +47,9 @@ spec:
             - name: healthcheck
               containerPort: 10240
               protocol: TCP
+            - name: metrics
+              containerPort: 10241
+              protocol: TCP
           livenessProbe:
             httpGet:
               path: /healthcheck
