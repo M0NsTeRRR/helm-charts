@@ -113,6 +113,20 @@ entries:
   bazarr:
   - apiVersion: v2
     appVersion: 1.4.2
+    created: "2024-04-04T19:42:15.665397091Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 28360398cd1bff1cd0b3cc878ec9702bde870bccbf6da40acc9e10155b37eb35
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.5/bazarr-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 1.4.2
     created: "2024-04-04T17:31:22.007050383Z"
     description: bazarr helm chart for Kubernetes
     digest: 59a4d27bdc319540690028964e7986dcb6348a6dbc9e10c99403c6cd3d4cd809
@@ -182,6 +196,20 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.0/bazarr-0.1.0.tgz
     version: 0.1.0
   flaresolverr:
+  - apiVersion: v2
+    appVersion: v3.3.16
+    created: "2024-04-04T19:42:15.815408644Z"
+    description: flaresolverr helm chart for Kubernetes
+    digest: 61a198fdb3e2208bc9b5ffe0cd172ffae1a55cc5bdeb88059dbb7edacd7fc16f
+    home: https://github.com/FlareSolverr/FlareSolverr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    name: flaresolverr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.1.3/flaresolverr-0.1.3.tgz
+    version: 0.1.3
   - apiVersion: v2
     appVersion: v3.3.16
     created: "2024-04-04T17:31:22.127158279Z"
@@ -736,4 +764,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-04T17:31:22.588860985Z"
+generated: "2024-04-04T19:42:15.815531375Z"
