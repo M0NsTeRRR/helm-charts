@@ -13,3 +13,4 @@ spec:
       name: http
   selector:
     {{- include "jellyfin.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack

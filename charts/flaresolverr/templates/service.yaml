@@ -13,3 +13,4 @@ spec:
       name: http
   selector:
     {{- include "flaresolverr.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack

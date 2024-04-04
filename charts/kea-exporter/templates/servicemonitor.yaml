@@ -15,6 +15,7 @@ spec:
       name: metrics
   selector:
     {{- include "kea-exporter.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack
 ---
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor

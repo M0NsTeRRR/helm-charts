@@ -13,3 +13,4 @@ spec:
       name: http
   selector:
     {{- include "kea-exporter.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack

@@ -21,3 +21,4 @@ spec:
       name: torrent-udp
   selector:
     {{- include "qbittorrent.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack
