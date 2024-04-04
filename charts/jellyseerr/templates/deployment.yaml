@@ -8,6 +8,8 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
+  updateStrategy:
+    type: {{ .Values.updateStrategyType }}
   selector:
     matchLabels:
       {{- include "jellyseerr.selectorLabels" . | nindent 6 }}

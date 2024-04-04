@@ -5,8 +5,10 @@ metadata:
   labels:
     {{- include "jellyfin.labels" . | nindent 4 }}
 spec:
+  {{- with .Values.cache.persistence.accessModes }}
   accessModes:
-    - ReadWriteOnce
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   {{- with .Values.cache.persistence.storageClass }}
   storageClassName: {{ if (eq "-" .) }}""{{ else }}{{ . }}{{ end }}
   {{- end }}

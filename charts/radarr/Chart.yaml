@@ -2,7 +2,7 @@ apiVersion: v2
 name: radarr
 description: radarr helm chart for Kubernetes
 type: application
-version: 0.1.3
+version: 0.1.4
 # image: linuxserver/radarr
 appVersion: "5.3.6"
 sources:

@@ -12,6 +12,9 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+# -- Deployment update strategy
+updateStrategyType: "OnDelete"
+
 # -- Environment variables to add to the qbittorrent pods
 extraEnv: []
 # -- Environment variables from secrets or configmaps to add to the qbittorrent pods
@@ -61,6 +64,9 @@ config:
     size: 5Gi
     # -- Annotations for PVCs
     annotations: {}
+    # -- Access modes of persistent disk
+    accessModes:
+      - ReadWriteOnce
     # -- Config name
     name: ""
 

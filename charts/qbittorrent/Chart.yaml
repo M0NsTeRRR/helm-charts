@@ -2,7 +2,7 @@ apiVersion: v2
 name: qbittorrent
 description: qbittorrent helm chart for Kubernetes
 type: application
-version: 0.2.5
+version: 0.2.6
 # image: ghcr.io/qbittorrent/docker-qbittorrent-nox
 appVersion: "4.6.4-1"
 sources:

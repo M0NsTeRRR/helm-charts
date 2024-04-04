@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.8.13-1](https://img.shields.io/badge/AppVersion-10.8.13--1-informational?style=flat-square)
+![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.8.13-1](https://img.shields.io/badge/AppVersion-10.8.13--1-informational?style=flat-square)
 
 jellyfin helm chart for Kubernetes
 
@@ -27,11 +27,13 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| cache | object | `{"persistence":{"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store cache |
+| cache | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store cache |
+| cache.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
 | cache.persistence.annotations | object | `{}` | Annotations for PVCs |
 | cache.persistence.name | string | `""` | Config name |
 | cache.persistence.size | string | `"5Gi"` | Size of persistent disk |
-| config | object | `{"persistence":{"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store configuration |
+| config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store configuration |
+| config.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
 | config.persistence.size | string | `"5Gi"` | Size of persistent disk |
@@ -66,5 +68,6 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
 | tolerations | list | `[]` |  |
+| updateStrategyType | string | `"OnDelete"` | Deployment update strategy |
 | volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
 | volumes | list | `[]` | Additional volumes on the output Deployment definition. |

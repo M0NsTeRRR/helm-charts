@@ -5,8 +5,10 @@ metadata:
   labels:
     {{- include "bazarr.labels" . | nindent 4 }}
 spec:
+  {{- with .Values.config.persistence.accessModes }}
   accessModes:
-    - ReadWriteOnce
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   {{- with .Values.config.persistence.storageClass }}
   storageClassName: {{ if (eq "-" .) }}""{{ else }}{{ . }}{{ end }}
   {{- end }}
