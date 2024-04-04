@@ -12,8 +12,9 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-# -- Deployment update strategy
-updateStrategyType: "OnDelete"
+# -- Deployment strategy
+strategy:
+  type: Recreate
 
 # -- Environment variables to add to the radarr pods
 extraEnv: []

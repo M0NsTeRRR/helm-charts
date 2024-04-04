@@ -7,9 +7,9 @@ metadata:
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
-  updateStrategy:
-    type: {{ .Values.updateStrategyType }}
   {{- end }}
+  strategy:
+    type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       {{- include "radarr.selectorLabels" . | nindent 6 }}

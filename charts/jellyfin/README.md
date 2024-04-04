@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.8.13-1](https://img.shields.io/badge/AppVersion-10.8.13--1-informational?style=flat-square)
+![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.8.13-1](https://img.shields.io/badge/AppVersion-10.8.13--1-informational?style=flat-square)
 
 jellyfin helm chart for Kubernetes
 
@@ -67,7 +67,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| strategy | object | `{"type":"Recreate"}` | Deployment strategy |
 | tolerations | list | `[]` |  |
-| updateStrategyType | string | `"OnDelete"` | Deployment update strategy |
 | volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
 | volumes | list | `[]` | Additional volumes on the output Deployment definition. |

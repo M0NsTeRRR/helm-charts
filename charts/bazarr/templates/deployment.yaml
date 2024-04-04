@@ -8,8 +8,8 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
-  updateStrategy:
-    type: {{ .Values.updateStrategyType }}
+  strategy:
+    type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       {{- include "bazarr.selectorLabels" . | nindent 6 }}
