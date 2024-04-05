@@ -35,7 +35,7 @@ spec:
               service:
                 name: {{ include "qbittorrent.fullname" $ }}
                 port:
-                  number: {{ .Values.service.port }}
+                  number: {{ $.Values.service.port }}
           {{- end }}
     {{- end }}
 {{- end }}

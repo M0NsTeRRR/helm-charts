@@ -35,7 +35,7 @@ spec:
               service:
                 name: {{ include "as212510-net.fullname" $ }}
                 port:
-                  number: {{ .Values.service.port }}
+                  number: {{ $.Values.service.port }}
           {{- end }}
     {{- end }}
 {{- end }}
