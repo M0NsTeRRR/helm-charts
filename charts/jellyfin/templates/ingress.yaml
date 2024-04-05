@@ -33,7 +33,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "jellyfin.fullname" . }}
+                name: {{ include "jellyfin.fullname" $ }}
                 port:
                   number: {{ .Values.service.port }}
           {{- end }}

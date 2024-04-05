@@ -33,7 +33,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "qbittorrent.fullname" . }}
+                name: {{ include "qbittorrent.fullname" $ }}
                 port:
                   number: {{ .Values.service.port }}
           {{- end }}

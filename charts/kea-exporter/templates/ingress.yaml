@@ -33,7 +33,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "kea-exporter.fullname" . }}
+                name: {{ include "kea-exporter.fullname" $ }}
                 port:
                   number: {{ .Values.service.port }}
           {{- end }}

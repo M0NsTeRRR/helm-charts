@@ -33,7 +33,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "sonarr.fullname" . }}
+                name: {{ include "sonarr.fullname" $ }}
                 port:
                   number: {{ .Values.service.port }}
           {{- end }}

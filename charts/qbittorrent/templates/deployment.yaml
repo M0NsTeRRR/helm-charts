@@ -110,7 +110,7 @@ spec:
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: {{ include "qbittorrent.configPersistenceName" $ }}
+            claimName: {{ include "qbittorrent.configPersistenceName" . }}
       {{- with .Values.volumes }}  
         {{- toYaml . | nindent 8 }}
       {{- end }}

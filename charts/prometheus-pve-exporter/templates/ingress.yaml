@@ -33,7 +33,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "prometheus-pve-exporter.fullname" . }}
+                name: {{ include "prometheus-pve-exporter.fullname" $ }}
                 port:
                   number: {{ .Values.service.port }}
           {{- end }}
