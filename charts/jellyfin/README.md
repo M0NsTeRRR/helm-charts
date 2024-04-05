@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.8.13-1](https://img.shields.io/badge/AppVersion-10.8.13--1-informational?style=flat-square)
+![Version: 0.1.6](https://img.shields.io/badge/Version-0.1.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.8.13-1](https://img.shields.io/badge/AppVersion-10.8.13--1-informational?style=flat-square)
 
 jellyfin helm chart for Kubernetes
 
@@ -15,6 +15,10 @@ jellyfin helm chart for Kubernetes
 ## Source Code
 
 * <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr>
+
+## Requirements
+
+Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
 

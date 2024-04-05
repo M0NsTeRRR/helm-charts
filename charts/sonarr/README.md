@@ -1,6 +1,6 @@
 # sonarr
 
-![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.3](https://img.shields.io/badge/AppVersion-4.0.3-informational?style=flat-square)
+![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.3](https://img.shields.io/badge/AppVersion-4.0.3-informational?style=flat-square)
 
 sonarr helm chart for Kubernetes
 
@@ -15,6 +15,10 @@ sonarr helm chart for Kubernetes
 ## Source Code
 
 * <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr>
+
+## Requirements
+
+Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
 

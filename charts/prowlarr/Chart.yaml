@@ -1,8 +1,9 @@
 apiVersion: v2
+kubeVersion: ">=1.23.0-0"
 name: prowlarr
 description: prowlarr helm chart for Kubernetes
 type: application
-version: 0.1.4
+version: 0.1.5
 # image: linuxserver/prowlarr
 appVersion: "1.15.0"
 maintainers:

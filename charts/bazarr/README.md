@@ -1,6 +1,6 @@
 # bazarr
 
-![Version: 0.1.7](https://img.shields.io/badge/Version-0.1.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.4.2](https://img.shields.io/badge/AppVersion-1.4.2-informational?style=flat-square)
+![Version: 0.1.8](https://img.shields.io/badge/Version-0.1.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.4.2](https://img.shields.io/badge/AppVersion-1.4.2-informational?style=flat-square)
 
 bazarr helm chart for Kubernetes
 
@@ -15,6 +15,10 @@ bazarr helm chart for Kubernetes
 ## Source Code
 
 * <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr>
+
+## Requirements
+
+Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
 

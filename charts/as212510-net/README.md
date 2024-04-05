@@ -1,6 +1,6 @@
 # as212510-net
 
-![Version: 0.3.5](https://img.shields.io/badge/Version-0.3.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.0](https://img.shields.io/badge/AppVersion-2.1.0-informational?style=flat-square)
+![Version: 0.3.6](https://img.shields.io/badge/Version-0.3.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.0](https://img.shields.io/badge/AppVersion-2.1.0-informational?style=flat-square)
 
 as212510.net helm chart for Kubernetes
 
@@ -15,6 +15,10 @@ as212510.net helm chart for Kubernetes
 ## Source Code
 
 * <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net>
+
+## Requirements
+
+Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
 
