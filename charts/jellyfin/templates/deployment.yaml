@@ -13,8 +13,6 @@ spec:
   selector:
     matchLabels:
       {{- include "jellyfin.selectorLabels" . | nindent 6 }}
-  strategy:
-    type: Recreate
   template:
     metadata:
       {{- with .Values.podAnnotations }}
