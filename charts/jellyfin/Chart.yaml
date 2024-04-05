@@ -5,6 +5,9 @@ type: application
 version: 0.1.5
 # image: jellyfin/jellyfin
 appVersion: "10.8.13-1"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
 home: https://github.com/jellyfin/jellyfin

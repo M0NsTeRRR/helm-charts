@@ -5,6 +5,9 @@ type: application
 version: 0.1.2
 # image: fallenbagel/jellyseerr
 appVersion: "1.7.0"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
 home: https://github.com/Fallenbagel/jellyseerr

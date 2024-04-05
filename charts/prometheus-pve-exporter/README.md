@@ -6,6 +6,12 @@ prometheus-pve-exporter helm chart for Kubernetes
 
 **Homepage:** <https://github.com/prometheus-pve/prometheus-pve-exporter>
 
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Ludovic Ortega | <ludovic.ortega@adminafk.fr> |  |
+
 ## Source Code
 
 * <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter>

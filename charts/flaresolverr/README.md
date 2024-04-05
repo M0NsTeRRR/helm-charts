@@ -6,6 +6,12 @@ flaresolverr helm chart for Kubernetes
 
 **Homepage:** <https://github.com/FlareSolverr/FlareSolverr>
 
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Ludovic Ortega | <ludovic.ortega@adminafk.fr> |  |
+
 ## Source Code
 
 * <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr>

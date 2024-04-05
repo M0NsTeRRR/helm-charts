@@ -5,6 +5,9 @@ type: application
 version: 0.1.4
 # image: flaresolverr/flaresolverr
 appVersion: "v3.3.16"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
 home: https://github.com/FlareSolverr/FlareSolverr

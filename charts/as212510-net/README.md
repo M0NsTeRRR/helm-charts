@@ -6,6 +6,12 @@ as212510.net helm chart for Kubernetes
 
 **Homepage:** <https://github.com/M0NsTeRRR/as212510.net>
 
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Ludovic Ortega | <ludovic.ortega@adminafk.fr> |  |
+
 ## Source Code
 
 * <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net>

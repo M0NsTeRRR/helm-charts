@@ -5,6 +5,9 @@ type: application
 version: 0.1.7
 # image: linuxserver/bazarr
 appVersion: "1.4.2"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
 home: https://github.com/morpheus65535/bazarr

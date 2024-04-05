@@ -5,6 +5,9 @@ type: application
 version: 0.1.5
 # image: linuxserver/radarr
 appVersion: "5.3.6"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
 home: https://github.com/Radarr/Radarr

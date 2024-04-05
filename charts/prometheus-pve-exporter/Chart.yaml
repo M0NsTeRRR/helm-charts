@@ -5,6 +5,9 @@ type: application
 version: 0.1.6
 # image: prompve/prometheus-pve-exporter
 appVersion: "3.2.2"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
 home: https://github.com/prometheus-pve/prometheus-pve-exporter

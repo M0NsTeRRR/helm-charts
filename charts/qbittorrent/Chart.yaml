@@ -5,6 +5,9 @@ type: application
 version: 0.2.7
 # image: ghcr.io/qbittorrent/docker-qbittorrent-nox
 appVersion: "4.6.4-1"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
 home: https://github.com/qbittorrent/qBittorrent

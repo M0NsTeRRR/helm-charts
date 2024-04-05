@@ -5,6 +5,9 @@ type: application
 version: 0.3.5
 # image: ghcr.io/m0nsterrr/as212510.net
 appVersion: "2.1.0"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
 sources:
   - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
 home: https://github.com/M0NsTeRRR/as212510.net
