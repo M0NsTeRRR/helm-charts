@@ -459,6 +459,24 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: 10.8.13-1
+    created: "2024-04-05T11:21:08.384801286Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 4d6e75081084d003182a0eff2f074a4b39e1215fada10c0d14e343b3d3e46420
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.9/jellyfin-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 10.8.13-1
     created: "2024-04-05T10:25:16.073574577Z"
     description: jellyfin helm chart for Kubernetes
     digest: bba40672e38cce4833c6e7c9156006d2b44d52d41edce6a4d21305fa729b547b
@@ -1568,4 +1586,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-05T10:25:17.322623026Z"
+generated: "2024-04-05T11:21:08.385011159Z"
