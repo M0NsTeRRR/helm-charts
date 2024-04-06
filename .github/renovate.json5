@@ -8,8 +8,8 @@
   automergeType: 'pr',
   platformAutomerge: true,
   rebaseWhen: 'conflicted',
-  "timezone": "Europe/Paris",
-  "schedule": [
+  timezone: "Europe/Paris",
+  schedule: [
     "before 9pm on friday"
   ],
   prConcurrentLimit: 0,
@@ -32,7 +32,7 @@
   pin: {
     automerge: true,
   },
-  pre-commit: {
+  "pre-commit": {
     enabled: true
   },
   customManagers: [
