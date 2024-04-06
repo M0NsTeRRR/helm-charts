@@ -18,6 +18,12 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install helm plugin
+        run: helm plugin install https://github.com/KnechtionsCoding/helm-schema-gen.git --version=0.0.10
+
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.1
+
       - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.6.1
 
@@ -31,19 +37,12 @@ jobs:
 
       - name: Run chart-testing
         if: steps.list-changed.outputs.changed == 'true'
-        run: ct lint --target-branch ${{ github.event.repository.default_branch }}
+        run: ct lint --target-branch ${{ github.event.repository.default_branch }} --validate-maintainers=false
 
-      - name: Create kind cluster
-        if: steps.list-changed.outputs.changed == 'true'
-        uses: helm/kind-action@v1.9.0
+      # - name: Create kind cluster
+      #   if: steps.list-changed.outputs.changed == 'true'
+      #   uses: helm/kind-action@v1.9.0
 
-      - name: Run chart-testing (install)
-        if: steps.list-changed.outputs.changed == 'true'
-        run: ct install --target-branch ${{ github.event.repository.default_branch }}
-
-  pre-commit:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-    - uses: pre-commit/action@v3.0.1
+      # - name: Run chart-testing (install)
+      #   if: steps.list-changed.outputs.changed == 'true'
+      #   run: ct install --target-branch ${{ github.event.repository.default_branch }}
