@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   as212510-net:
   - apiVersion: v2
+    appVersion: 2.1.2
+    created: "2024-04-07T23:21:24.627014578Z"
+    description: as212510.net helm chart for Kubernetes
+    digest: b1242e277bcc4f9a23d9fca3940e5c4c40509823071e11f3e94caf8c21efd1af
+    home: https://github.com/M0NsTeRRR/as212510.net
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: as212510-net
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.4.0/as212510-net-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     appVersion: 2.1.0
     created: "2024-04-06T23:06:40.772339217Z"
     description: as212510.net helm chart for Kubernetes
@@ -368,6 +386,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.1.0/bazarr-0.1.0.tgz
     version: 0.1.0
   flaresolverr:
+  - apiVersion: v2
+    appVersion: v3.3.16
+    created: "2024-04-07T23:21:24.794788428Z"
+    description: flaresolverr helm chart for Kubernetes
+    digest: 8a1218707ef962a2ceaf8dee710352652b4e251abfc2e7156ecda149a4c60653
+    home: https://github.com/FlareSolverr/FlareSolverr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: flaresolverr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.2.0/flaresolverr-0.2.0.tgz
+    version: 0.2.0
   - apiVersion: v2
     appVersion: v3.3.16
     created: "2024-04-06T23:06:41.092595503Z"
@@ -803,6 +839,24 @@ entries:
   kea-exporter:
   - apiVersion: v2
     appVersion: v0.7.0
+    created: "2024-04-07T23:21:24.958103397Z"
+    description: kea-exporter helm chart for Kubernetes
+    digest: d88cca8449cfd6ca6c57eef3349aa9b2dd85c2191b5ba0804008b995ca377d7c
+    home: https://github.com/mweinelt/kea-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: kea-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/kea-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.2.0/kea-exporter-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: v0.7.0
     created: "2024-04-06T23:06:41.550040615Z"
     description: kea-exporter helm chart for Kubernetes
     digest: 057f251cf2cd86755ff22c86dc843519383e1ee122cb15f9d3f35e6d848cfc70
@@ -959,6 +1013,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/overseerr-0.1.0/overseerr-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.2.2
+    created: "2024-04-07T23:21:25.13591121Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 16f25726beb225ec37c1a572a320c9c723121e8e37781ce14f6fe765eb3578b7
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.0/prometheus-pve-exporter-0.2.0.tgz
+    version: 0.2.0
   - apiVersion: v2
     appVersion: 3.2.2
     created: "2024-04-06T23:06:41.722850977Z"
@@ -1784,4 +1856,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-06T23:06:42.359409041Z"
+generated: "2024-04-07T23:21:25.136138144Z"
