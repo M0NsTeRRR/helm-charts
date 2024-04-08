@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   as212510-net:
   - apiVersion: v2
+    appVersion: 3.0.0
+    created: "2024-04-08T15:42:26.601392097Z"
+    description: as212510.net helm chart for Kubernetes
+    digest: 5d6e5f2a7f2473c4c4798f67a86768689fd8963c7cdbc0d6a37d58643a036cce
+    home: https://github.com/M0NsTeRRR/as212510.net
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: as212510-net
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.5.0/as212510-net-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 2.1.2
     created: "2024-04-07T23:21:24.627014578Z"
     description: as212510.net helm chart for Kubernetes
@@ -1856,4 +1874,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-07T23:21:25.136138144Z"
+generated: "2024-04-08T15:42:26.601574036Z"
