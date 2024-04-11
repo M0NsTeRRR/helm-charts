@@ -55,10 +55,10 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
-            - name: QBT_EULA
-              value: "accept"
-            - name: QBT_WEBUI_PORT
+            - name: QBITTORRENT__PORT
               value: "{{ $.Values.service.web.port }}"
+            - name: QBITTORRENT__BT_PORT
+              value: "8388"
           {{- with .Values.extraEnvFrom }}
             {{- toYaml .Values.extraEnv | nindent 12 }}
           {{- end }}
