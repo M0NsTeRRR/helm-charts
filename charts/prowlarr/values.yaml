@@ -35,8 +35,9 @@ serviceAccount:
 podAnnotations: {}
 podLabels: {}
 
-podSecurityContext: {}
-  # fsGroup: 2000
+podSecurityContext:
+  fsGroup: 65534
+  fsGroupChangePolicy: OnRootMismatch
 
 securityContext:
   allowPrivilegeEscalation: false
@@ -48,8 +49,6 @@ securityContext:
   privileged: false
   runAsUser: 65534
   runAsGroup: 65534
-  fsGroup: 65534
-  fsGroupChangePolicy: OnRootMismatch
   seccompProfile:
     type: RuntimeDefault
 
