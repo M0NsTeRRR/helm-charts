@@ -1,6 +1,6 @@
 # flaresolverr
 
-![Version: 0.2.1](https://img.shields.io/badge/Version-0.2.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.17](https://img.shields.io/badge/AppVersion-v3.3.17-informational?style=flat-square)
+![Version: 0.2.3](https://img.shields.io/badge/Version-0.2.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.17](https://img.shields.io/badge/AppVersion-v3.3.17-informational?style=flat-square)
 
 flaresolverr helm chart for Kubernetes
 

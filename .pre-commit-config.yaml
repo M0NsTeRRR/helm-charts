@@ -6,11 +6,3 @@ repos:
       - id: helm-docs-built
         args:
           - --chart-search-root=charts
-  - repo: local
-    hooks:
-      - id: helm-schema-gen
-        name: helm schema gen plugin
-        language: script
-        files: (^|/)values\.yaml$
-        entry: git-hook/helm-schema-gen
-        require_serial: true
