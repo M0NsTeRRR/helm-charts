@@ -1,6 +1,6 @@
 # flaresolverr
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.16](https://img.shields.io/badge/AppVersion-v3.3.16-informational?style=flat-square)
+![Version: 0.2.1](https://img.shields.io/badge/Version-0.2.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.17](https://img.shields.io/badge/AppVersion-v3.3.17-informational?style=flat-square)
 
 flaresolverr helm chart for Kubernetes
 
@@ -66,6 +66,8 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | resources | object | `{}` |  |
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| securityContext.fsGroup | int | `1000` |  |
+| securityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | securityContext.privileged | bool | `false` |  |
 | securityContext.readOnlyRootFilesystem | bool | `false` |  |
 | securityContext.runAsGroup | int | `1000` |  |

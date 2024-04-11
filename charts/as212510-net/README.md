@@ -1,6 +1,6 @@
 # as212510-net
 
-![Version: 0.5.0](https://img.shields.io/badge/Version-0.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.0](https://img.shields.io/badge/AppVersion-3.0.0-informational?style=flat-square)
+![Version: 0.5.1](https://img.shields.io/badge/Version-0.5.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.0.0](https://img.shields.io/badge/AppVersion-3.0.0-informational?style=flat-square)
 
 as212510.net helm chart for Kubernetes
 
@@ -62,6 +62,8 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | resources | object | `{}` |  |
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| securityContext.fsGroup | int | `65532` |  |
+| securityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | securityContext.privileged | bool | `false` |  |
 | securityContext.readOnlyRootFilesystem | bool | `true` |  |
 | securityContext.runAsGroup | int | `65532` |  |

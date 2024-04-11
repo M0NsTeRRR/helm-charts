@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 0.2.11](https://img.shields.io/badge/Version-0.2.11-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.4-1](https://img.shields.io/badge/AppVersion-4.6.4--1-informational?style=flat-square)
+![Version: 0.3.0](https://img.shields.io/badge/Version-0.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.4](https://img.shields.io/badge/AppVersion-4.6.4-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -58,7 +58,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | gluetun.volumeMounts | list | `[]` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"qbittorrent/docker-qbittorrent-nox"` |  |
+| image.repository | string | `"onedr0p/qbittorrent"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
@@ -76,7 +76,16 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | podSecurityContext | object | `{}` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
-| securityContext | object | `{}` |  |
+| securityContext.allowPrivilegeEscalation | bool | `false` |  |
+| securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| securityContext.fsGroup | int | `65534` |  |
+| securityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| securityContext.privileged | bool | `false` |  |
+| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.runAsGroup | int | `65534` |  |
+| securityContext.runAsNonRoot | bool | `true` |  |
+| securityContext.runAsUser | int | `65534` |  |
+| securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
 | service.torrent.annotations | object | `{}` | Annotations to add to the torrent service |
 | service.torrent.port | int | `6881` |  |
 | service.torrent.type | string | `"ClusterIP"` |  |

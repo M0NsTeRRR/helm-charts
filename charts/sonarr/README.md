@@ -1,6 +1,6 @@
 # sonarr
 
-![Version: 0.1.8](https://img.shields.io/badge/Version-0.1.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.3](https://img.shields.io/badge/AppVersion-4.0.3-informational?style=flat-square)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.3](https://img.shields.io/badge/AppVersion-4.0.3-informational?style=flat-square)
 
 sonarr helm chart for Kubernetes
 
@@ -46,8 +46,8 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the sonarr pods |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.registry | string | `"lscr.io"` |  |
-| image.repository | string | `"linuxserver/sonarr"` |  |
+| image.registry | string | `"ghcr.io"` |  |
+| image.repository | string | `"onedr0p/sonarr"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
@@ -65,7 +65,16 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | podSecurityContext | object | `{}` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
-| securityContext | object | `{}` |  |
+| securityContext.allowPrivilegeEscalation | bool | `false` |  |
+| securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| securityContext.fsGroup | int | `65534` |  |
+| securityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| securityContext.privileged | bool | `false` |  |
+| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.runAsGroup | int | `65534` |  |
+| securityContext.runAsNonRoot | bool | `true` |  |
+| securityContext.runAsUser | int | `65534` |  |
+| securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
 | service.port | int | `80` |  |
 | service.type | string | `"ClusterIP"` |  |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |

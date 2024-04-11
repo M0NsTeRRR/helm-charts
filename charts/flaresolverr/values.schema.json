@@ -153,6 +153,12 @@
                         }
                     }
                 },
+                "fsGroup": {
+                    "type": "integer"
+                },
+                "fsGroupChangePolicy": {
+                    "type": "string"
+                },
                 "privileged": {
                     "type": "boolean"
                 },
