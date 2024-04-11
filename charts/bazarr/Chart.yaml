@@ -3,8 +3,8 @@ kubeVersion: ">=1.23.0-0"
 name: bazarr
 description: bazarr helm chart for Kubernetes
 type: application
-version: 0.1.11
-# image: linuxserver/bazarr
+version: 0.2.0
+# image: ghcr.io/onedr0p/bazarr
 appVersion: "1.4.2"
 maintainers:
   - name: Ludovic Ortega
