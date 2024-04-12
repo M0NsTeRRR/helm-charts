@@ -54,6 +54,10 @@ spec:
             httpGet:
               path: /
               port: http
+              initialDelaySeconds: 60
+              periodSeconds: 10
+              timeoutSeconds: 1
+              failureThreshold: 3
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.extraEnv }}

@@ -35,22 +35,16 @@ serviceAccount:
 podAnnotations: {}
 podLabels: {}
 
-podSecurityContext:
-  fsGroup: 65534
-  fsGroupChangePolicy: OnRootMismatch
+podSecurityContext: {}
+  # fsGroup: 2000
 
-securityContext:
-  allowPrivilegeEscalation: false
-  capabilities:
-    drop:
-      - ALL
-  readOnlyRootFilesystem: true
-  runAsNonRoot: true
-  privileged: false
-  runAsUser: 65534
-  runAsGroup: 65534
-  seccompProfile:
-    type: RuntimeDefault
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
 
 service:
   web:
