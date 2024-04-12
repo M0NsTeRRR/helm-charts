@@ -275,6 +275,24 @@ entries:
   bazarr:
   - apiVersion: v2
     appVersion: 1.4.2
+    created: "2024-04-12T08:16:45.429416191Z"
+    description: bazarr helm chart for Kubernetes
+    digest: c8413b362b5f74e8c149e745bff2fb186226966f7ec9425e1aa183263cd971b5
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.2.5/bazarr-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v2
+    appVersion: 1.4.2
     created: "2024-04-12T00:07:45.3999853Z"
     description: bazarr helm chart for Kubernetes
     digest: d7d53d728cd1a477c2e1955dfb3962c46668a77696f7d43b41798bf2020d84f0
@@ -1742,6 +1760,24 @@ entries:
   qbittorrent:
   - apiVersion: v2
     appVersion: 4.6.4
+    created: "2024-04-12T08:16:45.555851685Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: e0fa6ce06bb8026d3838ffd3aa20b0b90564c01b20fecaf8e79ff6a40f743214
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.3.5/qbittorrent-0.3.5.tgz
+    version: 0.3.5
+  - apiVersion: v2
+    appVersion: 4.6.4
     created: "2024-04-12T00:07:45.535621632Z"
     description: qbittorrent helm chart for Kubernetes
     digest: d6728c385806ce7afb02395cd14896df8da66743fdd118d9bc32615ae48f2e1c
@@ -2432,4 +2468,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-12T00:07:45.536067601Z"
+generated: "2024-04-12T08:16:45.556333995Z"
