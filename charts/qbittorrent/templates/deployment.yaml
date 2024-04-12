@@ -84,7 +84,7 @@ spec:
           imagePullPolicy: {{ .Values.gluetun.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 8888
+              containerPort: {{ $.Values.service.web.port }}
               protocol: TCP
             - name: shadowsocks-tcp
               containerPort: 8388
@@ -92,14 +92,6 @@ spec:
             - name: shadowsocks-udp
               containerPort: 8388
               protocol: UDP
-          livenessProbe:
-            httpGet:
-              path: /api/v2/app/version
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /api/v2/app/version
-              port: http
           resources:
             {{- toYaml .Values.gluetun.resources | nindent 12 }}
           {{- with .Values.gluetun.extraEnv }}
