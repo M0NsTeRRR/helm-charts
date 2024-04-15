@@ -1,6 +1,6 @@
 # radarr
 
-![Version: 0.2.2](https://img.shields.io/badge/Version-0.2.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.3.6](https://img.shields.io/badge/AppVersion-5.3.6-informational?style=flat-square)
+![Version: 0.2.3](https://img.shields.io/badge/Version-0.2.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.3.6](https://img.shields.io/badge/AppVersion-5.3.6-informational?style=flat-square)
 
 radarr helm chart for Kubernetes
 
@@ -69,7 +69,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.privileged | bool | `false` |  |
-| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.readOnlyRootFilesystem | bool | `false` |  |
 | securityContext.runAsGroup | int | `65534` |  |
 | securityContext.runAsNonRoot | bool | `true` |  |
 | securityContext.runAsUser | int | `65534` |  |
