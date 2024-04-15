@@ -1320,6 +1320,24 @@ entries:
     version: 0.1.0
   prometheus-pve-exporter:
   - apiVersion: v2
+    appVersion: 3.2.4
+    created: "2024-04-15T15:26:29.514071664Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 360c8f808b82dc2d63a899fb19e8a0f54b89e28c12215a75bc530d513dc6a52c
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.4/prometheus-pve-exporter-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
     appVersion: 3.2.2
     created: "2024-04-11T23:56:29.127370259Z"
     description: prometheus-pve-exporter helm chart for Kubernetes
@@ -1561,6 +1579,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
   prowlarr:
+  - apiVersion: v2
+    appVersion: 1.15.0
+    created: "2024-04-15T15:26:29.709581114Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: 41f3cf760b483e224e75335c42705257e26cb705a29e299c7868e4db1d38a88d
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.2.3/prowlarr-0.2.3.tgz
+    version: 0.2.3
   - apiVersion: v2
     appVersion: 1.15.0
     created: "2024-04-11T23:56:29.238342954Z"
@@ -2063,6 +2099,24 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: 5.3.6
+    created: "2024-04-15T15:26:29.87859174Z"
+    description: radarr helm chart for Kubernetes
+    digest: 277ae9ab902df175d31457519ea3bed678ee2f30ab85750d8a41c016bd7454b4
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.2.3/radarr-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 5.3.6
     created: "2024-04-11T23:56:29.426219505Z"
     description: radarr helm chart for Kubernetes
     digest: 4d5491e9545ad971172f28f302bd29fd68e34fb1948313739cfad73c360f55a4
@@ -2274,6 +2328,24 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 4.0.3
+    created: "2024-04-15T15:26:30.058161247Z"
+    description: sonarr helm chart for Kubernetes
+    digest: f8bc19b870f60e55e9ffe8aba66110872323c81a407555a047fd6fdf85e4a415
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.2.3/sonarr-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 4.0.3
     created: "2024-04-11T23:56:29.525846982Z"
     description: sonarr helm chart for Kubernetes
     digest: 0e0c93cafe87b348600f4e3249cdced7df7985cf2d5ded97ec6b12f6132dfd31
@@ -2468,4 +2540,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-12T08:16:45.556333995Z"
+generated: "2024-04-15T15:26:30.058636973Z"
