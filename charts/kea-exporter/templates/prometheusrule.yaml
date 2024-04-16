@@ -10,7 +10,7 @@ spec:
     - name: KeaAlerts
       rules:
         - alert: KeaExporterDown
-          expr: up{job="kea-exporter-metrics"} != 1
+          expr: {{ printf "up{job=\"%s-metrics\"} != 1" (include "kea-exporter.fullname" .) }}
           for: 5m
           labels:
             severity: critical

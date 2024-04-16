@@ -10,7 +10,7 @@ spec:
     - name: PVEAlerts
       rules:
         - alert: PVEExporterDown
-          expr: up{job="prometheus-pve-exporter-metrics"} != 1
+          expr: {{ printf "up{job=\"%s-metrics\"} != 1" (include "prometheus-pve-exporter.fullname" .) }}
           for: 5m
           labels:
             severity: critical

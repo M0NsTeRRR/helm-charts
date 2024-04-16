@@ -1,0 +1,20 @@
+{{- if .Values.prometheusRule.enabled -}}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "routinator.fullname" . }}
+  labels:
+    {{- include "routinator.labels" . | nindent 4 }}
+spec:
+  groups:
+    - name: RoutinatorAlerts
+      rules:
+        - alert: RoutinatorDown
+          expr: {{ printf "up{job=\"%s-metrics\"} != 1" (include "routinator.fullname" .) }}
+          for: 5m
+          labels:
+            severity: critical
+          annotations:
+            description: 'Routinator instance {{`{{`}}$labels.instance{{`}}`}} from job {{`{{`}}$labels.job{{`}}`}} is down.'
+            summary: Routinator instance down.
+{{- end }}

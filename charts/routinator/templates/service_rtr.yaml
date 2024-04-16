@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "routinator.fullname" . }}-rtr
+  labels:
+    {{- include "routinator.labels" . | nindent 4 }}
+  {{- with .Values.rtrService.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  type: {{ .Values.rtrService.type }}
+  ports:
+    - port: {{ .Values.rtrService.port }}
+      targetPort: rtr
+      protocol: TCP
+      name: rtr
+  selector:
+    {{- include "routinator.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack
