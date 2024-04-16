@@ -1,10 +1,10 @@
-# kea-exporter
+# routinator
 
-![Version: 0.2.4](https://img.shields.io/badge/Version-0.2.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.7.0](https://img.shields.io/badge/AppVersion-v0.7.0-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.13.2](https://img.shields.io/badge/AppVersion-v0.13.2-informational?style=flat-square)
 
-kea-exporter helm chart for Kubernetes
+routinator helm chart for Kubernetes
 
-**Homepage:** <https://github.com/mweinelt/kea-exporter>
+**Homepage:** <https://github.com/NLnetLabs/routinator>
 
 ## Maintainers
 
@@ -14,7 +14,7 @@ kea-exporter helm chart for Kubernetes
 
 ## Source Code
 
-* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/kea-exporter>
+* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/routinator>
 
 ## Requirements
 
@@ -41,8 +41,8 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the kea-exporter pods |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"mweinelt/kea-exporter"` |  |
+| image.registry | string | `"docker.io"` |  |
+| image.repository | string | `"nlnetlabs/routinator"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
@@ -57,18 +57,21 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
-| podSecurityContext.fsGroup | int | `1000` |  |
+| podSecurityContext.fsGroup | int | `1012` |  |
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | prometheusRule.enabled | bool | `false` | If true, a PrometheusRule CRD is created for a prometheus operator |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
+| rtrService.annotations | object | `{}` |  |
+| rtrService.port | int | `3323` |  |
+| rtrService.type | string | `"LoadBalancer"` |  |
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.privileged | bool | `false` |  |
-| securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| securityContext.runAsGroup | int | `1000` |  |
+| securityContext.readOnlyRootFilesystem | bool | `false` |  |
+| securityContext.runAsGroup | int | `1012` |  |
 | securityContext.runAsNonRoot | bool | `true` |  |
-| securityContext.runAsUser | int | `1000` |  |
+| securityContext.runAsUser | int | `1012` |  |
 | securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
 | service.port | int | `80` |  |
 | service.type | string | `"ClusterIP"` |  |
@@ -85,7 +88,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | serviceMonitor.relabelings | list | `[]` |  |
 | serviceMonitor.scheme | string | `"http"` |  |
 | serviceMonitor.scrapeTimeout | string | `"30s"` |  |
-| serviceMonitor.service.port | int | `9547` | Metrics service port to scrape |
+| serviceMonitor.service.port | int | `8323` | Metrics service port to scrape |
 | serviceMonitor.targetLabels | list | `[]` |  |
 | serviceMonitor.tlsConfig | object | `{}` |  |
 | tolerations | list | `[]` |  |
