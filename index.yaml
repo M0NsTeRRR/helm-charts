@@ -1091,6 +1091,24 @@ entries:
   kea-exporter:
   - apiVersion: v2
     appVersion: v0.7.0
+    created: "2024-04-16T22:06:32.549322022Z"
+    description: kea-exporter helm chart for Kubernetes
+    digest: 9a92b51f8c02bf8a247d8cad78704c1178504e20013072c240d2190d800e6c0e
+    home: https://github.com/mweinelt/kea-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: kea-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/kea-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.2.4/kea-exporter-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
+    appVersion: v0.7.0
     created: "2024-04-11T23:56:29.037709949Z"
     description: kea-exporter helm chart for Kubernetes
     digest: 019661bb4e9ee233069422a65091173d6b023d8315c58a46db927c7a33c7aeb3
@@ -1319,6 +1337,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/overseerr-0.1.0/overseerr-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.2.4
+    created: "2024-04-16T22:06:32.643616131Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 49f5a0d3cc5c2b05450fd31400822db07175e94e47e08ecae9a560d5967f26a8
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.5/prometheus-pve-exporter-0.2.5.tgz
+    version: 0.2.5
   - apiVersion: v2
     appVersion: 3.2.4
     created: "2024-04-15T15:26:29.514071664Z"
@@ -2325,6 +2361,25 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.0/radarr-0.1.0.tgz
     version: 0.1.0
+  routinator:
+  - apiVersion: v2
+    appVersion: v0.13.2
+    created: "2024-04-16T22:06:32.742508286Z"
+    description: routinator helm chart for Kubernetes
+    digest: fc6cf495171df326fcb5ca4459c6cdedb3429841a2dfb9a90797d0d657de2f56
+    home: https://github.com/NLnetLabs/routinator
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: routinator
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/routinator
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/routinator-0.1.0/routinator-0.1.0.tgz
+    version: 0.1.0
   sonarr:
   - apiVersion: v2
     appVersion: 4.0.3
@@ -2540,4 +2595,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-15T15:26:30.058636973Z"
+generated: "2024-04-16T22:06:32.742829646Z"
