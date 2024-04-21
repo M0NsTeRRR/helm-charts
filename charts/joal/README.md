@@ -1,10 +1,10 @@
-# bazarr
+# joal
 
-![Version: 0.2.6](https://img.shields.io/badge/Version-0.2.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.4.2](https://img.shields.io/badge/AppVersion-1.4.2-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.36](https://img.shields.io/badge/AppVersion-2.1.36-informational?style=flat-square)
 
-bazarr helm chart for Kubernetes
+joal helm chart for Kubernetes
 
-**Homepage:** <https://github.com/morpheus65535/bazarr>
+**Homepage:** <https://github.com/anthonyraymond/joal>
 
 ## Maintainers
 
@@ -14,7 +14,7 @@ bazarr helm chart for Kubernetes
 
 ## Source Code
 
-* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr>
+* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/joal>
 
 ## Requirements
 
@@ -42,12 +42,12 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
 | config.persistence.size | string | `"5Gi"` | Size of persistent disk |
-| extraEnv | list | `[]` | Environment variables to add to the bazarr pods |
-| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the bazarr pods |
+| extraEnv | list | `[]` | Environment variables to add to the radarr pods |
+| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the radarr pods |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"onedr0p/bazarr"` |  |
+| image.registry | string | `"docker.io"` |  |
+| image.repository | string | `"anthonyraymond/joal"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
@@ -58,6 +58,13 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
 | ingress.ingressClassName | string | `""` |  |
 | ingress.tls | list | `[]` |  |
+| initContainerImage.pullPolicy | string | `"IfNotPresent"` |  |
+| initContainerImage.registry | string | `"docker.io"` |  |
+| initContainerImage.repository | string | `"busybox"` |  |
+| initContainerImage.sha | string | `""` |  |
+| initContainerImage.tag | string | `"1.36"` | Overrides the image tag whose default is the chart appVersion. |
+| joal.path_prefix | string | `"joal"` |  |
+| joal.secret_token | string | `"password"` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
@@ -69,7 +76,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.privileged | bool | `false` |  |
-| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.readOnlyRootFilesystem | bool | `false` |  |
 | securityContext.runAsGroup | int | `65534` |  |
 | securityContext.runAsNonRoot | bool | `true` |  |
 | securityContext.runAsUser | int | `65534` |  |

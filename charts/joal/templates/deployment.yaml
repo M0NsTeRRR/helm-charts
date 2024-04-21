@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "bazarr.fullname" . }}
+  name: {{ include "joal.fullname" . }}
   labels:
-    {{- include "bazarr.labels" . | nindent 4 }}
+    {{- include "joal.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -12,7 +12,7 @@ spec:
     type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
-      {{- include "bazarr.selectorLabels" . | nindent 6 }}
+      {{- include "joal.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -20,7 +20,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "bazarr.labels" . | nindent 8 }}
+        {{- include "joal.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -29,9 +29,20 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "bazarr.serviceAccountName" . }}
+      serviceAccountName: {{ include "joal.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      initContainers:
+        - name: init-busybox
+          {{- if .Values.initContainerImage.sha }}
+          image: "{{ .Values.initContainerImage.registry }}/{{ .Values.initContainerImage.repository }}:{{ .Values.initContainerImage.tag }}@sha256:{{ .Values.image.sha }}"
+          {{- else }}
+          image: "{{ .Values.initContainerImage.registry }}/{{ .Values.initContainerImage.repository }}:{{ .Values.initContainerImage.tag }}"
+          {{- end }}
+          command: ['sh', '-c', 'mkdir -p /data/torrents']
+          volumeMounts:
+            - name: config
+              mountPath: /data
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -42,17 +53,23 @@ spec:
           image: "{{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           {{- end }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - --joal-conf=/data
+            - --spring.main.web-environment=true
+            - --server.port=7878
+            - --joal.ui.path.prefix={{ .Values.joal.path_prefix }}
+            - --joal.ui.secret-token={{ .Values.joal.secret_token }}
           ports:
             - name: http
-              containerPort: 6767
+              containerPort: 7878
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /{{ .Values.joal.path_prefix }}/ui
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /{{ .Values.joal.path_prefix }}/ui
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
@@ -66,14 +83,14 @@ spec:
           {{- end }}
           volumeMounts:
             - name: config
-              mountPath: /config
+              mountPath: /data
           {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: {{ include "bazarr.configPersistenceName" . }}
+            claimName: {{ include "joal.configPersistenceName" . }}
       {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
