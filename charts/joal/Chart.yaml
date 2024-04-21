@@ -1,0 +1,15 @@
+apiVersion: v2
+kubeVersion: ">=1.23.0-0"
+name: joal
+description: joal helm chart for Kubernetes
+type: application
+version: 0.1.0
+# image: anthonyraymond/joal
+appVersion: "2.1.36"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
+sources:
+  - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/joal
+home: https://github.com/anthonyraymond/joal
+icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169

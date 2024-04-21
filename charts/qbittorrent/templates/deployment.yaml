@@ -77,9 +77,9 @@ spec:
           securityContext:
             {{- toYaml .Values.gluetun.securityContext | nindent 12 }}
           {{- if .Values.gluetun.image.sha }}
-          image: "{{ .Values.gluetun.image.registry }}/{{ .Values.gluetun.image.repository }}:{{ .Values.gluetun.image.tag | default .Chart.AppVersion }}@sha256:{{ .Values.gluetun.image.sha }}"
+          image: "{{ .Values.gluetun.image.registry }}/{{ .Values.gluetun.image.repository }}:{{ .Values.gluetun.image.tag }}@sha256:{{ .Values.gluetun.image.sha }}"
           {{- else }}
-          image: "{{ .Values.gluetun.image.registry }}/{{ .Values.gluetun.image.repository }}:{{ .Values.gluetun.image.tag | default .Chart.AppVersion }}"
+          image: "{{ .Values.gluetun.image.registry }}/{{ .Values.gluetun.image.repository }}:{{ .Values.gluetun.image.tag }}"
           {{- end }}
           imagePullPolicy: {{ .Values.gluetun.image.pullPolicy }}
           ports:
