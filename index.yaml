@@ -1393,6 +1393,24 @@ entries:
     version: 0.1.0
   prometheus-pve-exporter:
   - apiVersion: v2
+    appVersion: 3.4.0
+    created: "2024-05-06T10:18:01.318316307Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: b9669f138e9e06226bfbfc64b27249a6d5a18c4dd84984816d219be8db82eab4
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.7/prometheus-pve-exporter-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v2
     appVersion: 3.2.5
     created: "2024-04-19T08:22:53.853439955Z"
     description: prometheus-pve-exporter helm chart for Kubernetes
@@ -1689,6 +1707,24 @@ entries:
     version: 0.1.0
   prowlarr:
   - apiVersion: v2
+    appVersion: 1.16.2
+    created: "2024-05-06T10:18:01.442075385Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: e24ce713cc6e08aa6812ac44fc1d5e8fc40ce56325be990e5b667e33076a71e1
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.2.4/prowlarr-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
     appVersion: 1.15.0
     created: "2024-04-15T15:26:29.709581114Z"
     description: prowlarr helm chart for Kubernetes
@@ -1903,6 +1939,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.0/prowlarr-0.1.0.tgz
     version: 0.1.0
   qbittorrent:
+  - apiVersion: v2
+    appVersion: 4.6.4
+    created: "2024-05-06T10:18:01.574472104Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: ff691c752cea2a67473c07a4ec0c19a3506454bbd1d98e583b8c372dcba17b20
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.3.7/qbittorrent-0.3.7.tgz
+    version: 0.3.7
   - apiVersion: v2
     appVersion: 4.6.4
     created: "2024-04-21T15:38:48.450856207Z"
@@ -2722,4 +2776,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-04-21T15:38:48.451210209Z"
+generated: "2024-05-06T10:18:01.574865281Z"
