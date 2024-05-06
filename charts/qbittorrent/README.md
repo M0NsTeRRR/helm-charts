@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 0.3.6](https://img.shields.io/badge/Version-0.3.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.4](https://img.shields.io/badge/AppVersion-4.6.4-informational?style=flat-square)
+![Version: 0.3.7](https://img.shields.io/badge/Version-0.3.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.4](https://img.shields.io/badge/AppVersion-4.6.4-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -78,7 +78,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | resources | object | `{}` |  |
 | securityContext | object | `{}` |  |
 | service.torrent.annotations | object | `{}` | Annotations to add to the torrent service |
-| service.torrent.port | int | `6881` |  |
+| service.torrent.port | int | `8388` |  |
 | service.torrent.type | string | `"ClusterIP"` |  |
 | service.web.annotations | object | `{}` | Annotations to add to the web service |
 | service.web.port | int | `80` |  |

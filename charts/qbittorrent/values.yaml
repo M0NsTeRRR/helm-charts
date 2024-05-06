@@ -54,7 +54,7 @@ service:
     annotations: {}
   torrent:
     type: ClusterIP
-    port: 6881
+    port: 8388
     # -- Annotations to add to the torrent service
     annotations: {}
 
