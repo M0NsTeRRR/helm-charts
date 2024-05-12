@@ -782,6 +782,24 @@ entries:
     version: 0.1.0
   jellyfin:
   - apiVersion: v2
+    appVersion: 10.9.0
+    created: "2024-05-12T09:19:47.527659574Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 5f818ade97e9ba9e07fd1316dc933a5141b77abf5fec87b585196067805664bd
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.12/jellyfin-0.1.12.tgz
+    version: 0.1.12
+  - apiVersion: v2
     appVersion: 10.8.13-1
     created: "2024-04-11T22:57:07.838556332Z"
     description: jellyfin helm chart for Kubernetes
@@ -1392,6 +1410,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/overseerr-0.1.0/overseerr-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.4.1
+    created: "2024-05-12T09:19:47.623010892Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: c9e2e8372e224961e6281118e21acb8ec8b66500a9b5628f4005417640f3d68d
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.8/prometheus-pve-exporter-0.2.8.tgz
+    version: 0.2.8
   - apiVersion: v2
     appVersion: 3.4.0
     created: "2024-05-06T10:18:01.318316307Z"
@@ -2776,4 +2812,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-06T10:18:01.574865281Z"
+generated: "2024-05-12T09:19:47.623456884Z"
