@@ -782,6 +782,24 @@ entries:
     version: 0.1.0
   jellyfin:
   - apiVersion: v2
+    appVersion: 10.9.2
+    created: "2024-05-18T15:19:18.037566413Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 85ab446efd706a6478832ccd653de2ae3cf813508c591a7948fd06a20efa5201
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.13/jellyfin-0.1.13.tgz
+    version: 0.1.13
+  - apiVersion: v2
     appVersion: 10.9.0
     created: "2024-05-12T09:19:47.527659574Z"
     description: jellyfin helm chart for Kubernetes
@@ -1743,6 +1761,24 @@ entries:
     version: 0.1.0
   prowlarr:
   - apiVersion: v2
+    appVersion: 1.17.2
+    created: "2024-05-18T15:19:18.201789446Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: 1436e9d5245834032257d3f6573cced3b0c356f2e1f597942ae939e8d1ecd14f
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.2.5/prowlarr-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v2
     appVersion: 1.16.2
     created: "2024-05-06T10:18:01.442075385Z"
     description: prowlarr helm chart for Kubernetes
@@ -2315,6 +2351,24 @@ entries:
     version: 0.1.0
   radarr:
   - apiVersion: v2
+    appVersion: 5.6.0
+    created: "2024-05-18T15:19:18.374765997Z"
+    description: radarr helm chart for Kubernetes
+    digest: ab7f1e93d0027e100d2cce5c4763451ffa0e81ac8c965e6480657583888fcc90
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.2.5/radarr-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v2
     appVersion: 5.4.6
     created: "2024-04-19T08:22:54.021702637Z"
     description: radarr helm chart for Kubernetes
@@ -2812,4 +2866,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-12T09:19:47.623456884Z"
+generated: "2024-05-18T15:19:18.375258945Z"
