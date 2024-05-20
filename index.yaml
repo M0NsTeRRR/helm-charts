@@ -1762,6 +1762,24 @@ entries:
   prowlarr:
   - apiVersion: v2
     appVersion: 1.17.2
+    created: "2024-05-20T23:35:06.703304432Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: bb5baefb6fb0618f79b79c6d5350224cb99d655dde565d345962a2d28e2bb40c
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.3.0/prowlarr-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.17.2
     created: "2024-05-18T15:19:18.201789446Z"
     description: prowlarr helm chart for Kubernetes
     digest: 1436e9d5245834032257d3f6573cced3b0c356f2e1f597942ae939e8d1ecd14f
@@ -2866,4 +2884,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-18T15:19:18.375258945Z"
+generated: "2024-05-20T23:35:06.703628116Z"
