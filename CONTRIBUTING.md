@@ -28,6 +28,11 @@ Signed-off-by: Random Developer <random@developer.example.org>
 
 Please use your real name and a valid email address.
 
+## Bump chart and update chart README.md
+
+We expect you to bump the Helm chart following [Semantic Versioning](https://semver.org/).
+To generate the `README.md`, we use [helm-docs](https://github.com/norwoodj/helm-docs).
+
 ## Submitting changes
 
 Please create a new PR against the `main` branch which must be based on the
