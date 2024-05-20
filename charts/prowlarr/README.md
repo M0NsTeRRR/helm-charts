@@ -1,6 +1,6 @@
 # prowlarr
 
-![Version: 0.2.5](https://img.shields.io/badge/Version-0.2.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.17.2](https://img.shields.io/badge/AppVersion-1.17.2-informational?style=flat-square)
+![Version: 0.3.0](https://img.shields.io/badge/Version-0.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.17.2](https://img.shields.io/badge/AppVersion-1.17.2-informational?style=flat-square)
 
 prowlarr helm chart for Kubernetes
 
@@ -42,7 +42,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
 | config.persistence.size | string | `"5Gi"` | Size of persistent disk |
-| config.persistence.volumeName | string | `""` | bind to existing volumes |
+| config.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
 | extraEnv | list | `[]` | Environment variables to add to the prowlarr pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the prowlarr pods |
 | fullnameOverride | string | `""` |  |
