@@ -9,6 +9,9 @@ spec:
   accessModes:
     {{- toYaml . | nindent 4 }}
   {{- end }}
+  {{- if .Values.config.persistence.volumeName }}
+  volumeName: .Values.config.persistence.volumeName
+  {{- end }}
   {{- with .Values.config.persistence.storageClass }}
   storageClassName: {{ if (eq "-" .) }}""{{ else }}{{ . }}{{ end }}
   {{- end }}

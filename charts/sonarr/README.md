@@ -37,11 +37,12 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store configuration |
+| config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"name":"","size":"5Gi","volumeName":""}}` | Creating PVC to store configuration |
 | config.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
 | config.persistence.size | string | `"5Gi"` | Size of persistent disk |
+| config.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
 | extraEnv | list | `[]` | Environment variables to add to the sonarr pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the sonarr pods |
 | fullnameOverride | string | `""` |  |
