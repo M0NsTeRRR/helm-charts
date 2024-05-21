@@ -70,15 +70,6 @@ serviceMonitor:
     # -- Metrics service port to scrape
     port: 8192
 
-# -- Creating PVC to store configuration
-config:
-  persistence:
-    # -- Size of persistent disk
-    size: 5Gi
-    # -- Annotations for PVCs
-    annotations: {}
-    # -- Config name
-    name: ""
 
 ingress:
   enabled: false
