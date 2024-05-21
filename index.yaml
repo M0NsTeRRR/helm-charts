@@ -275,6 +275,24 @@ entries:
   bazarr:
   - apiVersion: v2
     appVersion: 1.4.2
+    created: "2024-05-21T09:33:16.770570651Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 5d3436df1f9af3951828216b1ff954da5407f4983c4be8dafd0f4c1aab5e482b
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.3.0/bazarr-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.4.2
     created: "2024-04-21T15:38:48.156652323Z"
     description: bazarr helm chart for Kubernetes
     digest: 96de0c3de9c9516786e65dfbcd73bf732c19ef4c4fdfa6089cc28e341650af36
@@ -996,6 +1014,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.0/jellyfin-0.1.0.tgz
     version: 0.1.0
   jellyseerr:
+  - apiVersion: v2
+    appVersion: 1.8.1
+    created: "2024-05-21T09:33:16.874298055Z"
+    description: jellyseerr helm chart for Kubernetes
+    digest: a8bb2f3f4bbbae9daa018aa2a0354981ca6e836b6d6e5b778ab180a03d763a79
+    home: https://github.com/Fallenbagel/jellyseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyseerr-0.3.0/jellyseerr-0.3.0.tgz
+    version: 0.3.0
   - apiVersion: v2
     appVersion: 1.8.1
     created: "2024-04-19T08:22:53.68172508Z"
@@ -2017,6 +2053,24 @@ entries:
   qbittorrent:
   - apiVersion: v2
     appVersion: 4.6.4
+    created: "2024-05-21T09:33:16.993206094Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: 5e06781d0e9a8d762233129e5a611f6f3251187af67d8724f734644fcb653a08
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.4.0/qbittorrent-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 4.6.4
     created: "2024-05-06T10:18:01.574472104Z"
     description: qbittorrent helm chart for Kubernetes
     digest: ff691c752cea2a67473c07a4ec0c19a3506454bbd1d98e583b8c372dcba17b20
@@ -2906,4 +2960,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-21T00:18:58.33850948Z"
+generated: "2024-05-21T09:33:16.993704998Z"
