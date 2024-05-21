@@ -70,7 +70,7 @@ config:
     name: ""
     # -- Name of the permanent volume to reference in the claim.
     # Can be used to bind to existing volumes.
-    volumeName:
+    volumeName: ""
 
 ingress:
   enabled: false
