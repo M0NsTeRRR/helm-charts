@@ -37,10 +37,6 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| config | object | `{"persistence":{"annotations":{},"name":"","size":"5Gi"}}` | Creating PVC to store configuration |
-| config.persistence.annotations | object | `{}` | Annotations for PVCs |
-| config.persistence.name | string | `""` | Config name |
-| config.persistence.size | string | `"5Gi"` | Size of persistent disk |
 | extraEnv | list | `[]` | Environment variables to add to the flaresolverr pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the flaresolverr pods |
 | fullnameOverride | string | `""` |  |
