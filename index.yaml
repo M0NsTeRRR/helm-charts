@@ -572,6 +572,24 @@ entries:
   flaresolverr:
   - apiVersion: v2
     appVersion: v3.3.17
+    created: "2024-05-21T09:39:59.118180631Z"
+    description: flaresolverr helm chart for Kubernetes
+    digest: 383ecc394daf1b27dc8498e6be1be804242eabd9a21b58f0fdaf59e14a4652ed
+    home: https://github.com/FlareSolverr/FlareSolverr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: flaresolverr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.2.5/flaresolverr-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v2
+    appVersion: v3.3.17
     created: "2024-04-11T23:56:28.94883793Z"
     description: flaresolverr helm chart for Kubernetes
     digest: ebb1287792488667afc36e617bd77f8f69cacb733b481299302debbaf7f5ade7
@@ -2960,4 +2978,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-21T09:33:16.993704998Z"
+generated: "2024-05-21T09:39:59.118487512Z"
