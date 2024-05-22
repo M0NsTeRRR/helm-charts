@@ -62,6 +62,9 @@ config:
       - ReadWriteOnce
     # -- Config name
     name: ""
+    # -- Name of the permanent volume to reference in the claim.
+    # Can be used to bind to existing volumes.
+    volumeName: ""
 
 # -- Creating PVC to store cache
 cache:
@@ -75,6 +78,9 @@ cache:
       - ReadWriteOnce
     # -- Config name
     name: ""
+    # -- Name of the permanent volume to reference in the claim.
+    # Can be used to bind to existing volumes.
+    volumeName: ""
 
 ingress:
   enabled: false
