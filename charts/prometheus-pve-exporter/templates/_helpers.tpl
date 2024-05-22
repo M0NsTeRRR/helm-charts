@@ -39,6 +39,7 @@ helm.sh/chart: {{ include "prometheus-pve-exporter.chart" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
+app.kubernetes.io/part-of: {{ .Chart.Name }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
