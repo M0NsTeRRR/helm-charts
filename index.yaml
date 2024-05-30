@@ -607,6 +607,24 @@ entries:
     version: 0.1.0
   flaresolverr:
   - apiVersion: v2
+    appVersion: v3.3.19
+    created: "2024-05-30T11:48:16.251385545Z"
+    description: flaresolverr helm chart for Kubernetes
+    digest: 6c281d21c2f7a860cdd730443a66d6747bad41be6c3c98f99ce6010c15beb802
+    home: https://github.com/FlareSolverr/FlareSolverr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: flaresolverr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.2.7/flaresolverr-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v2
     appVersion: v3.3.17
     created: "2024-05-22T18:32:19.860508627Z"
     description: flaresolverr helm chart for Kubernetes
@@ -858,6 +876,24 @@ entries:
     version: 0.1.0
   jellyfin:
   - apiVersion: v2
+    appVersion: 10.9.3
+    created: "2024-05-30T11:48:16.369375519Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 75835f5b6e71a7b9a6645ac6fb670fce51f343c0288e6b180ad16cc3880cdfd3
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.2.1/jellyfin-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
     appVersion: 10.9.2
     created: "2024-05-22T18:32:19.956960147Z"
     description: jellyfin helm chart for Kubernetes
@@ -1104,6 +1140,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.0/jellyfin-0.1.0.tgz
     version: 0.1.0
   jellyseerr:
+  - apiVersion: v2
+    appVersion: 1.9.0
+    created: "2024-05-30T11:48:16.495937627Z"
+    description: jellyseerr helm chart for Kubernetes
+    digest: 9cfaad16d8a6379d68e8a302bf4d9fd74192131b25fca2d80b74f84071ef8e4a
+    home: https://github.com/Fallenbagel/jellyseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyseerr-0.3.2/jellyseerr-0.3.2.tgz
+    version: 0.3.2
   - apiVersion: v2
     appVersion: 1.8.1
     created: "2024-05-22T18:32:20.059392304Z"
@@ -1594,6 +1648,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/overseerr-0.1.0/overseerr-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.4.2
+    created: "2024-05-30T11:48:16.647848149Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: da61876fdc33b255f8374ea40ce52975b5f34361968cf3341b60bdbed1a2f24d
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.10/prometheus-pve-exporter-0.2.10.tgz
+    version: 0.2.10
   - apiVersion: v2
     appVersion: 3.4.1
     created: "2024-05-22T18:32:20.400930675Z"
@@ -2231,6 +2303,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.0/prowlarr-0.1.0.tgz
     version: 0.1.0
   qbittorrent:
+  - apiVersion: v2
+    appVersion: 4.6.5
+    created: "2024-05-30T11:48:16.769876288Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: 68155fcc5a5a3d7178d728fa62a90f34e920526b2b0927ca6945a96ea171f2b0
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.4.2/qbittorrent-0.4.2.tgz
+    version: 0.4.2
   - apiVersion: v2
     appVersion: 4.6.4
     created: "2024-05-22T18:32:20.618660858Z"
@@ -2931,6 +3021,24 @@ entries:
     version: 0.1.0
   sonarr:
   - apiVersion: v2
+    appVersion: 4.0.5
+    created: "2024-05-30T11:48:16.873423808Z"
+    description: sonarr helm chart for Kubernetes
+    digest: 850b9363a1123f9d79073378d71f5ac62097c17978b5459725174fadb5685843
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.3.2/sonarr-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
     appVersion: 4.0.4
     created: "2024-05-22T18:32:20.930708914Z"
     description: sonarr helm chart for Kubernetes
@@ -3198,4 +3306,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-22T18:32:20.932402496Z"
+generated: "2024-05-30T11:48:16.874096761Z"
