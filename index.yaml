@@ -860,6 +860,30 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.1.0/flaresolverr-0.1.0.tgz
     version: 0.1.0
+  hyperglass:
+  - apiVersion: v2
+    appVersion: v0.1.4
+    created: "2024-05-31T11:17:40.173432721Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 0.3.1
+    description: hyperglass helm chart for Kubernetes
+    digest: 1b5c034a8427b867a0916c8f55aaa3c6b75ebf331a9983f620624f324c87bdf7
+    home: https://github.com/thatmattlove/hyperglass
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: hyperglass
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/hyperglass
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.0/hyperglass-0.1.0.tgz
+    version: 0.1.0
   jellyfin:
   - apiVersion: v2
     appVersion: 10.9.3
@@ -3292,4 +3316,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-30T11:48:16.874096761Z"
+generated: "2024-05-31T11:17:40.173707054Z"
