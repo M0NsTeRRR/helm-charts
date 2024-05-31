@@ -1,6 +1,6 @@
 # hyperglass
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.0.0](https://img.shields.io/badge/AppVersion-2.0.0-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.1.4](https://img.shields.io/badge/AppVersion-v0.1.4-informational?style=flat-square)
 
 hyperglass helm chart for Kubernetes
 
@@ -46,7 +46,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"thatmattlove/hyperglass"` |  |
+| image.repository | string | `"m0nsterrr/hyperglass"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
@@ -61,7 +61,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
-| podSecurityContext.fsGroup | int | `65532` |  |
+| podSecurityContext.fsGroup | int | `1000` |  |
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
@@ -69,9 +69,9 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.privileged | bool | `false` |  |
 | securityContext.readOnlyRootFilesystem | bool | `false` |  |
-| securityContext.runAsGroup | int | `65532` |  |
+| securityContext.runAsGroup | int | `1000` |  |
 | securityContext.runAsNonRoot | bool | `true` |  |
-| securityContext.runAsUser | int | `65532` |  |
+| securityContext.runAsUser | int | `1000` |  |
 | securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
 | service.port | int | `80` |  |
 | service.type | string | `"ClusterIP"` |  |
@@ -81,9 +81,14 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
 | tolerations | list | `[]` |  |
 | valkey.architecture | string | `"standalone"` |  |
-| valkey.auth.enabled | bool | `true` |  |
+| valkey.auth.enabled | bool | `false` |  |
 | valkey.auth.existingSecret | string | `""` |  |
 | valkey.auth.existingSecretPasswordKey | string | `""` |  |
 | valkey.enabled | bool | `false` | enable the Bitnami Valkey chart. Refer to https://github.com/bitnami/charts/blob/main/bitnami/valkey/ for possible values. |
+| valkey.master.disableCommands[0] | string | `"FLUSHALL"` |  |
+| valkey.master.persistence.size | string | `"1Gi"` |  |
+| valkey.metrics.enabled | bool | `false` |  |
+| valkey.metrics.prometheusRule.enabled | bool | `false` |  |
+| valkey.metrics.serviceMonitor.enabled | bool | `false` |  |
 | volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
 | volumes | list | `[]` | Additional volumes on the output Deployment definition. |
