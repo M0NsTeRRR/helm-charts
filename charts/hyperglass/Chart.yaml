@@ -2,7 +2,7 @@ apiVersion: v2
 kubeVersion: ">=1.23.0-0"
 name: hyperglass
 description: hyperglass helm chart for Kubernetes
-type: application 
+type: application
 version: 0.1.0
 # image: ghcr.io/thatmattlove/hyperglass
 appVersion: "v0.1.4"
