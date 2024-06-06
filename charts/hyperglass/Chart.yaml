@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: hyperglass
 description: hyperglass helm chart for Kubernetes
 type: application
-version: 0.1.1
-# image: ghcr.io/thatmattlove/hyperglass
-appVersion: "v2.0.1"
+version: 0.1.2
+# image: ghcr.io/m0nsterrr/hyperglass
+appVersion: "v2.0.2"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
@@ -15,6 +15,6 @@ home: https://github.com/thatmattlove/hyperglass
 icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
 dependencies:
   - name: valkey
-    version: 0.3.1
+    version: 0.3.3
     repository: oci://registry-1.docker.io/bitnamicharts
     condition: valkey.enabled
