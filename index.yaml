@@ -292,6 +292,24 @@ entries:
     version: 0.1.0
   bazarr:
   - apiVersion: v2
+    appVersion: 1.4.3
+    created: "2024-06-07T10:24:06.216080018Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 86231143e44d6c1a49d2821ddd7482b753aa6ecdea2e52ec60057faab420f6db
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.3.2/bazarr-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
     appVersion: 1.4.2
     created: "2024-05-22T18:32:19.745710183Z"
     description: bazarr helm chart for Kubernetes
@@ -862,6 +880,29 @@ entries:
     version: 0.1.0
   hyperglass:
   - apiVersion: v2
+    appVersion: v2.0.2
+    created: "2024-06-07T10:24:06.324878391Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 0.3.3
+    description: hyperglass helm chart for Kubernetes
+    digest: 37e3451311f963562e0ef39c9720d07549994d8ec7de21166279e5b9fa918373
+    home: https://github.com/thatmattlove/hyperglass
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: hyperglass
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/hyperglass
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.2/hyperglass-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: v2.0.1
     created: "2024-06-01T15:12:51.643292722Z"
     dependencies:
@@ -908,6 +949,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.0/hyperglass-0.1.0.tgz
     version: 0.1.0
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.9.6
+    created: "2024-06-07T10:24:06.410401359Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: ccb9fac3020b36f6a3ff3f1f32fc3623e2087271cfed76acaa34d54f4886ac73
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.2.2/jellyfin-0.2.2.tgz
+    version: 0.2.2
   - apiVersion: v2
     appVersion: 10.9.3
     created: "2024-05-30T11:48:16.369375519Z"
@@ -2049,6 +2108,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
   prowlarr:
+  - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2024-06-07T10:24:06.508771263Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: 93f56b580a7a3798f308015d8f07f92b70781b64e07962160919e341b779c193
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.3.2/prowlarr-0.3.2.tgz
+    version: 0.3.2
   - apiVersion: v2
     appVersion: 1.17.2
     created: "2024-05-22T18:32:20.513671808Z"
@@ -3325,4 +3402,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-01T15:12:51.643621985Z"
+generated: "2024-06-07T10:24:06.509289992Z"
