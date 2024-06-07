@@ -1,6 +1,6 @@
 # hyperglass
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.0.1](https://img.shields.io/badge/AppVersion-v2.0.1-informational?style=flat-square)
+![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.0.2](https://img.shields.io/badge/AppVersion-v2.0.2-informational?style=flat-square)
 
 hyperglass helm chart for Kubernetes
 
@@ -22,7 +22,7 @@ Kubernetes: `>=1.23.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| oci://registry-1.docker.io/bitnamicharts | valkey | 0.3.1 |
+| oci://registry-1.docker.io/bitnamicharts | valkey | 0.3.3 |
 
 ## Chart Repo
 
