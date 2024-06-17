@@ -59,8 +59,8 @@ spec:
               value: "{{ $.Values.service.web.port }}"
             - name: QBITTORRENT__BT_PORT
               value: "8388"
-          {{- with .Values.extraEnvFrom }}
-            {{- toYaml .Values.extraEnv | nindent 12 }}
+          {{- with .Values.extraEnv }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.extraEnvFrom }}
           envFrom:
