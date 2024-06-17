@@ -880,6 +880,29 @@ entries:
     version: 0.1.0
   hyperglass:
   - apiVersion: v2
+    appVersion: v2.0.3
+    created: "2024-06-17T21:52:39.124491749Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 0.3.5
+    description: hyperglass helm chart for Kubernetes
+    digest: bff97cbe83cea1e99a5187cc858ee3a004f1b8d505115fda33e3b48e1bf5cf89
+    home: https://github.com/thatmattlove/hyperglass
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: hyperglass
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/hyperglass
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.4/hyperglass-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: v2.0.2
     created: "2024-06-13T20:57:04.004414941Z"
     dependencies:
@@ -2456,6 +2479,24 @@ entries:
   qbittorrent:
   - apiVersion: v2
     appVersion: 4.6.5
+    created: "2024-06-17T21:52:39.301506629Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: d3eba792c24f99c6f76e12d4e2a87b754d5a6f25532f52f93b35d0c36d9b475e
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.4.3/qbittorrent-0.4.3.tgz
+    version: 0.4.3
+  - apiVersion: v2
+    appVersion: 4.6.5
     created: "2024-05-30T11:48:16.769876288Z"
     description: qbittorrent helm chart for Kubernetes
     digest: 68155fcc5a5a3d7178d728fa62a90f34e920526b2b0927ca6945a96ea171f2b0
@@ -3443,4 +3484,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-13T20:57:04.087732669Z"
+generated: "2024-06-17T21:52:39.302000916Z"
