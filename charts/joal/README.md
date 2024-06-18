@@ -63,7 +63,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | initContainerImage.registry | string | `"docker.io"` |  |
 | initContainerImage.repository | string | `"busybox"` |  |
 | initContainerImage.sha | string | `""` |  |
-| initContainerImage.tag | string | `"1.36"` | Overrides the image tag whose default is the chart appVersion. |
+| initContainerImage.tag | string | `"1.36"` |  |
 | joal.path_prefix | string | `"joal"` |  |
 | joal.secret_token | string | `"password"` |  |
 | nameOverride | string | `""` |  |
