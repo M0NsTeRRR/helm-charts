@@ -1,6 +1,6 @@
 # joal
 
-![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.36](https://img.shields.io/badge/AppVersion-2.1.36-informational?style=flat-square)
+![Version: 0.2.1](https://img.shields.io/badge/Version-0.2.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.36](https://img.shields.io/badge/AppVersion-2.1.36-informational?style=flat-square)
 
 joal helm chart for Kubernetes
 
@@ -63,7 +63,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | initContainerImage.registry | string | `"docker.io"` |  |
 | initContainerImage.repository | string | `"busybox"` |  |
 | initContainerImage.sha | string | `""` |  |
-| initContainerImage.tag | string | `"1.36"` |  |
+| initContainerImage.tag | string | `"1.36.1"` |  |
 | joal.path_prefix | string | `"joal"` |  |
 | joal.secret_token | string | `"password"` |  |
 | nameOverride | string | `""` |  |
