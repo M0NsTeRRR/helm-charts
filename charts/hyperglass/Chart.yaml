@@ -15,6 +15,6 @@ home: https://github.com/thatmattlove/hyperglass
 icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
 dependencies:
   - name: valkey
-    version: 0.3.6
+    version: 0.3.7
     repository: oci://registry-1.docker.io/bitnamicharts
     condition: valkey.enabled
