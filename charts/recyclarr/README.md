@@ -1,0 +1,72 @@
+# recyclarr
+
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 6.0.2](https://img.shields.io/badge/AppVersion-6.0.2-informational?style=flat-square)
+
+recyclarr helm chart for Kubernetes
+
+**Homepage:** <https://github.com/recyclarr/recyclarr>
+
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Ludovic Ortega | <ludovic.ortega@adminafk.fr> |  |
+
+## Source Code
+
+* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr>
+
+## Requirements
+
+Kubernetes: `>=1.23.0-0`
+
+## Chart Repo
+
+Add the following repo to use the chart:
+
+```console
+helm repo add adminafk https://helm-charts.adminafk.fr
+```
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| affinity | object | `{}` |  |
+| autoscaling.enabled | bool | `false` |  |
+| autoscaling.maxReplicas | int | `100` |  |
+| autoscaling.minReplicas | int | `1` |  |
+| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| extraEnv | list | `[]` | Environment variables to add to the bazarr pods |
+| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the bazarr pods |
+| fullnameOverride | string | `""` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
+| image.registry | string | `"ghcr.io"` |  |
+| image.repository | string | `"recyclarr/recyclarr"` |  |
+| image.sha | string | `""` |  |
+| image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
+| imagePullSecrets | list | `[]` |  |
+| nameOverride | string | `""` |  |
+| nodeSelector | object | `{}` |  |
+| podAnnotations | object | `{}` |  |
+| podLabels | object | `{}` |  |
+| podSecurityContext.fsGroup | int | `65534` |  |
+| podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| replicaCount | int | `1` |  |
+| resources | object | `{}` |  |
+| securityContext.allowPrivilegeEscalation | bool | `false` |  |
+| securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| securityContext.privileged | bool | `false` |  |
+| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.runAsGroup | int | `65534` |  |
+| securityContext.runAsNonRoot | bool | `true` |  |
+| securityContext.runAsUser | int | `65534` |  |
+| securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
+| serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
+| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| strategy | object | `{"type":"Recreate"}` | Deployment strategy |
+| tolerations | list | `[]` |  |
+| volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
+| volumes | list | `[]` | Additional volumes on the output Deployment definition. |
