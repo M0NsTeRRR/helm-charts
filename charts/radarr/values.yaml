@@ -59,6 +59,7 @@ service:
 # -- Creating PVC to store configuration
 config:
   persistence:
+    enabled: true
     # -- Size of persistent disk
     size: 5Gi
     # -- Annotations for PVCs

@@ -64,13 +64,17 @@ spec:
           envFrom:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          {{- if .Values.config.persistence.enabled }}
           volumeMounts:
             - name: config
               mountPath: /config
+          {{- end }}
+      {{- if .Values.config.persistence.enabled }}
       volumes:
         - name: config
           persistentVolumeClaim:
             claimName: {{ include "prowlarr.configPersistenceName" . }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
