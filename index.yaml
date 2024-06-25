@@ -3299,6 +3299,24 @@ entries:
   recyclarr:
   - apiVersion: v2
     appVersion: 6.0.2
+    created: "2024-06-25T20:45:59.595924439Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: afe36943442943839bb1c18a7de106a5972b7eb471fd143596d0f9eecad711c0
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.1.1/recyclarr-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 6.0.2
     created: "2024-06-23T23:10:46.058872732Z"
     description: recyclarr helm chart for Kubernetes
     digest: f3ef4a27ca02ff36c0aead5894b8fe27de5f1d6aea5711b4de13777c87e759ec
@@ -3675,4 +3693,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-23T23:10:46.287614296Z"
+generated: "2024-06-25T20:45:59.59640145Z"
