@@ -1,6 +1,6 @@
 # recyclarr
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 6.0.2](https://img.shields.io/badge/AppVersion-6.0.2-informational?style=flat-square)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 6.0.2](https://img.shields.io/badge/AppVersion-6.0.2-informational?style=flat-square)
 
 recyclarr helm chart for Kubernetes
 
@@ -57,7 +57,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.privileged | bool | `false` |  |
-| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.readOnlyRootFilesystem | bool | `false` |  |
 | securityContext.runAsGroup | int | `65534` |  |
 | securityContext.runAsNonRoot | bool | `true` |  |
 | securityContext.runAsUser | int | `65534` |  |
