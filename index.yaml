@@ -1567,6 +1567,24 @@ entries:
   joal:
   - apiVersion: v2
     appVersion: 2.1.36
+    created: "2024-06-26T20:38:30.983071815Z"
+    description: joal helm chart for Kubernetes
+    digest: 1cb877c15ba43f64acb72fe5716dc34e8cd5a4d747e3450600c890e1189a8588
+    home: https://github.com/anthonyraymond/joal
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: joal
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/joal
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/joal-0.2.2/joal-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 2.1.36
     created: "2024-06-18T19:33:28.317812308Z"
     description: joal helm chart for Kubernetes
     digest: b711491b7c9bc3e3f008de5c71a0e10f9215c593e411e722349eef34bf3b8a27
@@ -3299,6 +3317,24 @@ entries:
   recyclarr:
   - apiVersion: v2
     appVersion: 6.0.2
+    created: "2024-06-26T20:38:31.077790703Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: b9395994d0c49861ef52eb6d9bc559a989fb9574a4ea8c0bd2a2827a3ea5724d
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.1.2/recyclarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 6.0.2
     created: "2024-06-25T20:45:59.595924439Z"
     description: recyclarr helm chart for Kubernetes
     digest: afe36943442943839bb1c18a7de106a5972b7eb471fd143596d0f9eecad711c0
@@ -3693,4 +3729,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-25T20:45:59.59640145Z"
+generated: "2024-06-26T20:38:31.078136074Z"
