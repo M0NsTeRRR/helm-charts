@@ -35,20 +35,11 @@ Common labels
 */}}
 {{- define "recyclarr.labels" -}}
 helm.sh/chart: {{ include "recyclarr.chart" . }}
-{{ include "recyclarr.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/part-of: {{ .Chart.Name }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- end }}
-
-{{/*
-Selector labels
-*/}}
-{{- define "recyclarr.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "recyclarr.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*

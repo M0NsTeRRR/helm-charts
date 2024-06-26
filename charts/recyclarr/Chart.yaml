@@ -3,7 +3,7 @@ kubeVersion: ">=1.23.0-0"
 name: recyclarr
 description: recyclarr helm chart for Kubernetes
 type: application
-version: 0.1.1
+version: 0.1.2
 # image: ghcr.io/recyclarr/recyclarr
 appVersion: "6.0.2"
 maintainers:
