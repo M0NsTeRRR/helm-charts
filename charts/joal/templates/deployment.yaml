@@ -39,7 +39,7 @@ spec:
           {{- else }}
           image: "{{ .Values.initContainerImage.registry }}/{{ .Values.initContainerImage.repository }}:{{ .Values.initContainerImage.tag }}"
           {{- end }}
-          command: ['sh', '-c', 'mkdir -p /data/torrents']
+          command: ['sh', '-c', 'mkdir -p /data/torrents/archived']
           volumeMounts:
             - name: config
               mountPath: /data

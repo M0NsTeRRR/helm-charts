@@ -3,7 +3,7 @@ kubeVersion: ">=1.23.0-0"
 name: joal
 description: joal helm chart for Kubernetes
 type: application
-version: 0.2.1
+version: 0.2.2
 # image: anthonyraymond/joal
 appVersion: "2.1.36"
 maintainers:
