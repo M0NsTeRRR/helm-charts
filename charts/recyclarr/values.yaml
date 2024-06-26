@@ -13,7 +13,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 job:
-  schedule: "@daily"
+  schedule: "0 0 * * *"
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
   restartPolicy: "never"
