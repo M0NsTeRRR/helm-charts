@@ -6,9 +6,9 @@ metadata:
     {{- include "recyclarr.labels" . | nindent 4 }}
 spec:
   concurrencyPolicy: "Replace"
-  successfulJobsHistoryLimit: {{ .Values.successfulJobsHistoryLimit }}
-  failedJobsHistoryLimit: {{ .Values.failedJobsHistoryLimit }}
-  schedule: {{ .Values.schedule }}
+  successfulJobsHistoryLimit: {{ .Values.job.successfulJobsHistoryLimit }}
+  failedJobsHistoryLimit: {{ .Values.job.failedJobsHistoryLimit }}
+  schedule: {{ .Values.job.schedule }}
   jobTemplate:
     spec:
       template:
@@ -23,6 +23,7 @@ spec:
             {{- toYaml . | nindent 12 }}
             {{- end }}
         spec:
+          restartPolicy: {{- with .Values.job.restartPolicy }}
           {{- with .Values.imagePullSecrets }}
           imagePullSecrets:
             {{- toYaml . | nindent 12 }}
@@ -31,7 +32,7 @@ spec:
           securityContext:
             {{- toYaml .Values.podSecurityContext | nindent 12 }}
           containers:
-            - name: "ffff"
+            - name: {{ .Chart.Name }}
               securityContext:
                 {{- toYaml .Values.securityContext | nindent 16 }}
               {{- if .Values.image.sha }}

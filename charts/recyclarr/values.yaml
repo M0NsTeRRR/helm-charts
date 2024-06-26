@@ -12,9 +12,11 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-scfhedule: "@daily"
-successfulJobsHistoryLimit: 1
-failedJobsHistoryLimit: 1
+job:
+  schedule: "@daily"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  restartPolicy: "never"
 
 # -- Environment variables to add to the bazarr pods
 extraEnv: []

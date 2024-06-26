@@ -1,6 +1,6 @@
 # recyclarr
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 6.0.2](https://img.shields.io/badge/AppVersion-6.0.2-informational?style=flat-square)
+![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 6.0.2](https://img.shields.io/badge/AppVersion-6.0.2-informational?style=flat-square)
 
 recyclarr helm chart for Kubernetes
 
@@ -35,7 +35,6 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | affinity | object | `{}` |  |
 | extraEnv | list | `[]` | Environment variables to add to the bazarr pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the bazarr pods |
-| failedJobsHistoryLimit | int | `1` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"ghcr.io"` |  |
@@ -43,6 +42,10 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
+| job.failedJobsHistoryLimit | int | `1` |  |
+| job.restartPolicy | string | `"never"` |  |
+| job.schedule | string | `"@daily"` |  |
+| job.successfulJobsHistoryLimit | int | `1` |  |
 | jobAnnotations | object | `{}` |  |
 | jobLabels | object | `{}` |  |
 | nameOverride | string | `""` |  |
@@ -51,7 +54,6 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
-| scfhedule | string | `"@daily"` |  |
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | securityContext.privileged | bool | `false` |  |
@@ -64,7 +66,6 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
-| successfulJobsHistoryLimit | int | `1` |  |
 | tolerations | list | `[]` |  |
 | volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
 | volumes | list | `[]` | Additional volumes on the output Deployment definition. |
