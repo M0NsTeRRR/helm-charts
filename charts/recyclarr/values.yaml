@@ -16,7 +16,7 @@ job:
   schedule: "0 0 * * *"
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
-  restartPolicy: "never"
+  restartPolicy: "Never"
 
 # -- Environment variables to add to the bazarr pods
 extraEnv: []
