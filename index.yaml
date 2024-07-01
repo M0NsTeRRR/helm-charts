@@ -916,6 +916,29 @@ entries:
     version: 0.1.0
   hyperglass:
   - apiVersion: v2
+    appVersion: v2.0.4
+    created: "2024-07-01T16:35:45.070132993Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 0.3.*
+    description: hyperglass helm chart for Kubernetes
+    digest: 61c0005ba62a0f4dad63865b1cf6bc5c979d79c2bdc3a10d4bc8a427fd118295
+    home: https://github.com/thatmattlove/hyperglass
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: hyperglass
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/hyperglass
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.7/hyperglass-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
     appVersion: v2.0.3
     created: "2024-06-23T23:10:45.770071692Z"
     dependencies:
@@ -3388,6 +3411,24 @@ entries:
     version: 0.1.1
   recyclarr:
   - apiVersion: v2
+    appVersion: 7.0.0
+    created: "2024-07-01T16:35:45.210682Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: c2b7c24287f8ec3a71315535d17b99e01b85d207d8037ad80730eb53a09032d1
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.1.8/recyclarr-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
     appVersion: 6.0.2
     created: "2024-06-27T16:36:11.230540148Z"
     description: recyclarr helm chart for Kubernetes
@@ -3873,4 +3914,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-27T16:36:11.231094803Z"
+generated: "2024-07-01T16:35:45.21114487Z"
