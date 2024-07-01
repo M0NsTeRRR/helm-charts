@@ -66,11 +66,15 @@ spec:
           envFrom:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          {{- if or .Values.config.persistence.enabled .Values.volumeMounts }}
           volumeMounts:
+          {{- if .Values.config.persistence.enabled }}
             - name: config
               mountPath: /config
+          {{- end }}
           {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
+          {{- end }}
           {{- end }}
         {{- if .Values.gluetun.enabled }}
         - name: gluten
@@ -107,12 +111,16 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
         {{- end }}
+      {{- if or .Values.config.persistence.enabled .Values.volumes }}
       volumes:
+      {{- if .Values.config.persistence.enabled }}
         - name: config
           persistentVolumeClaim:
             claimName: {{ include "qbittorrent.configPersistenceName" . }}
-      {{- with .Values.volumes }}  
+      {{- end }}
+      {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
