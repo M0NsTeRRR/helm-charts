@@ -2692,6 +2692,24 @@ entries:
   qbittorrent:
   - apiVersion: v2
     appVersion: 4.6.5
+    created: "2024-07-01T16:50:47.531375625Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: 1ccf590db0d6053809b15f3c8ca3bb01c42129f7de3b85b533c0cbdb225b9ad7
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.4.5/qbittorrent-0.4.5.tgz
+    version: 0.4.5
+  - apiVersion: v2
+    appVersion: 4.6.5
     created: "2024-06-17T22:36:00.089461933Z"
     description: qbittorrent helm chart for Kubernetes
     digest: 0d3b4e5450c1bdd2b500d04b60bf782719027251a77f41758d8caa8a749682c3
@@ -3914,4 +3932,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-01T16:35:45.21114487Z"
+generated: "2024-07-01T16:50:47.531907418Z"
