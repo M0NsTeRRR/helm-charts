@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 0.4.4](https://img.shields.io/badge/Version-0.4.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.5](https://img.shields.io/badge/AppVersion-4.6.5-informational?style=flat-square)
+![Version: 0.4.5](https://img.shields.io/badge/Version-0.4.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.5](https://img.shields.io/badge/AppVersion-4.6.5-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -37,7 +37,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"name":"","size":"5Gi","volumeName":""}}` | Creating PVC to store configuration |
+| config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","volumeName":""}}` | Creating PVC to store configuration |
 | config.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
 | config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | config.persistence.name | string | `""` | Config name |
