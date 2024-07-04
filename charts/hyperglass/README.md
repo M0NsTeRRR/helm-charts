@@ -1,6 +1,6 @@
 # hyperglass
 
-![Version: 0.1.7](https://img.shields.io/badge/Version-0.1.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.0.4](https://img.shields.io/badge/AppVersion-v2.0.4-informational?style=flat-square)
+![Version: 0.1.8](https://img.shields.io/badge/Version-0.1.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.0.4](https://img.shields.io/badge/AppVersion-v2.0.4-informational?style=flat-square)
 
 hyperglass helm chart for Kubernetes
 
@@ -84,7 +84,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | valkey.auth.enabled | bool | `false` |  |
 | valkey.auth.existingSecret | string | `""` |  |
 | valkey.auth.existingSecretPasswordKey | string | `""` |  |
-| valkey.enabled | bool | `false` | enable the Bitnami Valkey chart. Refer to https://github.com/bitnami/charts/blob/main/bitnami/valkey/ for possible values. |
+| valkey.enabled | bool | `true` | enable the Bitnami Valkey chart. Refer to https://github.com/bitnami/charts/blob/main/bitnami/valkey/ for possible values. |
 | valkey.master.disableCommands[0] | string | `"FLUSHALL"` |  |
 | valkey.master.persistence.size | string | `"1Gi"` |  |
 | valkey.metrics.enabled | bool | `false` |  |
