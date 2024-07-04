@@ -917,6 +917,29 @@ entries:
   hyperglass:
   - apiVersion: v2
     appVersion: v2.0.4
+    created: "2024-07-04T22:42:46.556600945Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 0.3.*
+    description: hyperglass helm chart for Kubernetes
+    digest: 867ef08b407b44d802809ccd124106837cf18a67fb02e41d2721b1bca7796e82
+    home: https://github.com/thatmattlove/hyperglass
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: hyperglass
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/hyperglass
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.8/hyperglass-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: v2.0.4
     created: "2024-07-01T16:35:45.070132993Z"
     dependencies:
     - condition: valkey.enabled
@@ -1981,6 +2004,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/overseerr-0.1.0/overseerr-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.4.3
+    created: "2024-07-04T22:42:46.68919537Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 216799c4ca461ce65b11a834bec8de87833500e8c2045018f1b8ef1c1423ebe3
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.11/prometheus-pve-exporter-0.2.11.tgz
+    version: 0.2.11
   - apiVersion: v2
     appVersion: 3.4.2
     created: "2024-05-30T11:48:16.647848149Z"
@@ -3629,6 +3670,24 @@ entries:
     version: 0.1.0
   sonarr:
   - apiVersion: v2
+    appVersion: 4.0.6
+    created: "2024-07-04T22:42:46.776504708Z"
+    description: sonarr helm chart for Kubernetes
+    digest: 09733e44dfd13e0239dfd730dfa3f7011d327709ed506b0608ee04ba9c1cf5c5
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.4.1/sonarr-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
     appVersion: 4.0.5
     created: "2024-06-23T23:10:46.287044251Z"
     description: sonarr helm chart for Kubernetes
@@ -3932,4 +3991,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-01T16:50:47.531907418Z"
+generated: "2024-07-04T22:42:46.77703065Z"
