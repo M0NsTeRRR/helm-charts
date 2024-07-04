@@ -50,7 +50,7 @@ securityContext:
 
 valkey:
   # -- enable the Bitnami Valkey chart. Refer to https://github.com/bitnami/charts/blob/main/bitnami/valkey/ for possible values.
-  enabled: false
+  enabled: true
   architecture: standalone
   master:
     disableCommands:
