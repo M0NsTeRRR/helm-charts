@@ -3488,6 +3488,24 @@ entries:
     version: 0.1.1
   recyclarr:
   - apiVersion: v2
+    appVersion: 7.1.1
+    created: "2024-07-18T20:01:21.197120619Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: 0ecd346da3777f3443d61c6c4851562927bae15ab75e7d9d2505511244c0db2b
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.1.10/recyclarr-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
     appVersion: 7.1.0
     created: "2024-07-11T23:16:56.470116274Z"
     description: recyclarr helm chart for Kubernetes
@@ -3705,6 +3723,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/routinator-0.1.0/routinator-0.1.0.tgz
     version: 0.1.0
   sonarr:
+  - apiVersion: v2
+    appVersion: 4.0.8
+    created: "2024-07-18T20:01:21.339261079Z"
+    description: sonarr helm chart for Kubernetes
+    digest: a656e473d8113de54897337da8005911cf1bb72988d6081757a5752d9a1b049e
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.4.2/sonarr-0.4.2.tgz
+    version: 0.4.2
   - apiVersion: v2
     appVersion: 4.0.6
     created: "2024-07-04T22:42:46.776504708Z"
@@ -4027,4 +4063,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-11T23:16:56.470525579Z"
+generated: "2024-07-18T20:01:21.339744384Z"
