@@ -8,6 +8,8 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
+  strategy:
+    type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       {{- include "hyperglass.selectorLabels" . | nindent 6 }}
@@ -65,13 +67,26 @@ spec:
           envFrom:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          {{- with .Values.volumeMounts }}
+          {{- if or .Values.build.persistence.enabled .Values.volumeMounts }}
           volumeMounts:
+          {{- if .Values.build.persistence.enabled }}
+            - name: build
+              mountPath: /etc/hyperglass/static
+          {{- end }}
+          {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
-      {{- with .Values.volumes }}
+          {{- end }}
+      {{- if or .Values.build.persistence.enabled .Values.volumes }}
       volumes:
+      {{- if .Values.build.persistence.enabled }}
+        - name: build
+          persistentVolumeClaim:
+            claimName: {{ include "hyperglass.buildPersistenceName" . }}
+      {{- end }}
+      {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
