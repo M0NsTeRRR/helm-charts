@@ -1,6 +1,6 @@
 # hyperglass
 
-![Version: 0.1.8](https://img.shields.io/badge/Version-0.1.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.0.4](https://img.shields.io/badge/AppVersion-v2.0.4-informational?style=flat-square)
+![Version: 0.1.9](https://img.shields.io/badge/Version-0.1.9-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.0.4](https://img.shields.io/badge/AppVersion-v2.0.4-informational?style=flat-square)
 
 hyperglass helm chart for Kubernetes
 
@@ -41,6 +41,12 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| build | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"200Mi","volumeName":""}}` | Creating PVC to store UI build artifact |
+| build.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
+| build.persistence.annotations | object | `{}` | Annotations for PVCs |
+| build.persistence.name | string | `""` | Config name |
+| build.persistence.size | string | `"200Mi"` | Size of persistent disk |
+| build.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
 | extraEnv | list | `[]` | Environment variables to add to the as212510.net pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the as212510.net pods |
 | fullnameOverride | string | `""` |  |
@@ -79,6 +85,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| strategy | object | `{"type":"Recreate"}` | Deployment strategy |
 | tolerations | list | `[]` |  |
 | valkey.architecture | string | `"standalone"` |  |
 | valkey.auth.enabled | bool | `false` |  |

@@ -61,3 +61,10 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Create the name of the pvc build to use
+*/}}
+{{- define "hyperglass.buildPersistenceName" -}}
+{{- default (printf "%s-build" (include "hyperglass.fullname" .)) .Values.build.persistence.name }}
+{{- end }}

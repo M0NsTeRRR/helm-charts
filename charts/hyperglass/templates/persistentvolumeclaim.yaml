@@ -1,0 +1,22 @@
+{{- if .Values.build.persistence.enabled -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "hyperglass.buildPersistenceName" . }}
+  labels:
+    {{- include "hyperglass.labels" . | nindent 4 }}
+spec:
+  {{- with .Values.build.persistence.accessModes }}
+  accessModes:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- if .Values.build.persistence.volumeName }}
+  volumeName: {{ .Values.build.persistence.volumeName }}
+  {{- end }}
+  {{- with .Values.build.persistence.storageClass }}
+  storageClassName: {{ if (eq "-" .) }}""{{ else }}{{ . }}{{ end }}
+  {{- end }}
+  resources:
+    requests:
+      storage: "{{ .Values.build.persistence.size }}"
+{{- end }}

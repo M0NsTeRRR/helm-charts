@@ -12,6 +12,10 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+# -- Deployment strategy
+strategy:
+  type: Recreate
+
 # -- Environment variables to add to the as212510.net pods
 extraEnv: []
 # -- Environment variables from secrets or configmaps to add to the as212510.net pods
@@ -71,6 +75,23 @@ valkey:
 service:
   type: ClusterIP
   port: 80
+
+# -- Creating PVC to store UI build artifact
+build:
+  persistence:
+    enabled: true
+    # -- Size of persistent disk
+    size: 200Mi
+    # -- Annotations for PVCs
+    annotations: {}
+    # -- Access modes of persistent disk
+    accessModes:
+      - ReadWriteOnce
+    # -- Config name
+    name: ""
+    # -- Name of the permanent volume to reference in the claim.
+    # Can be used to bind to existing volumes.
+    volumeName: ""
 
 ingress:
   enabled: false
