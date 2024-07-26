@@ -1147,6 +1147,24 @@ entries:
     version: 0.1.0
   jellyfin:
   - apiVersion: v2
+    appVersion: 10.9.8
+    created: "2024-07-26T07:15:43.859723807Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 9336d73b6f8c42cb4f2b4736958b7d97c1c4b4854c746f31eb18e66fc87d8797
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.2.4/jellyfin-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
     appVersion: 10.9.7
     created: "2024-06-27T16:36:10.933531099Z"
     description: jellyfin helm chart for Kubernetes
@@ -3206,6 +3224,24 @@ entries:
     version: 0.1.1
   radarr:
   - apiVersion: v2
+    appVersion: 5.8.3
+    created: "2024-07-26T07:15:44.062770822Z"
+    description: radarr helm chart for Kubernetes
+    digest: 11190cbab525077a00cc5344c15f6f43ea93fb4a1e609cd601728d401077ea0d
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.5.0/radarr-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
     appVersion: 5.7.0
     created: "2024-06-23T23:10:45.95227026Z"
     description: radarr helm chart for Kubernetes
@@ -4086,4 +4122,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-19T09:40:57.489399664Z"
+generated: "2024-07-26T07:15:44.063261412Z"
