@@ -33,9 +33,9 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "qbittorrent.fullname" $ }}
+                name: {{ include "qbittorrent.fullname" $ }}-web
                 port:
-                  number: {{ $.Values.service.port }}
+                  number: {{ $.Values.service.web.port }}
           {{- end }}
     {{- end }}
 {{- end }}
