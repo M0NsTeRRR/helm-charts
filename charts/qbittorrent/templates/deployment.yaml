@@ -44,22 +44,18 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.web.port }}
+              containerPort: 8080
               protocol: TCP
             - name: torrent-tcp
-              containerPort: 6881
+              containerPort: 50413
               protocol: TCP
             - name: torrent-udp
-              containerPort: 6881
+              containerPort: 50413
               protocol: UDP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          env:
-            - name: QBITTORRENT__PORT
-              value: "{{ $.Values.service.web.port }}"
-            - name: QBITTORRENT__BT_PORT
-              value: "8388"
           {{- with .Values.extraEnv }}
+          env:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.extraEnvFrom }}
