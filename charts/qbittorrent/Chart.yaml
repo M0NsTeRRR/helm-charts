@@ -5,7 +5,7 @@ description: qbittorrent helm chart for Kubernetes
 type: application
 version: 0.5.1
 # image: ghcr.io/onedr0p/qbittorrent
-appVersion: "4.6.5"
+appVersion: "4.6.6"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
