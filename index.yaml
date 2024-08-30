@@ -2863,6 +2863,24 @@ entries:
     version: 0.1.0
   qbittorrent:
   - apiVersion: v2
+    appVersion: 4.6.6
+    created: "2024-08-30T19:07:52.523354024Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: c8221524ee8eb7fc0e1dccbf20407cac8afeec10ccc564a5e9c631785eb11eda
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.5.2/qbittorrent-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v2
     appVersion: 4.6.5
     created: "2024-08-19T13:11:33.800100344Z"
     description: qbittorrent helm chart for Kubernetes
@@ -3349,6 +3367,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.1.1/qbittorrent-0.1.1.tgz
     version: 0.1.1
   radarr:
+  - apiVersion: v2
+    appVersion: 5.9.1
+    created: "2024-08-30T19:07:52.63909535Z"
+    description: radarr helm chart for Kubernetes
+    digest: 90cfcd75b6be00d0c99212ade735ee461d8f13ff0a78af616062efac1f0ff6b4
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.6.0/radarr-0.6.0.tgz
+    version: 0.6.0
   - apiVersion: v2
     appVersion: 5.8.3
     created: "2024-07-26T07:15:44.062770822Z"
@@ -4320,4 +4356,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-30T19:02:56.098374117Z"
+generated: "2024-08-30T19:07:52.639690832Z"
