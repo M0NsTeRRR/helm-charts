@@ -2486,6 +2486,24 @@ entries:
     version: 0.1.0
   prowlarr:
   - apiVersion: v2
+    appVersion: 1.23.1
+    created: "2024-09-06T11:17:09.719305269Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: 311f2361621a0c377b1dc688cd58d67ba727679bfdfd38abe9a5f12555357961
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.6.0/prowlarr-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
     appVersion: 1.21.2
     created: "2024-07-30T22:55:25.329156075Z"
     description: prowlarr helm chart for Kubernetes
@@ -3709,6 +3727,24 @@ entries:
     version: 0.1.1
   recyclarr:
   - apiVersion: v2
+    appVersion: 7.2.3
+    created: "2024-09-06T11:17:09.912397556Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: 13bb61958aeef2b7bc73e3838a8db06a72122da36380d086fb14da6dae2357bd
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.2.3/recyclarr-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
     appVersion: 7.2.2
     created: "2024-08-30T19:02:56.001692279Z"
     description: recyclarr helm chart for Kubernetes
@@ -4356,4 +4392,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-30T19:07:52.639690832Z"
+generated: "2024-09-06T11:17:09.912831378Z"
