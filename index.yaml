@@ -292,6 +292,24 @@ entries:
     version: 0.1.0
   bazarr:
   - apiVersion: v2
+    appVersion: 1.4.4
+    created: "2024-09-15T22:13:50.609132092Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 2b84e4cae178008ad59960f4ac2f372e1491472f277928e3f3db9130040e95d1
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.4.1/bazarr-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
     appVersion: 1.4.3
     created: "2024-06-23T23:10:45.62755755Z"
     description: bazarr helm chart for Kubernetes
@@ -1146,6 +1164,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.0/hyperglass-0.1.0.tgz
     version: 0.1.0
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.9.11
+    created: "2024-09-15T22:13:50.72810998Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: a0528ded61812f844aae94e45023985dd1dfc5bf262ce93060bcb835e1953175
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.2.7/jellyfin-0.2.7.tgz
+    version: 0.2.7
   - apiVersion: v2
     appVersion: 10.9.10
     created: "2024-08-30T19:02:55.906945146Z"
@@ -3727,6 +3763,24 @@ entries:
     version: 0.1.1
   recyclarr:
   - apiVersion: v2
+    appVersion: 7.2.4
+    created: "2024-09-15T22:13:50.818415405Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: 14e755e93753ee47e9b7d3b0798e460c497d4f7d2d1048f2682997422307310b
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.2.4/recyclarr-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
     appVersion: 7.2.3
     created: "2024-09-06T11:17:09.912397556Z"
     description: recyclarr helm chart for Kubernetes
@@ -4392,4 +4446,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-06T11:17:09.912831378Z"
+generated: "2024-09-15T22:13:50.819126262Z"
