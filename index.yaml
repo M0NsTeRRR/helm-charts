@@ -2118,6 +2118,24 @@ entries:
     version: 0.1.0
   prometheus-pve-exporter:
   - apiVersion: v2
+    appVersion: 3.4.5
+    created: "2024-09-19T20:48:40.706241992Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 03f052a8fe82a775eba513fe5d6234aaf7fbcd0fa5fae59945df01cc7436fb60
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.13/prometheus-pve-exporter-0.2.13.tgz
+    version: 0.2.13
+  - apiVersion: v2
     appVersion: 3.4.4
     created: "2024-08-19T13:11:33.658108023Z"
     description: prometheus-pve-exporter helm chart for Kubernetes
@@ -2916,6 +2934,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.0/prowlarr-0.1.0.tgz
     version: 0.1.0
   qbittorrent:
+  - apiVersion: v2
+    appVersion: 4.6.7
+    created: "2024-09-19T20:48:40.910740009Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: 601b1591497bcb9c1c5f0d483b656ec7b763bcf6b458281e51984074e0f8bd80
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.5.3/qbittorrent-0.5.3.tgz
+    version: 0.5.3
   - apiVersion: v2
     appVersion: 4.6.6
     created: "2024-08-30T19:07:52.523354024Z"
@@ -4446,4 +4482,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-15T22:13:50.819126262Z"
+generated: "2024-09-19T20:48:40.911307385Z"
