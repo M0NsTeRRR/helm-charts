@@ -3458,6 +3458,24 @@ entries:
     version: 0.1.1
   radarr:
   - apiVersion: v2
+    appVersion: 5.11.0
+    created: "2024-09-26T20:16:11.715171277Z"
+    description: radarr helm chart for Kubernetes
+    digest: 81a81894938bdb050aad3248c3f0cfb198cbdbdf4683ac3f8c2d2d85fa144268
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.7.0/radarr-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
     appVersion: 5.9.1
     created: "2024-08-30T19:07:52.63909535Z"
     description: radarr helm chart for Kubernetes
@@ -4482,4 +4500,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-19T20:48:40.911307385Z"
+generated: "2024-09-26T20:16:11.715703464Z"
