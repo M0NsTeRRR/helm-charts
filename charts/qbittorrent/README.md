@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 0.5.3](https://img.shields.io/badge/Version-0.5.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.7](https://img.shields.io/badge/AppVersion-4.6.7-informational?style=flat-square)
+![Version: 0.5.4](https://img.shields.io/badge/Version-0.5.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.6.7](https://img.shields.io/badge/AppVersion-4.6.7-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -53,7 +53,7 @@ helm repo add adminafk https://helm-charts.adminafk.fr
 | gluetun.image.registry | string | `"docker.io"` |  |
 | gluetun.image.repository | string | `"qmcgaw/gluetun"` |  |
 | gluetun.image.sha | string | `""` |  |
-| gluetun.image.tag | string | `"v3.39.0"` |  |
+| gluetun.image.tag | string | `"v3.39.1"` |  |
 | gluetun.resources | object | `{}` |  |
 | gluetun.securityContext.capabilities.add[0] | string | `"NET_ADMIN"` |  |
 | gluetun.volumeMounts | list | `[]` |  |
