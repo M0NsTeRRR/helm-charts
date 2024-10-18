@@ -1556,6 +1556,24 @@ entries:
     version: 0.1.0
   jellyseerr:
   - apiVersion: v2
+    appVersion: 2.0.1
+    created: "2024-10-18T10:11:33.909012491Z"
+    description: jellyseerr helm chart for Kubernetes
+    digest: a79e2e2a4f9b1f6c32226c0fb68e714dc269c893b8f6073408084a59308868fd
+    home: https://github.com/Fallenbagel/jellyseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyseerr-1.0.0/jellyseerr-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     appVersion: 1.9.2
     created: "2024-06-13T20:57:04.087320901Z"
     description: jellyseerr helm chart for Kubernetes
@@ -3530,6 +3548,24 @@ entries:
     version: 0.1.1
   radarr:
   - apiVersion: v2
+    appVersion: 5.12.2
+    created: "2024-10-18T10:11:34.037635586Z"
+    description: radarr helm chart for Kubernetes
+    digest: 2436ebef72c3880676f47d4d2408fa9c80f66def392b2cdb64674d1ed1233fb2
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.8.0/radarr-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
     appVersion: 5.11.0
     created: "2024-09-26T20:16:11.715171277Z"
     description: radarr helm chart for Kubernetes
@@ -4572,4 +4608,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-03T21:12:12.742225167Z"
+generated: "2024-10-18T10:11:34.03826665Z"
