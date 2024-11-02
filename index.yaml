@@ -1183,6 +1183,24 @@ entries:
     version: 0.1.0
   jellyfin:
   - apiVersion: v2
+    appVersion: 10.10.0
+    created: "2024-11-02T12:34:05.155144055Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 4bebd5bbdb73df05fa67b1fbbf1728d7add838ff08a8c2e641916fa18275fff4
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.3.0/jellyfin-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 10.9.11
     created: "2024-09-15T22:13:50.72810998Z"
     description: jellyfin helm chart for Kubernetes
@@ -3025,6 +3043,24 @@ entries:
     version: 0.1.0
   qbittorrent:
   - apiVersion: v2
+    appVersion: 5.0.1
+    created: "2024-11-02T12:34:05.327390625Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: d642aa0324a40f53f5a314a72a7a289603883f555422b25470a23e3a5789aa1f
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-1.0.1/qbittorrent-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
     appVersion: 5.0.0
     created: "2024-10-03T21:12:12.74155714Z"
     description: qbittorrent helm chart for Kubernetes
@@ -3566,6 +3602,24 @@ entries:
     version: 0.1.1
   radarr:
   - apiVersion: v2
+    appVersion: 5.14.0
+    created: "2024-11-02T12:34:05.4219733Z"
+    description: radarr helm chart for Kubernetes
+    digest: 1e5be7c7086b1301cd97bb5d97a5e4fb85a9ca4d9f5651ec57221ca846664e67
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.10.0/radarr-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
     appVersion: 5.13.1
     created: "2024-10-26T16:41:59.913120721Z"
     description: radarr helm chart for Kubernetes
@@ -3960,6 +4014,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.1.1/radarr-0.1.1.tgz
     version: 0.1.1
   recyclarr:
+  - apiVersion: v2
+    appVersion: 7.3.0
+    created: "2024-11-02T12:34:05.511986664Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: 5bb6f276c388e36ec3833c076dc0ba9c8a196a9d5ef870abe5d04f695f9bffe0
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.3.0/recyclarr-0.3.0.tgz
+    version: 0.3.0
   - apiVersion: v2
     appVersion: 7.2.4
     created: "2024-09-15T22:13:50.818415405Z"
@@ -4662,4 +4734,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-26T16:42:00.003675477Z"
+generated: "2024-11-02T12:34:05.512699925Z"
