@@ -70,8 +70,7 @@ spec:
           {{- end }}
       volumes:
         - name: tmp
-          emptyDir:
-            medium: "Memory"
+          emptyDir: {}
       {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
