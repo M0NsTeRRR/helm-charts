@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: homepage
 description: homepage helm chart for Kubernetes
 type: application
-version: 0.1.1
+version: 0.1.2
 # image: ghcr.io/gethomepage/homepage
-appVersion: "v0.9.11"
+appVersion: "v0.9.12"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
