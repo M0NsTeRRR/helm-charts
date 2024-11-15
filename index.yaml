@@ -952,6 +952,24 @@ entries:
     version: 0.1.0
   homepage:
   - apiVersion: v2
+    appVersion: v0.9.12
+    created: "2024-11-15T08:36:58.933683861Z"
+    description: homepage helm chart for Kubernetes
+    digest: bbcb1292ae6b6ea6879ea8949abcf27882194fb8d83ed2eea25c82a8f03ea89f
+    home: https://github.com/gethomepage/homepage
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: homepage
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/homepage
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/homepage-0.1.2/homepage-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: v0.9.11
     created: "2024-11-04T21:32:48.977435722Z"
     description: homepage helm chart for Kubernetes
@@ -1219,6 +1237,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.0/hyperglass-0.1.0.tgz
     version: 0.1.0
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.10.1
+    created: "2024-11-15T08:36:59.045057762Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 4210987f91cb3b0f534e1f02a580dccf692e83b5ded7d0e8dfa3dfb1a8721088
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.3.1/jellyfin-0.3.1.tgz
+    version: 0.3.1
   - apiVersion: v2
     appVersion: 10.10.0
     created: "2024-11-02T12:34:05.155144055Z"
@@ -1610,6 +1646,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.1.0/jellyfin-0.1.0.tgz
     version: 0.1.0
   jellyseerr:
+  - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2024-11-15T08:36:59.177510799Z"
+    description: jellyseerr helm chart for Kubernetes
+    digest: 8532c3b6f1aa803a8a1d30da4e24c05b878055680efabf04c233cba4c77577c9
+    home: https://github.com/Fallenbagel/jellyseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyseerr-1.1.0/jellyseerr-1.1.0.tgz
+    version: 1.1.0
   - apiVersion: v2
     appVersion: 2.0.1
     created: "2024-10-18T10:11:33.909012491Z"
@@ -4070,6 +4124,24 @@ entries:
     version: 0.1.1
   recyclarr:
   - apiVersion: v2
+    appVersion: 7.4.0
+    created: "2024-11-15T08:36:59.278585582Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: 79dbc8b7487eb5534b1a55cf809f38523a57264b15f4241d95513c01a3a52fce
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.4.0/recyclarr-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
     appVersion: 7.3.0
     created: "2024-11-02T12:34:05.511986664Z"
     description: recyclarr helm chart for Kubernetes
@@ -4789,4 +4861,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-04T21:32:48.977941218Z"
+generated: "2024-11-15T08:36:59.279206022Z"
