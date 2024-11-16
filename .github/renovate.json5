@@ -1,21 +1,21 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    'config:base',
+    'config:recommended',
     ':dependencyDashboard',
   ],
   dependencyDashboardAutoclose: true,
   automergeType: 'pr',
   platformAutomerge: true,
   rebaseWhen: 'conflicted',
-  timezone: "Europe/Paris",
+  timezone: 'Europe/Paris',
   schedule: [
-    "before 9pm on friday"
+    'before 9pm on friday',
   ],
   prConcurrentLimit: 0,
   prHourlyLimit: 0,
   terragrunt: {
-    enabled: false
+    enabled: false,
   },
   labels: [
     'dependencies',
@@ -32,15 +32,19 @@
   pin: {
     automerge: true,
   },
-  "pre-commit": {
-    enabled: true
+  'pre-commit': {
+    enabled: true,
   },
   customManagers: [
     {
-      customType: "regex",
-      fileMatch: ["(^|/)Chart\\.yaml$"],
-      matchStrings: ["#\\s+image:\\s+(?<depName>\\S*)\nappVersion:\\s+\"(?<currentValue>\\S*)\""],
-      datasourceTemplate: "docker"
-    }
-  ]
+      customType: 'regex',
+      fileMatch: [
+        '(^|/)Chart\\.yaml$',
+      ],
+      matchStrings: [
+        '#\\s+image:\\s+(?<depName>\\S*)\nappVersion:\\s+"(?<currentValue>\\S*)"',
+      ],
+      datasourceTemplate: 'docker',
+    },
+  ],
 }
