@@ -1238,6 +1238,24 @@ entries:
     version: 0.1.0
   jellyfin:
   - apiVersion: v2
+    appVersion: 10.10.3
+    created: "2024-11-22T08:35:34.039888947Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: e08b6b6721995ab727ecc5382a3cd7215bc988c303d0291f27471ffa475b132d
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/jellyfin
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.3.2/jellyfin-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
     appVersion: 10.10.1
     created: "2024-11-15T08:36:59.045057762Z"
     description: jellyfin helm chart for Kubernetes
@@ -2721,6 +2739,24 @@ entries:
     version: 0.1.0
   prowlarr:
   - apiVersion: v2
+    appVersion: 1.26.1
+    created: "2024-11-22T08:35:34.335440196Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: add48aa4fff1b4c7966402f4b153be8e0bcd41d8daa9503061aa355f62fc6ec8
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prowlarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.9.0/prowlarr-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v2
     appVersion: 1.25.4
     created: "2024-10-26T16:41:59.828902208Z"
     description: prowlarr helm chart for Kubernetes
@@ -3151,6 +3187,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.0/prowlarr-0.1.0.tgz
     version: 0.1.0
   qbittorrent:
+  - apiVersion: v2
+    appVersion: 5.0.2
+    created: "2024-11-22T08:35:34.480707899Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: 2226a1bf25f8e7a734e7dd3875c9e8bc7e036e81ba3531e963ee25cca0769fdb
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/qbittorrent
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-1.0.2/qbittorrent-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: 5.0.1
     created: "2024-11-02T12:34:05.327390625Z"
@@ -3710,6 +3764,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-0.1.1/qbittorrent-0.1.1.tgz
     version: 0.1.1
   radarr:
+  - apiVersion: v2
+    appVersion: 5.15.1
+    created: "2024-11-22T08:35:34.617536159Z"
+    description: radarr helm chart for Kubernetes
+    digest: 8af66302930011fbf91e9ecc18db3dd4e68ca45b90b01cd1724a55b3fb19e951
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.11.0/radarr-0.11.0.tgz
+    version: 0.11.0
   - apiVersion: v2
     appVersion: 5.14.0
     created: "2024-11-02T12:34:05.4219733Z"
@@ -4861,4 +4933,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-15T08:36:59.279206022Z"
+generated: "2024-11-22T08:35:34.928004423Z"
