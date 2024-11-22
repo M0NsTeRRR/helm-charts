@@ -10,6 +10,6 @@ maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
 sources:
-  - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+  - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/qbittorrent
 home: https://github.com/qbittorrent/qBittorrent
 icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169

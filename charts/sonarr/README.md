@@ -14,7 +14,7 @@ sonarr helm chart for Kubernetes
 
 ## Source Code
 
-* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr>
+* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/sonarr>
 
 ## Requirements
 
