@@ -56,9 +56,7 @@ valkey:
   # -- enable the Bitnami Valkey chart. Refer to https://github.com/bitnami/charts/blob/main/bitnami/valkey/ for possible values.
   enabled: true
   architecture: standalone
-  master:
-    disableCommands:
-      - FLUSHALL
+  primary:
     persistence:
       size: 1Gi
   auth:
