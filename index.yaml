@@ -3,6 +3,24 @@ entries:
   as212510-net:
   - apiVersion: v2
     appVersion: 3.0.0
+    created: "2024-11-22T10:45:57.60197089Z"
+    description: as212510.net helm chart for Kubernetes
+    digest: 52460e18770d56a217a39e1507741564259042826932775ad6caf73391000e9d
+    home: https://github.com/M0NsTeRRR/as212510.net
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: as212510-net
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/as212510-net
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.5.5/as212510-net-0.5.5.tgz
+    version: 0.5.5
+  - apiVersion: v2
+    appVersion: 3.0.0
     created: "2024-05-22T18:32:19.629201182Z"
     description: as212510.net helm chart for Kubernetes
     digest: 288b33776abd21e3ed051bdb5fddd1f6810fb32a258aa4cc83a0362c4b1cb11a
@@ -291,6 +309,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/as212510-net-0.1.0/as212510-net-0.1.0.tgz
     version: 0.1.0
   bazarr:
+  - apiVersion: v2
+    appVersion: 1.4.5
+    created: "2024-11-22T10:45:57.91084572Z"
+    description: bazarr helm chart for Kubernetes
+    digest: 85bf939abc42d4be27035c08b8775f78279940bc9394a18c68af5db2bfc66ea8
+    home: https://github.com/morpheus65535/bazarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: bazarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/bazarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/bazarr-0.4.3/bazarr-0.4.3.tgz
+    version: 0.4.3
   - apiVersion: v2
     appVersion: 1.4.5
     created: "2024-10-03T21:12:12.381999209Z"
@@ -666,6 +702,24 @@ entries:
   flaresolverr:
   - apiVersion: v2
     appVersion: v3.3.21
+    created: "2024-11-22T10:45:58.102378417Z"
+    description: flaresolverr helm chart for Kubernetes
+    digest: b7ba15612c6b5a7520bf9122cc3e492f27656df0121dd59158f8cc4ea5df94db
+    home: https://github.com/FlareSolverr/FlareSolverr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: flaresolverr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/flaresolverr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/flaresolverr-0.2.9/flaresolverr-0.2.9.tgz
+    version: 0.2.9
+  - apiVersion: v2
+    appVersion: v3.3.21
     created: "2024-06-27T16:36:10.818566022Z"
     description: flaresolverr helm chart for Kubernetes
     digest: 8bc937a15bf478aa69fe1ca12a8d91c629aed53d9982cca5f442b61b35c1219d
@@ -953,6 +1007,24 @@ entries:
   homepage:
   - apiVersion: v2
     appVersion: v0.9.12
+    created: "2024-11-22T10:45:58.262520649Z"
+    description: homepage helm chart for Kubernetes
+    digest: 4ede709e71dfd792d9e0bd71b44b8a531af80d9d06fdfdc4e56837ea50a87a53
+    home: https://github.com/gethomepage/homepage
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: homepage
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/homepage
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/homepage-0.1.3/homepage-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: v0.9.12
     created: "2024-11-15T08:36:58.933683861Z"
     description: homepage helm chart for Kubernetes
     digest: bbcb1292ae6b6ea6879ea8949abcf27882194fb8d83ed2eea25c82a8f03ea89f
@@ -1006,6 +1078,29 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/homepage-0.1.0/homepage-0.1.0.tgz
     version: 0.1.0
   hyperglass:
+  - apiVersion: v2
+    appVersion: v2.0.4
+    created: "2024-11-22T10:45:58.456557972Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 2.0.*
+    description: hyperglass helm chart for Kubernetes
+    digest: 24f94b5928cf941f1e149013dbfa0e8dd0c356fedeaf87f1e55e8a57728706cb
+    home: https://github.com/thatmattlove/hyperglass
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: hyperglass
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/hyperglass
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-1.0.1/hyperglass-1.0.1.tgz
+    version: 1.0.1
   - apiVersion: v2
     appVersion: v2.0.4
     created: "2024-11-22T10:24:23.617614912Z"
@@ -1260,6 +1355,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-0.1.0/hyperglass-0.1.0.tgz
     version: 0.1.0
   jellyfin:
+  - apiVersion: v2
+    appVersion: 10.10.3
+    created: "2024-11-22T10:45:58.634828279Z"
+    description: jellyfin helm chart for Kubernetes
+    digest: 52d24d44a327174cfa416cd0745ae4231aba35d40d521593f2b5c8e024a06d51
+    home: https://github.com/jellyfin/jellyfin
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyfin
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/jellyfin
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyfin-0.3.3/jellyfin-0.3.3.tgz
+    version: 0.3.3
   - apiVersion: v2
     appVersion: 10.10.3
     created: "2024-11-22T08:35:34.039888947Z"
@@ -1689,6 +1802,24 @@ entries:
   jellyseerr:
   - apiVersion: v2
     appVersion: 2.1.0
+    created: "2024-11-22T10:45:58.828476523Z"
+    description: jellyseerr helm chart for Kubernetes
+    digest: 56ad6c848d00824414da5946d2289a1845be94ae790f5fdeec73ed4a284fa18c
+    home: https://github.com/Fallenbagel/jellyseerr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: jellyseerr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/jellyseerr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/jellyseerr-1.1.1/jellyseerr-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: 2.1.0
     created: "2024-11-15T08:36:59.177510799Z"
     description: jellyseerr helm chart for Kubernetes
     digest: 8532c3b6f1aa803a8a1d30da4e24c05b878055680efabf04c233cba4c77577c9
@@ -1948,6 +2079,24 @@ entries:
   joal:
   - apiVersion: v2
     appVersion: 2.1.36
+    created: "2024-11-22T10:45:59.032575064Z"
+    description: joal helm chart for Kubernetes
+    digest: 725c761476b86143a5bf8cfd26ca69f9d69b6f797c7bead21506087d4cdff608
+    home: https://github.com/anthonyraymond/joal
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: joal
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/joal
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/joal-0.3.1/joal-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: 2.1.36
     created: "2024-10-03T21:12:12.50820285Z"
     description: joal helm chart for Kubernetes
     digest: cbae9ac06e54dea11ccb8a4a797db00f4af3767a3b993b6576267c4ea5b5436e
@@ -2055,6 +2204,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/joal-0.1.0/joal-0.1.0.tgz
     version: 0.1.0
   kea-exporter:
+  - apiVersion: v2
+    appVersion: v0.7.0
+    created: "2024-11-22T10:45:59.20427272Z"
+    description: kea-exporter helm chart for Kubernetes
+    digest: 2c016b292cc11e4c16e5cea13ab2d67091e3d1a5c469a85b9bc075b940c800bd
+    home: https://github.com/mweinelt/kea-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: kea-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/kea-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/kea-exporter-0.2.6/kea-exporter-0.2.6.tgz
+    version: 0.2.6
   - apiVersion: v2
     appVersion: v0.7.0
     created: "2024-05-22T18:32:20.289566771Z"
@@ -2321,6 +2488,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/overseerr-0.1.0/overseerr-0.1.0.tgz
     version: 0.1.0
   prometheus-pve-exporter:
+  - apiVersion: v2
+    appVersion: 3.4.5
+    created: "2024-11-22T10:45:59.416378894Z"
+    description: prometheus-pve-exporter helm chart for Kubernetes
+    digest: 22b7090c9cfa838eadcd7064339d87ad36731ac16b5d93642f0bd845d70c008e
+    home: https://github.com/prometheus-pve/prometheus-pve-exporter
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prometheus-pve-exporter
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prometheus-pve-exporter
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.2.15/prometheus-pve-exporter-0.2.15.tgz
+    version: 0.2.15
   - apiVersion: v2
     appVersion: 3.4.5
     created: "2024-11-04T21:19:30.168566423Z"
@@ -2761,6 +2946,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prometheus-pve-exporter-0.1.0/prometheus-pve-exporter-0.1.0.tgz
     version: 0.1.0
   prowlarr:
+  - apiVersion: v2
+    appVersion: 1.26.1
+    created: "2024-11-22T10:45:59.586814403Z"
+    description: prowlarr helm chart for Kubernetes
+    digest: 005115a021a5c3544c9948a1d75c8e728bb5a3f10fe284f2870062a450cf69a8
+    home: https://github.com/prowlarr/prowlarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: prowlarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/prowlarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.9.1/prowlarr-0.9.1.tgz
+    version: 0.9.1
   - apiVersion: v2
     appVersion: 1.26.1
     created: "2024-11-22T08:35:34.335440196Z"
@@ -3210,6 +3413,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/prowlarr-0.1.0/prowlarr-0.1.0.tgz
     version: 0.1.0
   qbittorrent:
+  - apiVersion: v2
+    appVersion: 5.0.2
+    created: "2024-11-22T10:45:59.779335434Z"
+    description: qbittorrent helm chart for Kubernetes
+    digest: 333abe67a9fca1219683cae002c8fb4ccbff8265a2abc5c371e1812560857bb6
+    home: https://github.com/qbittorrent/qBittorrent
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: qbittorrent
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/qbittorrent
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/qbittorrent-1.0.3/qbittorrent-1.0.3.tgz
+    version: 1.0.3
   - apiVersion: v2
     appVersion: 5.0.2
     created: "2024-11-22T08:35:34.480707899Z"
@@ -3789,6 +4010,24 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: 5.15.1
+    created: "2024-11-22T10:45:59.966410362Z"
+    description: radarr helm chart for Kubernetes
+    digest: 500e4c4cdcffeabe089b1d57350ad303eca429120167ab8da9cdc5d335f8497d
+    home: https://github.com/Radarr/Radarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: radarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/radarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/radarr-0.11.1/radarr-0.11.1.tgz
+    version: 0.11.1
+  - apiVersion: v2
+    appVersion: 5.15.1
     created: "2024-11-22T08:35:34.617536159Z"
     description: radarr helm chart for Kubernetes
     digest: 8af66302930011fbf91e9ecc18db3dd4e68ca45b90b01cd1724a55b3fb19e951
@@ -4220,6 +4459,24 @@ entries:
   recyclarr:
   - apiVersion: v2
     appVersion: 7.4.0
+    created: "2024-11-22T10:46:00.125592697Z"
+    description: recyclarr helm chart for Kubernetes
+    digest: e74d6f552a6ce37d7505bc7306ccc2e3aee6a7fd3f9c5755feabd5eacfb5359b
+    home: https://github.com/recyclarr/recyclarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: recyclarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/recyclarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/recyclarr-0.4.1/recyclarr-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 7.4.0
     created: "2024-11-15T08:36:59.278585582Z"
     description: recyclarr helm chart for Kubernetes
     digest: 79dbc8b7487eb5534b1a55cf809f38523a57264b15f4241d95513c01a3a52fce
@@ -4527,6 +4784,24 @@ entries:
   routinator:
   - apiVersion: v2
     appVersion: v0.14.0
+    created: "2024-11-22T10:46:00.309897628Z"
+    description: routinator helm chart for Kubernetes
+    digest: d09cfe3aecc8cd90fa025a78e38880023fda8a88a08930ac3b2b20f825470596
+    home: https://github.com/NLnetLabs/routinator
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: routinator
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/routinator
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/routinator-0.1.3/routinator-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: v0.14.0
     created: "2024-06-23T23:10:46.155957878Z"
     description: routinator helm chart for Kubernetes
     digest: bacbb2cb739743eae3aea4632e11437107eeafb5558cf088bf92975b9816829e
@@ -4580,6 +4855,24 @@ entries:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/routinator-0.1.0/routinator-0.1.0.tgz
     version: 0.1.0
   sonarr:
+  - apiVersion: v2
+    appVersion: 4.0.10
+    created: "2024-11-22T10:46:00.495011717Z"
+    description: sonarr helm chart for Kubernetes
+    digest: 54dc4fb53dcf732fbc7d06dc05d5802c458127bddf07dd36154d0a441ed8d0a3
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/sonarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.4.5/sonarr-0.4.5.tgz
+    version: 0.4.5
   - apiVersion: v2
     appVersion: 4.0.10
     created: "2024-10-26T16:42:00.002784442Z"
@@ -4956,4 +5249,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-22T10:24:23.618018558Z"
+generated: "2024-11-22T10:46:00.496882545Z"
