@@ -1008,6 +1008,29 @@ entries:
   hyperglass:
   - apiVersion: v2
     appVersion: v2.0.4
+    created: "2024-11-22T10:24:23.617614912Z"
+    dependencies:
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 2.0.*
+    description: hyperglass helm chart for Kubernetes
+    digest: 537f18815332acce020c02a2d21fe9fc0403ec7e4135bf34761fc2bfa3fd9774
+    home: https://github.com/thatmattlove/hyperglass
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: hyperglass
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/hyperglass
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/hyperglass-1.0.0/hyperglass-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: v2.0.4
     created: "2024-07-19T09:40:57.489023131Z"
     dependencies:
     - condition: valkey.enabled
@@ -4933,4 +4956,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-22T08:35:34.928004423Z"
+generated: "2024-11-22T10:24:23.618018558Z"
