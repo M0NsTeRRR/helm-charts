@@ -1,6 +1,6 @@
 # routinator
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.14.0](https://img.shields.io/badge/AppVersion-v0.14.0-informational?style=flat-square)
+![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.14.0](https://img.shields.io/badge/AppVersion-v0.14.0-informational?style=flat-square)
 
 routinator helm chart for Kubernetes
 
@@ -21,6 +21,14 @@ routinator helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
+
+### OCI
+```console
+helm install routinator oci://ghcr.io/m0nsterrr/helm-charts/routinator
+```
+
+### Helm repository
+Will be deprecated in a future major release
 
 Add the following repo to use the chart:
 

@@ -1,6 +1,6 @@
 # prowlarr
 
-![Version: 0.9.0](https://img.shields.io/badge/Version-0.9.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.26.1](https://img.shields.io/badge/AppVersion-1.26.1-informational?style=flat-square)
+![Version: 0.9.1](https://img.shields.io/badge/Version-0.9.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.26.1](https://img.shields.io/badge/AppVersion-1.26.1-informational?style=flat-square)
 
 prowlarr helm chart for Kubernetes
 
@@ -21,6 +21,14 @@ prowlarr helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
+
+### OCI
+```console
+helm install prowlarr oci://ghcr.io/m0nsterrr/helm-charts/prowlarr
+```
+
+### Helm repository
+Will be deprecated in a future major release
 
 Add the following repo to use the chart:
 
