@@ -1,6 +1,6 @@
 # recyclarr
 
-![Version: 0.4.0](https://img.shields.io/badge/Version-0.4.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 7.4.0](https://img.shields.io/badge/AppVersion-7.4.0-informational?style=flat-square)
+![Version: 0.4.1](https://img.shields.io/badge/Version-0.4.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 7.4.0](https://img.shields.io/badge/AppVersion-7.4.0-informational?style=flat-square)
 
 recyclarr helm chart for Kubernetes
 
@@ -21,6 +21,14 @@ recyclarr helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
+
+### OCI
+```console
+helm install recyclarr oci://ghcr.io/m0nsterrr/helm-charts/recyclarr
+```
+
+### Helm repository
+Will be deprecated in a future major release
 
 Add the following repo to use the chart:
 

@@ -1,6 +1,6 @@
 # sonarr
 
-![Version: 0.4.4](https://img.shields.io/badge/Version-0.4.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.10](https://img.shields.io/badge/AppVersion-4.0.10-informational?style=flat-square)
+![Version: 0.4.5](https://img.shields.io/badge/Version-0.4.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.10](https://img.shields.io/badge/AppVersion-4.0.10-informational?style=flat-square)
 
 sonarr helm chart for Kubernetes
 
@@ -21,6 +21,14 @@ sonarr helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
+
+### OCI
+```console
+helm install sonarr oci://ghcr.io/m0nsterrr/helm-charts/sonarr
+```
+
+### Helm repository
+Will be deprecated in a future major release
 
 Add the following repo to use the chart:
 

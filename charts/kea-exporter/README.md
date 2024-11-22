@@ -1,6 +1,6 @@
 # kea-exporter
 
-![Version: 0.2.5](https://img.shields.io/badge/Version-0.2.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.7.0](https://img.shields.io/badge/AppVersion-v0.7.0-informational?style=flat-square)
+![Version: 0.2.6](https://img.shields.io/badge/Version-0.2.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.7.0](https://img.shields.io/badge/AppVersion-v0.7.0-informational?style=flat-square)
 
 kea-exporter helm chart for Kubernetes
 
@@ -21,6 +21,14 @@ kea-exporter helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
+
+### OCI
+```console
+helm install kea-exporter oci://ghcr.io/m0nsterrr/helm-charts/kea-exporter
+```
+
+### Helm repository
+Will be deprecated in a future major release
 
 Add the following repo to use the chart:
 

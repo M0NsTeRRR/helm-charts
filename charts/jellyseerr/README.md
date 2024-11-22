@@ -1,6 +1,6 @@
 # jellyseerr
 
-![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.0](https://img.shields.io/badge/AppVersion-2.1.0-informational?style=flat-square)
+![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.0](https://img.shields.io/badge/AppVersion-2.1.0-informational?style=flat-square)
 
 jellyseerr helm chart for Kubernetes
 
@@ -21,6 +21,14 @@ jellyseerr helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Chart Repo
+
+### OCI
+```console
+helm install jellyseerr oci://ghcr.io/m0nsterrr/helm-charts/jellyseerr
+```
+
+### Helm repository
+Will be deprecated in a future major release
 
 Add the following repo to use the chart:
 
