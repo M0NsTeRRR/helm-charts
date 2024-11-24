@@ -1006,6 +1006,24 @@ entries:
     version: 0.1.0
   homepage:
   - apiVersion: v2
+    appVersion: v0.9.13
+    created: "2024-11-24T22:16:25.374334283Z"
+    description: homepage helm chart for Kubernetes
+    digest: 748fdf507461d6f7d6ead2ee255a83fcbc07dc10283681f7230d209f3f429037
+    home: https://github.com/gethomepage/homepage
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: homepage
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/homepage
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/homepage-0.1.4/homepage-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: v0.9.12
     created: "2024-11-22T10:45:58.262520649Z"
     description: homepage helm chart for Kubernetes
@@ -5249,4 +5267,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-22T10:46:00.496882545Z"
+generated: "2024-11-24T22:16:25.375033101Z"
