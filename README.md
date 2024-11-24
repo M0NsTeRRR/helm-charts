@@ -1,32 +1,45 @@
+<div align="center">
+<img src="https://raw.githubusercontent.com/m0nsterrr/helm-charts/main/docs/assets/logo.svg" align="center" width="144px" height="144px"/>
+
+### helm-charts
+
+</div>
+
+<div align="center">
+
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/m0nsterrr&style=for-the-badge)](https://artifacthub.io/packages/search?repo=m0nsterrr)
+
+</div>
+
 This is my custom Helm charts that are published under https://helm-charts.adminafk.fr
 
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/m0nsterrr)](https://artifacthub.io/packages/search?repo=m0nsterrr)
+## 🛠️ Dev
+Install [helm](https://helm.sh/docs/intro/install/) and [helm-docs](https://github.com/norwoodj/helm-docs)
 
-# Dev
-## Requirements
-- [Devcontainer](https://code.visualstudio.com/docs/devcontainers/containers)
-
-## Lint
+### Run linter
 `helm lint charts/<chart>`
 
-# Contributing
+### Devcontainer
+[Documentation](https://code.visualstudio.com/docs/devcontainers/containers)
 
-We welcome and encourage contributions to this project! Please read the [Contributing guide](CONTRIBUTING.md). Also make sure to check the [Code of Conduct](CODE_OF_CONDUCT.md) and adhere to its guidelines
+## 🙋‍♂️ Support & Assistance
 
-# Security
+* Take a look at the [support](.github/SUPPORT.md) document on
+     guidelines for tips on how to ask the right questions.
+* For all questions/features/bugs/issues [head over here](/../../issues/new/choose).
 
-See [SECURITY.md](SECURITY.md) file for details.
+## 🤝 Contributing
 
-# Licence
+* Please review the [Code of Conduct](.github/CODE_OF_CONDUCT.md) for guidelines
+    on ensuring everyone has the best experience interacting with the community.
+* We welcome and encourage contributions to this project !
+    Please review the [contributing](.github/CONTRIBUTING.md) doc for submitting
+    issues/a guide on submitting pull requests and helping out.
 
-The code is under CeCILL license.
+## 🛡️ Security
 
-You can find all details here: https://cecill.info/licences/Licence_CeCILL_V2.1-en.html
+See [security](.github/SECURITY.md) file for details.
 
-# Credits
+## ⚖️ License
 
-Copyright © Ludovic Ortega, 2023
-
-Contributor(s):
-
--Ortega Ludovic - ludovic.ortega@adminafk.fr
+See [here](LICENSE).
