@@ -1,50 +1,39 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: [
-    'config:recommended',
-    ':dependencyDashboard',
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "docker:enableMajor",
+    "replacements:k8s-registry-move",
+    ":automergePr",
+    ":automergePatch",
+    ":disableRateLimiting",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":timezone(Europe/Paris)",
+    "github>m0nsterrr/helm-charts//.github/renovate/labels.json5",
   ],
-  dependencyDashboardAutoclose: true,
-  automergeType: 'pr',
-  platformAutomerge: true,
-  rebaseWhen: 'conflicted',
-  timezone: 'Europe/Paris',
-  schedule: [
-    'before 9pm on friday',
+  "lockFileMaintenance": {
+    "enabled": true,
+  },
+  "dependencyDashboardTitle": "Renovate Dashboard 🤖",
+  "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
+  "rebaseWhen": "conflicted",
+  "schedule": [
+    "before 9pm on friday",
   ],
-  prConcurrentLimit: 0,
-  prHourlyLimit: 0,
-  terragrunt: {
-    enabled: false,
-  },
-  labels: [
-    'dependencies',
+  "labels": [
+    "dependencies",
   ],
-  vulnerabilityAlerts: {
-    enabled: true,
-    labels: [
-      'security',
-    ],
-  },
-  patch: {
-    automerge: true,
-  },
-  pin: {
-    automerge: true,
-  },
-  'pre-commit': {
-    enabled: true,
-  },
-  customManagers: [
+  "customManagers": [
     {
-      customType: 'regex',
-      fileMatch: [
-        '(^|/)Chart\\.yaml$',
+      "customType": "regex",
+      "fileMatch": [
+        "(^|/)Chart\\.yaml$",
       ],
-      matchStrings: [
+      "matchStrings": [
         '#\\s+image:\\s+(?<depName>\\S*)\nappVersion:\\s+"(?<currentValue>\\S*)"',
       ],
-      datasourceTemplate: 'docker',
+      "datasourceTemplate": "docker",
     },
   ],
 }
