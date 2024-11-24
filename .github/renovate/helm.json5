@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "description": ["Process Helm chart"],
+      "customType": "regex",
+      "fileMatch": ["(^|/)Chart\\.yaml$",],
+      "matchStrings": [
+        '#\\s+image:\\s+(?<depName>\\S*)\nappVersion:\\s+"(?<currentValue>\\S*)"',
+      ],
+      "datasourceTemplate": "docker",
+    },
+  ]
+}

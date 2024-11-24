@@ -1,6 +1,6 @@
 # homepage
 
-![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.9.12](https://img.shields.io/badge/AppVersion-v0.9.12-informational?style=flat-square)
+![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.9.13](https://img.shields.io/badge/AppVersion-v0.9.13-informational?style=flat-square)
 
 homepage helm chart for Kubernetes
 
