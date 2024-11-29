@@ -1,6 +1,6 @@
 # flaresolverr
 
-![Version: 0.2.9](https://img.shields.io/badge/Version-0.2.9-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.21](https://img.shields.io/badge/AppVersion-v3.3.21-informational?style=flat-square)
+![Version: 0.2.10](https://img.shields.io/badge/Version-0.2.10-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.21](https://img.shields.io/badge/AppVersion-v3.3.21-informational?style=flat-square)
 
 flaresolverr helm chart for Kubernetes
 
@@ -25,6 +25,12 @@ Kubernetes: `>=1.23.0-0`
 ### OCI
 ```console
 helm install flaresolverr oci://ghcr.io/m0nsterrr/helm-charts/flaresolverr
+```
+
+Verify the signature :
+```console
+cosign verify ghcr.io/m0nsterrr/helm-charts/flaresolverr:0.2.10 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+tions.githubusercontent.com
 ```
 
 ### Helm repository

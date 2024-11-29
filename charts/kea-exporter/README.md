@@ -1,6 +1,6 @@
 # kea-exporter
 
-![Version: 0.2.6](https://img.shields.io/badge/Version-0.2.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.7.0](https://img.shields.io/badge/AppVersion-v0.7.0-informational?style=flat-square)
+![Version: 0.2.7](https://img.shields.io/badge/Version-0.2.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.7.0](https://img.shields.io/badge/AppVersion-v0.7.0-informational?style=flat-square)
 
 kea-exporter helm chart for Kubernetes
 
@@ -25,6 +25,12 @@ Kubernetes: `>=1.23.0-0`
 ### OCI
 ```console
 helm install kea-exporter oci://ghcr.io/m0nsterrr/helm-charts/kea-exporter
+```
+
+Verify the signature :
+```console
+cosign verify ghcr.io/m0nsterrr/helm-charts/kea-exporter:0.2.7 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+tions.githubusercontent.com
 ```
 
 ### Helm repository

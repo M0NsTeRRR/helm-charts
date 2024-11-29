@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 1.0.3](https://img.shields.io/badge/Version-1.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.2](https://img.shields.io/badge/AppVersion-5.0.2-informational?style=flat-square)
+![Version: 1.0.4](https://img.shields.io/badge/Version-1.0.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.2](https://img.shields.io/badge/AppVersion-5.0.2-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -25,6 +25,12 @@ Kubernetes: `>=1.23.0-0`
 ### OCI
 ```console
 helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
+```
+
+Verify the signature :
+```console
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:1.0.4 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+tions.githubusercontent.com
 ```
 
 ### Helm repository

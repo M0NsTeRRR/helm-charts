@@ -1,6 +1,6 @@
 # homepage
 
-![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.9.13](https://img.shields.io/badge/AppVersion-v0.9.13-informational?style=flat-square)
+![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.9.13](https://img.shields.io/badge/AppVersion-v0.9.13-informational?style=flat-square)
 
 homepage helm chart for Kubernetes
 
@@ -25,6 +25,12 @@ Kubernetes: `>=1.23.0-0`
 ### OCI
 ```console
 helm install homepage oci://ghcr.io/m0nsterrr/helm-charts/homepage
+```
+
+Verify the signature :
+```console
+cosign verify ghcr.io/m0nsterrr/helm-charts/homepage:0.1.5 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+tions.githubusercontent.com
 ```
 
 ### Helm repository
