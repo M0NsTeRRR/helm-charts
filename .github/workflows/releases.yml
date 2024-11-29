@@ -40,7 +40,8 @@ jobs:
         if: steps.check-artifacts.outputs.has_artifacts == 'true'
         with:
           name: artifacts
-          path: .cr-release-packages
+          include-hidden-files: true
+          path: .cr-release-packages/
 
   publish-oci:
     name: Publish to ghcr.io
