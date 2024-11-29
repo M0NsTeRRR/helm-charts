@@ -4893,6 +4893,24 @@ entries:
   sonarr:
   - apiVersion: v2
     appVersion: 4.0.11
+    created: "2024-11-29T09:04:26.016333121Z"
+    description: sonarr helm chart for Kubernetes
+    digest: 6964343d76194b30646eb611c978cd6342d7529e7da43ce4c265d860e11e36a1
+    home: https://github.com/Sonarr/Sonarr
+    icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: ludovic.ortega@adminafk.fr
+      name: Ludovic Ortega
+    name: sonarr
+    sources:
+    - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/sonarr
+    type: application
+    urls:
+    - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.4.7/sonarr-0.4.7.tgz
+    version: 0.4.7
+  - apiVersion: v2
+    appVersion: 4.0.11
     created: "2024-11-29T08:42:42.194532932Z"
     description: sonarr helm chart for Kubernetes
     digest: ad09eafcd092c91446a7362f172815403d61288f949323487a58a5fd57200d00
@@ -5303,4 +5321,4 @@ entries:
     urls:
     - https://github.com/M0NsTeRRR/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-29T08:42:42.196081635Z"
+generated: "2024-11-29T09:04:26.017569429Z"
