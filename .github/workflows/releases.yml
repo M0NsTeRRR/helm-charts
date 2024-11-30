@@ -4,12 +4,11 @@ on:
     branches:
       - main
 jobs:
-  publish-gh-pages:
-    name: Publish to Github pages
+  package-helm-chart:
+    name: Package helm chart
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      packages: write
+      contents: read
     outputs:
       has_artifacts: ${{ steps.check-artifacts.outputs.has_artifacts }}
     steps:
@@ -17,16 +16,25 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Configure Git
+      - name: Install helm
+        uses: azure/setup-helm@v4
+      - name: Package helm charts
         run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.6.0
-        with:
-          config: "./cr.yaml"
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          mkdir -p ./.cr-release-packages
+          for chart in ./charts/*; do
+            if [ -d "$chart" ] && [ -f "$chart/Chart.yaml" ]; then
+              current_version=$(grep '^version:' "$chart/Chart.yaml" | awk '{print $2}')
+              previous_version=$(git show HEAD~1:"$chart/Chart.yaml" | grep '^version:' | awk '{print $2}' 2>/dev/null)
+
+              if [ "$current_version" != "$previous_version" ]; then
+                helm package "$chart" --destination ./.cr-release-packages
+              else
+                echo "No version change for $chart. Skipping."
+              fi
+            else
+              echo "Skipping $chart: Not a valid Helm chart"
+            fi
+          done
       - name: Check if artifacts exist
         id: check-artifacts
         run: |
@@ -43,17 +51,23 @@ jobs:
           include-hidden-files: true
           path: .cr-release-packages/
 
-  publish-oci:
+  publish:
     name: Publish to ghcr.io
     runs-on: ubuntu-latest
     permissions:
       packages: write # needed for pushing to github registry
       id-token: write # needed for signing the images with GitHub OIDC Token
-    needs: [publish-gh-pages]
+    needs: [package-helm-chart]
     if: needs.publish-gh-pages.outputs.has_artifacts == 'true'
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Install Cosign
         uses: sigstore/cosign-installer@v3
+      - name: Install Oras
+        uses: oras-project/setup-oras@v1
       - name: Downloads artifacts
         uses: actions/download-artifact@v4
         with:
@@ -69,11 +83,16 @@ jobs:
         env:
           COSIGN_YES: true
         run: |
-          lowercase=$(echo "${GITHUB_REPOSITORY}" | tr '[:upper:]' '[:lower:]')
           for chart in `find .cr-release-packages -name '*.tgz' -print`; do
-            helm push ${chart} oci://ghcr.io/${lowercase} |& tee helm-push-output.log
-            file_name=${chart##*/}
-            chart_name=${file_name%-*}
-            digest=$(awk -F "[, ]+" '/Digest/{print $NF}' < helm-push-output.log)
-            cosign sign "ghcr.io/${lowercase}/${chart_name}@${digest}"
+            helm push ${chart} oci://ghcr.io/${GITHUB_REPOSITORY@L} |& tee helm-push-output.log
+            chart_name=${chart%-*}
+            chart_digest=$(awk -F "[, ]+" '/Digest/{print $NF}' < helm-push-output.log)
+            cosign sign "ghcr.io/${GITHUB_REPOSITORY@L}/${chart_name}@${chart_digest}"
+            oras push \
+              oci://ghcr.io/${GITHUB_REPOSITORY@L}/${chart_name}:artifacthub.io \
+              --config /dev/null:application/vnd.cncf.artifacthub.config.v1+yaml \
+              charts/$chart_name/artifacthub-repo.yml:application/vnd.cncf.artifacthub.repository-metadata.layer.v1.yaml\
+              |& tee oras-push-output.log
+            artifacthub_digest=$(grep "Digest:" oras-push-output.log | awk '{print $2}')
+            cosign sign "ghcr.io/${GITHUB_REPOSITORY@L}/${chart_name}:artifacthub.io@${artifacthub_digest}"
           done

@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 0.3.4](https://img.shields.io/badge/Version-0.3.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.10.3](https://img.shields.io/badge/AppVersion-10.10.3-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.10.3](https://img.shields.io/badge/AppVersion-10.10.3-informational?style=flat-square)
 
 jellyfin helm chart for Kubernetes
 
@@ -20,26 +20,15 @@ jellyfin helm chart for Kubernetes
 
 Kubernetes: `>=1.23.0-0`
 
-## Chart Repo
-
-### OCI
+## Install
 ```console
 helm install jellyfin oci://ghcr.io/m0nsterrr/helm-charts/jellyfin
 ```
 
-Verify the signature :
+Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/jellyfin:0.3.4 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/jellyfin:1.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
-```
-
-### Helm repository
-Will be deprecated in a future major release
-
-Add the following repo to use the chart:
-
-```console
-helm repo add adminafk https://helm-charts.adminafk.fr
 ```
 
 ## Values

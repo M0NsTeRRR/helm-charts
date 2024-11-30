@@ -7,11 +7,11 @@
 
 <div align="center">
 
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/m0nsterrr&style=for-the-badge)](https://artifacthub.io/packages/search?repo=m0nsterrr)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/m0nsterrr&style=for-the-badge)](https://artifacthub.io/packages/search?user=M0NsTeRRR)
 
 </div>
 
-This is my custom Helm charts that are published under https://helm-charts.adminafk.fr
+These are my custom Helm charts. Documentation for each chart can be found in its respective README file.
 
 ## 🛠️ Dev
 Install [helm](https://helm.sh/docs/intro/install/) and [helm-docs](https://github.com/norwoodj/helm-docs)
