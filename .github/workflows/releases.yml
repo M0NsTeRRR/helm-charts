@@ -23,10 +23,14 @@ jobs:
           mkdir -p ./.cr-release-packages
           for chart in ./charts/*; do
             if [ -d "$chart" ] && [ -f "$chart/Chart.yaml" ]; then
+              # get current version
               current_version=$(grep '^version:' "$chart/Chart.yaml" | awk '{print $2}')
-              previous_version=$(git show HEAD~1:"$chart/Chart.yaml" | grep '^version:' | awk '{print $2}' 2>/dev/null)
+              # get latest release version
+              oras discover ghcr.io/${GITHUB_REPOSITORY}/${chart} --output json |& tee oci-tags-output.log
+              previous_version=$(cat oci-tags-output.log | jq -r '.references[].tag' | sort -V | tail -n 1)
 
               if [ "$current_version" != "$previous_version" ]; then
+                helm dependency build "$chart"
                 helm package "$chart" --destination ./.cr-release-packages
               else
                 echo "No version change for $chart. Skipping."
@@ -58,7 +62,7 @@ jobs:
       packages: write # needed for pushing to github registry
       id-token: write # needed for signing the images with GitHub OIDC Token
     needs: [package-helm-chart]
-    if: needs.publish-gh-pages.outputs.has_artifacts == 'true'
+    if: needs.package-helm-chart.outputs.has_artifacts == 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -84,15 +88,20 @@ jobs:
           COSIGN_YES: true
         run: |
           for chart in `find .cr-release-packages -name '*.tgz' -print`; do
+            # push chart to OCI  
             helm push ${chart} oci://ghcr.io/${GITHUB_REPOSITORY@L} |& tee helm-push-output.log
-            chart_name=${chart%-*}
+            file_name=${chart##*/}
+            chart_name=${file_name%-*}
             chart_digest=$(awk -F "[, ]+" '/Digest/{print $NF}' < helm-push-output.log)
+            # sign chart
             cosign sign "ghcr.io/${GITHUB_REPOSITORY@L}/${chart_name}@${chart_digest}"
+            # push artifacthub-repo.yml to OCI
             oras push \
-              oci://ghcr.io/${GITHUB_REPOSITORY@L}/${chart_name}:artifacthub.io \
+              ghcr.io/${GITHUB_REPOSITORY@L}/${chart_name}:artifacthub.io \
               --config /dev/null:application/vnd.cncf.artifacthub.config.v1+yaml \
-              charts/$chart_name/artifacthub-repo.yml:application/vnd.cncf.artifacthub.repository-metadata.layer.v1.yaml\
+              charts/$chart_name/artifacthub-repo.yml:application/vnd.cncf.artifacthub.repository-metadata.layer.v1.yaml \
               |& tee oras-push-output.log
             artifacthub_digest=$(grep "Digest:" oras-push-output.log | awk '{print $2}')
+            # sign artifacthub-repo.yml
             cosign sign "ghcr.io/${GITHUB_REPOSITORY@L}/${chart_name}:artifacthub.io@${artifacthub_digest}"
           done
