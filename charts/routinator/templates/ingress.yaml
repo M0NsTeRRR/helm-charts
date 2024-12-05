@@ -33,7 +33,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ include "routinator.fullname" $ }}
+                name: {{ include "routinator.fullname" $ }}-http
                 port:
                   number: {{ $.Values.service.port }}
           {{- end }}
