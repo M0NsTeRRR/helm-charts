@@ -1,6 +1,6 @@
 # prometheus-pve-exporter
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.4.5](https://img.shields.io/badge/AppVersion-3.4.5-informational?style=flat-square)
+![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.4.6](https://img.shields.io/badge/AppVersion-3.4.6-informational?style=flat-square)
 
 prometheus-pve-exporter helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install prometheus-pve-exporter oci://ghcr.io/m0nsterrr/helm-charts/prometh
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/prometheus-pve-exporter:1.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/prometheus-pve-exporter:1.0.1 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
