@@ -28,11 +28,10 @@ jobs:
               chart=$(basename "$chart_path")
               # get current version
               current_version=$(grep '^version:' "$chart_path/Chart.yaml" | awk '{print $2}')
-              # get latest release version
-              oras discover ghcr.io/${GITHUB_REPOSITORY@L}/${chart} --output json |& tee oci-tags-output.log
-              previous_version=$(cat oci-tags-output.log | jq -r '.references[].tag' | sort -V | tail -n 1)
+              # get current release version
+              oras discover ghcr.io/${GITHUB_REPOSITORY@L}/${chart}:${current_version}
 
-              if [ "$current_version" != "$previous_version" ]; then
+              if [ "$?" -eq 1 ]; then
                 helm dependency build "$chart_path"
                 helm package "$chart_path" --destination ./.cr-release-packages
               else
@@ -91,7 +90,8 @@ jobs:
           for chart_path in `find .cr-release-packages -name '*.tgz' -print`; do
             # push chart to OCI  
             helm push ${chart_path} oci://ghcr.io/${GITHUB_REPOSITORY@L} |& tee helm-push-output.log
-            chart=$(basename "$chart_path" .tgz)
+            chart_release_file=$(basename "$chart_path")
+            chart=${chart_release_file%-*}
             chart_digest=$(awk -F "[, ]+" '/Digest/{print $NF}' < helm-push-output.log)
             # sign chart
             cosign sign "ghcr.io/${GITHUB_REPOSITORY@L}/${chart}@${chart_digest}"
