@@ -29,7 +29,7 @@ jobs:
               # get current version
               current_version=$(grep '^version:' "$chart_path/Chart.yaml" | awk '{print $2}')
               # get latest release version
-              oras discover ghcr.io/${GITHUB_REPOSITORY}/${chart} --output json |& tee oci-tags-output.log
+              oras discover ghcr.io/${GITHUB_REPOSITORY@L}/${chart} --output json |& tee oci-tags-output.log
               previous_version=$(cat oci-tags-output.log | jq -r '.references[].tag' | sort -V | tail -n 1)
 
               if [ "$current_version" != "$previous_version" ]; then
