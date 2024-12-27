@@ -141,7 +141,7 @@ gluetun:
     registry: docker.io
     repository: qmcgaw/gluetun
     pullPolicy: IfNotPresent
-    tag: "v3.39.1"
+    tag: "v3.40.0"
     sha: ""
   extraEnv: []
   extraEnvFrom: []

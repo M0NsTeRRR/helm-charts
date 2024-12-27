@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 2.0.1](https://img.shields.io/badge/Version-2.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.3](https://img.shields.io/badge/AppVersion-5.0.3-informational?style=flat-square)
+![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.3](https://img.shields.io/badge/AppVersion-5.0.3-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:2.0.1 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:2.1.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -56,7 +56,7 @@ tions.githubusercontent.com
 | gluetun.image.registry | string | `"docker.io"` |  |
 | gluetun.image.repository | string | `"qmcgaw/gluetun"` |  |
 | gluetun.image.sha | string | `""` |  |
-| gluetun.image.tag | string | `"v3.39.1"` |  |
+| gluetun.image.tag | string | `"v3.40.0"` |  |
 | gluetun.resources | object | `{}` |  |
 | gluetun.securityContext.capabilities.add[0] | string | `"NET_ADMIN"` |  |
 | gluetun.volumeMounts | list | `[]` |  |
