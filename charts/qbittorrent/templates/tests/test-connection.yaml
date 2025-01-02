@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "qbittorrent.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ include "qbittorrent.fullname" . }}:{{ .Values.qbittorrent.service.port }}']
   restartPolicy: Never

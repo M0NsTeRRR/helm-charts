@@ -1,0 +1,64 @@
+{{- if .Values.genericDevicePlugin.serviceMonitor.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "genericDevicePlugin.fullname" . }}-metrics
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "genericDevicePlugin.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.genericDevicePlugin.serviceMonitor.service.port }}
+      protocol: TCP
+      name: metrics
+  selector:
+    {{- include "genericDevicePlugin.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "genericDevicePlugin.fullname" . }}
+  namespace: {{ default .Release.Namespace .Values.genericDevicePlugin.serviceMonitor.namespace }}
+  labels:
+    {{- with .Values.genericDevicePlugin.serviceMonitor.labels }}
+      {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  jobLabel: {{ .Release.Name }}
+  namespaceSelector:
+    matchNames:
+      - {{ .Release.Namespace }}
+  selector:
+    matchLabels:
+      {{- include "genericDevicePlugin.selectorLabels" . | nindent 6 }}
+  {{- with .Values.genericDevicePlugin.serviceMonitor.targetLabels }}
+  targetLabels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  endpoints:
+  - port: metrics
+    {{- with .Values.genericDevicePlugin.serviceMonitor.interval }}
+    interval: {{ . }}
+    {{- end }}
+    {{- with .Values.genericDevicePlugin.serviceMonitor.scrapeTimeout }}
+    scrapeTimeout: {{ . }}
+    {{- end }}
+    honorLabels: true
+    path: {{ .Values.genericDevicePlugin.serviceMonitor.path }}
+    scheme: {{ .Values.genericDevicePlugin.serviceMonitor.scheme }}
+    {{- with .Values.genericDevicePlugin.serviceMonitor.tlsConfig }}
+    tlsConfig:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.genericDevicePlugin.serviceMonitor.relabelings }}
+    relabelings:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.genericDevicePlugin.serviceMonitor.metricRelabelings }}
+    metricRelabelings:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+{{- end }}

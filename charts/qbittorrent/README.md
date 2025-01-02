@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.3](https://img.shields.io/badge/AppVersion-5.0.3-informational?style=flat-square)
+![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.3](https://img.shields.io/badge/AppVersion-5.0.3-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:2.1.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:3.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -35,71 +35,74 @@ tions.githubusercontent.com
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| affinity | object | `{}` |  |
-| autoscaling.enabled | bool | `false` |  |
-| autoscaling.maxReplicas | int | `100` |  |
-| autoscaling.minReplicas | int | `1` |  |
-| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","volumeName":""}}` | Creating PVC to store configuration |
-| config.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
-| config.persistence.annotations | object | `{}` | Annotations for PVCs |
-| config.persistence.name | string | `""` | Config name |
-| config.persistence.size | string | `"5Gi"` | Size of persistent disk |
-| config.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
-| extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
-| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
-| fullnameOverride | string | `""` |  |
-| gluetun.enabled | bool | `true` |  |
-| gluetun.extraEnv | list | `[]` |  |
-| gluetun.extraEnvFrom | list | `[]` |  |
-| gluetun.image.pullPolicy | string | `"IfNotPresent"` |  |
-| gluetun.image.registry | string | `"docker.io"` |  |
-| gluetun.image.repository | string | `"qmcgaw/gluetun"` |  |
-| gluetun.image.sha | string | `""` |  |
-| gluetun.image.tag | string | `"v3.40.0"` |  |
-| gluetun.resources | object | `{}` |  |
-| gluetun.securityContext.capabilities.add[0] | string | `"NET_ADMIN"` |  |
-| gluetun.volumeMounts | list | `[]` |  |
-| image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"onedr0p/qbittorrent"` |  |
-| image.sha | string | `""` |  |
-| image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
-| imagePullSecrets | list | `[]` |  |
-| ingress.annotations | object | `{}` |  |
-| ingress.enabled | bool | `false` |  |
-| ingress.hosts[0].host | string | `"chart-example.local"` |  |
-| ingress.hosts[0].paths[0].path | string | `"/"` |  |
-| ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
-| ingress.ingressClassName | string | `""` |  |
-| ingress.tls | list | `[]` |  |
-| nameOverride | string | `""` |  |
-| nodeSelector | object | `{}` |  |
-| podAnnotations | object | `{}` |  |
-| podLabels | object | `{}` |  |
-| podSecurityContext.fsGroup | int | `65534` |  |
-| podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
-| replicaCount | int | `1` |  |
-| resources | object | `{}` |  |
-| securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| securityContext.privileged | bool | `false` |  |
-| securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| securityContext.runAsGroup | int | `65534` |  |
-| securityContext.runAsNonRoot | bool | `true` |  |
-| securityContext.runAsUser | int | `65534` |  |
-| securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
-| service.torrent.annotations | object | `{}` | Annotations to add to the torrent service |
-| service.torrent.port | int | `8388` |  |
-| service.torrent.type | string | `"ClusterIP"` |  |
-| service.web.annotations | object | `{}` | Annotations to add to the web service |
-| service.web.port | int | `80` |  |
-| service.web.type | string | `"ClusterIP"` |  |
-| serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
-| serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
-| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
-| serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
-| strategy | object | `{"type":"Recreate"}` | Deployment strategy |
-| tolerations | list | `[]` |  |
-| volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
-| volumes | list | `[]` | Additional volumes on the output Deployment definition. |
+| genericDevicePlugin | object | `{"affinity":{},"enabled":true,"extraEnv":[],"extraEnvFrom":[],"fullnameOverride":"","image":{"registry":"ghcr.io","repository":"squat/generic-device-plugin","sha":"","tag":"36bfc606bba2064de6ede0ff2764cbb52edff70d"},"imagePullSecrets":[],"nameOverride":"","nodeSelector":{},"podAnnotations":{},"podLabels":{},"podSecurityContext":{},"priorityClassName":"system-node-critical","resources":{},"securityContext":{"privileged":true},"serviceAccount":{"annotations":{},"automount":true,"create":true,"name":""},"serviceMonitor":{"enabled":false,"interval":"30s","labels":{},"metricRelabelings":[],"namespace":null,"path":"/metrics","relabelings":[],"scheme":"http","scrapeTimeout":"30s","service":{"port":8080},"targetLabels":[],"tlsConfig":{}},"tolerations":[],"updateStrategy":{"type":"RollingUpdate"}}` | A Kubernetes device plugin to schedule generic Linux devices (used for /dev/tun) |
+| genericDevicePlugin.enabled | bool | `true` | Enable generic device plugin daemonset |
+| genericDevicePlugin.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
+| genericDevicePlugin.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
+| genericDevicePlugin.image.tag | string | `"36bfc606bba2064de6ede0ff2764cbb52edff70d"` | Overrides the image tag whose default is the chart appVersion. |
+| genericDevicePlugin.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| genericDevicePlugin.serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
+| genericDevicePlugin.serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| genericDevicePlugin.serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| genericDevicePlugin.serviceMonitor.enabled | bool | `false` | If true, a ServiceMonitor CRD is created for a prometheus operator |
+| genericDevicePlugin.serviceMonitor.namespace | string | `nil` | If set create the `ServiceMonitor` in an alternate namespace. |
+| genericDevicePlugin.serviceMonitor.service.port | int | `8080` | Metrics service port to scrape |
+| genericDevicePlugin.updateStrategy | object | `{"type":"RollingUpdate"}` | Deployment strategy |
+| qbittorrent.affinity | object | `{}` |  |
+| qbittorrent.autoscaling.enabled | bool | `false` |  |
+| qbittorrent.autoscaling.maxReplicas | int | `100` |  |
+| qbittorrent.autoscaling.minReplicas | int | `1` |  |
+| qbittorrent.autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| qbittorrent.config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","volumeName":""}}` | Creating PVC to store configuration |
+| qbittorrent.config.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
+| qbittorrent.config.persistence.annotations | object | `{}` | Annotations for PVCs |
+| qbittorrent.config.persistence.name | string | `""` | Config name |
+| qbittorrent.config.persistence.size | string | `"5Gi"` | Size of persistent disk |
+| qbittorrent.config.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
+| qbittorrent.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
+| qbittorrent.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
+| qbittorrent.fullnameOverride | string | `""` |  |
+| qbittorrent.gluetun | object | `{"enabled":true,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.40.0"},"resources":{"limits":{"squat.ai/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
+| qbittorrent.image.pullPolicy | string | `"IfNotPresent"` |  |
+| qbittorrent.image.registry | string | `"ghcr.io"` |  |
+| qbittorrent.image.repository | string | `"onedr0p/qbittorrent"` |  |
+| qbittorrent.image.sha | string | `""` |  |
+| qbittorrent.image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
+| qbittorrent.imagePullSecrets | list | `[]` |  |
+| qbittorrent.ingress.annotations | object | `{}` |  |
+| qbittorrent.ingress.enabled | bool | `false` |  |
+| qbittorrent.ingress.hosts[0].host | string | `"chart-example.local"` |  |
+| qbittorrent.ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| qbittorrent.ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
+| qbittorrent.ingress.ingressClassName | string | `""` |  |
+| qbittorrent.ingress.tls | list | `[]` |  |
+| qbittorrent.nameOverride | string | `""` |  |
+| qbittorrent.nodeSelector | object | `{}` |  |
+| qbittorrent.podAnnotations | object | `{}` |  |
+| qbittorrent.podLabels | object | `{}` |  |
+| qbittorrent.podSecurityContext.fsGroup | int | `65534` |  |
+| qbittorrent.podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| qbittorrent.replicaCount | int | `1` |  |
+| qbittorrent.resources | object | `{}` |  |
+| qbittorrent.securityContext.allowPrivilegeEscalation | bool | `false` |  |
+| qbittorrent.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| qbittorrent.securityContext.privileged | bool | `false` |  |
+| qbittorrent.securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| qbittorrent.securityContext.runAsGroup | int | `65534` |  |
+| qbittorrent.securityContext.runAsNonRoot | bool | `true` |  |
+| qbittorrent.securityContext.runAsUser | int | `65534` |  |
+| qbittorrent.securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
+| qbittorrent.service.torrent.annotations | object | `{}` | Annotations to add to the torrent service |
+| qbittorrent.service.torrent.port | int | `8388` |  |
+| qbittorrent.service.torrent.type | string | `"ClusterIP"` |  |
+| qbittorrent.service.web.annotations | object | `{}` | Annotations to add to the web service |
+| qbittorrent.service.web.port | int | `80` |  |
+| qbittorrent.service.web.type | string | `"ClusterIP"` |  |
+| qbittorrent.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| qbittorrent.serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
+| qbittorrent.serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| qbittorrent.serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| qbittorrent.strategy | object | `{"type":"Recreate"}` | Deployment strategy |
+| qbittorrent.tolerations | list | `[]` |  |
+| qbittorrent.volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
+| qbittorrent.volumes | list | `[]` | Additional volumes on the output Deployment definition. |

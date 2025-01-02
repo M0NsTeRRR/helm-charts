@@ -4,14 +4,14 @@ metadata:
   name: {{ include "qbittorrent.fullname" . }}-web
   labels:
     {{- include "qbittorrent.labels" . | nindent 4 }}
-  {{- with .Values.service.web.annotations }}
+  {{- with .Values.qbittorrent.service.web.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  type: {{ .Values.service.web.type }}
+  type: {{ .Values.qbittorrent.service.web.type }}
   ports:
-    - port: {{ .Values.service.web.port }}
+    - port: {{ .Values.qbittorrent.service.web.port }}
       targetPort: http
       protocol: TCP
       name: http

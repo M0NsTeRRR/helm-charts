@@ -1,0 +1,92 @@
+{{- if .Values.genericDevicePlugin.enabled }}
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: {{ include "genericDevicePlugin.fullname" . }}
+  labels:
+    {{- include "genericDevicePlugin.labels" . | nindent 4 }}
+spec:
+  updateStrategy:
+    type: {{ .Values.genericDevicePlugin.updateStrategy.type }}
+  selector:
+    matchLabels:
+      {{- include "genericDevicePlugin.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.genericDevicePlugin.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "genericDevicePlugin.labels" . | nindent 8 }}
+        {{- with .Values.genericDevicePlugin.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- with .Values.genericDevicePlugin.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "genericDevicePlugin.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.genericDevicePlugin.podSecurityContext | nindent 8 }}
+      priorityClassName: {{ .Values.genericDevicePlugin.priorityClassName }}
+      containers:
+        - name: generic-device-plugin
+          securityContext:
+            {{- toYaml .Values.genericDevicePlugin.securityContext | nindent 12 }}
+          {{- if .Values.genericDevicePlugin.image.sha }}
+          image: "{{ .Values.genericDevicePlugin.image.registry }}/{{ .Values.genericDevicePlugin.image.repository }}:{{ .Values.genericDevicePlugin.image.tag | default .Chart.AppVersion }}@sha256:{{ .Values.genericDevicePlugin.image.sha }}"
+          {{- else }}
+          image: "{{ .Values.genericDevicePlugin.image.registry }}/{{ .Values.genericDevicePlugin.image.repository }}:{{ .Values.genericDevicePlugin.image.tag | default .Chart.AppVersion }}"
+          {{- end }}
+          imagePullPolicy: {{ .Values.genericDevicePlugin.image.pullPolicy }}
+          # count: 1024 is arbitrary, but will limit each k8s node
+          # to only running 1024 containers that use /dev/net/tun
+          args:
+          - --device
+          - |
+            name: tun
+            groups:
+              - count: 1024
+                paths:
+                  - path: /dev/net/tun
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.genericDevicePlugin.resources | nindent 12 }}
+          {{- with .Values.genericDevicePlugin.extraEnv }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.genericDevicePlugin.extraEnvFrom }}
+          envFrom:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          volumeMounts:
+            - name: device-plugin
+              mountPath: /var/lib/kubelet/device-plugins
+            - name: dev
+              mountPath: /dev
+      volumes:
+        - name: device-plugin
+          hostPath:
+            path: /var/lib/kubelet/device-plugins
+        - name: dev
+          hostPath:
+            path: /dev
+      {{- with .Values.genericDevicePlugin.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.genericDevicePlugin.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.genericDevicePlugin.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+{{- end }}

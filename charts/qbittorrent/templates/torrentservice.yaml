@@ -4,18 +4,18 @@ metadata:
   name: {{ include "qbittorrent.fullname" . }}-torrent
   labels:
     {{- include "qbittorrent.labels" . | nindent 4 }}
-  {{- with .Values.service.torrent.annotations }}
+  {{- with .Values.qbittorrent.service.torrent.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  type: {{ .Values.service.torrent.type }}
+  type: {{ .Values.qbittorrent.service.torrent.type }}
   ports:
-    - port: {{ .Values.service.torrent.port }}
+    - port: {{ .Values.qbittorrent.service.torrent.port }}
       targetPort: torrent-tcp
       protocol: TCP
       name: torrent-tcp
-    - port: {{ .Values.service.torrent.port }}
+    - port: {{ .Values.qbittorrent.service.torrent.port }}
       targetPort: torrent-udp
       protocol: UDP
       name: torrent-udp
