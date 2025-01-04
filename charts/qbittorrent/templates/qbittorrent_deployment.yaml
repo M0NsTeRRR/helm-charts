@@ -52,6 +52,18 @@ spec:
             - name: torrent-udp
               containerPort: 50413
               protocol: UDP
+          livenessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "wget --no-verbose --tries=1 --spider http://localhost:8080 || exit 1"
+          readinessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "wget --no-verbose --tries=1 --spider http://localhost:8080 || exit 1"
           resources:
             {{- toYaml .Values.qbittorrent.resources | nindent 12 }}
           {{- with .Values.qbittorrent.extraEnv }}
@@ -84,7 +96,7 @@ spec:
           imagePullPolicy: {{ .Values.qbittorrent.gluetun.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ $.Values.qbittorrent.service.web.port }}
+              containerPort: 8888
               protocol: TCP
             - name: shadowsocks-tcp
               containerPort: 8388
@@ -121,6 +133,56 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+        {{- end }}
+        {{- if .Values.qbittorrent.prometheusQbittorrentExporter.enabled }}
+        - name: prometheus-qbittorrent-exporter
+          securityContext:
+            {{- toYaml .Values.qbittorrent.prometheusQbittorrentExporter.securityContext | nindent 12 }}
+          {{- if .Values.qbittorrent.prometheusQbittorrentExporter.image.sha }}
+          image: "{{ .Values.qbittorrent.prometheusQbittorrentExporter.image.registry }}/{{ .Values.qbittorrent.prometheusQbittorrentExporter.image.repository }}:{{ .Values.qbittorrent.prometheusQbittorrentExporter.image.tag }}@sha256:{{ .Values.qbittorrent.prometheusQbittorrentExporter.image.sha }}"
+          {{- else }}
+          image: "{{ .Values.qbittorrent.prometheusQbittorrentExporter.image.registry }}/{{ .Values.qbittorrent.prometheusQbittorrentExporter.image.repository }}:{{ .Values.qbittorrent.prometheusQbittorrentExporter.image.tag }}"
+          {{- end }}
+          imagePullPolicy: {{ .Values.qbittorrent.prometheusQbittorrentExporter.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 8100
+              protocol: TCP
+          livenessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "wget --no-verbose --tries=1 --spider http://127.0.0.1:8100 || exit 1"
+          readinessProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "wget --no-verbose --tries=1 --spider http://127.0.0.1:8100 || exit 1"
+          resources:
+            {{- toYaml .Values.qbittorrent.prometheusQbittorrentExporter.resources | nindent 12 }}
+          env:
+            - name: EXPORTER_PORT
+              value: "8100"
+            - name: QBITTORRENT_HOST
+              value: "localhost"
+            - name: QBITTORRENT_PORT
+              value: "8080"
+          {{- with .Values.qbittorrent.prometheusQbittorrentExporter.extraEnv }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.qbittorrent.prometheusQbittorrentExporter.extraEnvFrom }}
+          envFrom:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.qbittorrent.prometheusQbittorrentExporter.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+        {{- end }}
+        {{- with .Values.qbittorrent.extraContainers }}
+          {{- toYaml . | nindent 8 }}
         {{- end }}
       {{- if or .Values.qbittorrent.config.persistence.enabled .Values.qbittorrent.volumes }}
       volumes:

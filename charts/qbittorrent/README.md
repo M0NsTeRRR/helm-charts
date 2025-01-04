@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 3.0.0](https://img.shields.io/badge/Version-3.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.3](https://img.shields.io/badge/AppVersion-5.0.3-informational?style=flat-square)
+![Version: 4.0.0](https://img.shields.io/badge/Version-4.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.0.3](https://img.shields.io/badge/AppVersion-5.0.3-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:3.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:4.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -59,10 +59,11 @@ tions.githubusercontent.com
 | qbittorrent.config.persistence.name | string | `""` | Config name |
 | qbittorrent.config.persistence.size | string | `"5Gi"` | Size of persistent disk |
 | qbittorrent.config.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
+| qbittorrent.extraContainers | list | `[]` | Extra containers to add to qbittorrent deployment |
 | qbittorrent.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
 | qbittorrent.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
 | qbittorrent.fullnameOverride | string | `""` |  |
-| qbittorrent.gluetun | object | `{"enabled":true,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.40.0"},"resources":{"limits":{"squat.ai/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
+| qbittorrent.gluetun | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.40.0"},"resources":{"limits":{"squat.ai/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
 | qbittorrent.image.pullPolicy | string | `"IfNotPresent"` |  |
 | qbittorrent.image.registry | string | `"ghcr.io"` |  |
 | qbittorrent.image.repository | string | `"onedr0p/qbittorrent"` |  |
@@ -82,6 +83,10 @@ tions.githubusercontent.com
 | qbittorrent.podLabels | object | `{}` |  |
 | qbittorrent.podSecurityContext.fsGroup | int | `65534` |  |
 | qbittorrent.podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| qbittorrent.prometheusQbittorrentExporter | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"ghcr.io","repository":"esanchezm/prometheus-qbittorrent-exporter","sha":"","tag":"v1.6.0"},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"privileged":false,"readOnlyRootFilesystem":true,"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}},"serviceMonitor":{"enabled":false,"interval":"30s","labels":{},"metricRelabelings":[],"namespace":null,"path":"/metrics","relabelings":[],"scheme":"http","scrapeTimeout":"30s","service":{"port":8100},"targetLabels":[],"tlsConfig":{}},"volumeMounts":[]}` | Prometheus-qbittorrent-exporter sidecar |
+| qbittorrent.prometheusQbittorrentExporter.serviceMonitor.enabled | bool | `false` | If true, a ServiceMonitor CRD is created for a prometheus operator |
+| qbittorrent.prometheusQbittorrentExporter.serviceMonitor.namespace | string | `nil` | If set create the `ServiceMonitor` in an alternate namespace. |
+| qbittorrent.prometheusQbittorrentExporter.serviceMonitor.service.port | int | `8100` | Metrics service port to scrape |
 | qbittorrent.replicaCount | int | `1` |  |
 | qbittorrent.resources | object | `{}` |  |
 | qbittorrent.securityContext.allowPrivilegeEscalation | bool | `false` |  |

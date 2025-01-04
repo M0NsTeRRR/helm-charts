@@ -138,7 +138,7 @@ qbittorrent:
 
   # -- Gluetun sidecar
   gluetun:
-    enabled: true
+    enabled: false
     image:
       registry: docker.io
       repository: qmcgaw/gluetun
@@ -155,6 +155,52 @@ qbittorrent:
     resources:
       limits:
         squat.ai/tun: 1
+
+  # -- Prometheus-qbittorrent-exporter sidecar
+  prometheusQbittorrentExporter:
+    enabled: false
+    image:
+      registry: ghcr.io
+      repository: esanchezm/prometheus-qbittorrent-exporter
+      pullPolicy: IfNotPresent
+      tag: "v1.6.0"
+      sha: ""
+    extraEnv: []
+    extraEnvFrom: []
+    volumeMounts: []
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+          - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      privileged: false
+      runAsUser: 1000
+      runAsGroup: 1000
+      seccompProfile:
+        type: RuntimeDefault
+
+    serviceMonitor:
+      # -- If true, a ServiceMonitor CRD is created for a prometheus operator
+      enabled: false
+      path: /metrics
+      # -- If set create the `ServiceMonitor` in an alternate namespace.
+      namespace:
+      labels: {}
+      interval: 30s
+      scheme: http
+      tlsConfig: {}
+      scrapeTimeout: 30s
+      relabelings: []
+      metricRelabelings: []
+      targetLabels: []
+      service:
+        # -- Metrics service port to scrape
+        port: 8100
+
+  # -- Extra containers to add to qbittorrent deployment
+  extraContainers: []
 
 # -- Generic device plugin
 # -- https://github.com/squat/generic-device-plugin

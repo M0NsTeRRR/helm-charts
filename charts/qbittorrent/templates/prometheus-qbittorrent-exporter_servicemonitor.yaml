@@ -1,0 +1,64 @@
+{{- if and .Values.qbittorrent.prometheusQbittorrentExporter.enabled .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "qbittorrent.fullname" . }}-metrics
+  namespace: {{ .Release.Namespace | quote }}
+  labels:
+    {{- include "qbittorrent.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.service.port }}
+      protocol: TCP
+      name: metrics
+  selector:
+    {{- include "qbittorrent.selectorLabels" . | nindent 4 }}
+  ipFamilyPolicy: PreferDualStack
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "qbittorrent.fullname" . }}
+  namespace: {{ default .Release.Namespace .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.namespace }}
+  labels:
+    {{- with .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.labels }}
+      {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  jobLabel: {{ .Release.Name }}
+  namespaceSelector:
+    matchNames:
+      - {{ .Release.Namespace }}
+  selector:
+    matchLabels:
+      {{- include "qbittorrent.selectorLabels" . | nindent 6 }}
+  {{- with .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.targetLabels }}
+  targetLabels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  endpoints:
+  - port: metrics
+    {{- with .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.interval }}
+    interval: {{ . }}
+    {{- end }}
+    {{- with .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.scrapeTimeout }}
+    scrapeTimeout: {{ . }}
+    {{- end }}
+    honorLabels: true
+    path: {{ .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.path }}
+    scheme: {{ .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.scheme }}
+    {{- with .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.tlsConfig }}
+    tlsConfig:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.relabelings }}
+    relabelings:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.qbittorrent.prometheusQbittorrentExporter.serviceMonitor.metricRelabelings }}
+    metricRelabelings:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+{{- end }}
