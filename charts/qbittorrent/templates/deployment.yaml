@@ -119,6 +119,10 @@ spec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "(ip rule del table 51820; ip -6 rule del table 51820) || true"]
           resources:
             {{- toYaml .Values.qbittorrent.gluetun.resources | nindent 12 }}
           {{- with .Values.qbittorrent.gluetun.extraEnv }}
