@@ -1,6 +1,6 @@
 # flaresolverr
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.21](https://img.shields.io/badge/AppVersion-v3.3.21-informational?style=flat-square)
+![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.21](https://img.shields.io/badge/AppVersion-v3.3.21-informational?style=flat-square)
 
 flaresolverr helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install flaresolverr oci://ghcr.io/m0nsterrr/helm-charts/flaresolverr
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/flaresolverr:1.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/flaresolverr:2.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -36,10 +36,6 @@ tions.githubusercontent.com
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| autoscaling.enabled | bool | `false` |  |
-| autoscaling.maxReplicas | int | `100` |  |
-| autoscaling.minReplicas | int | `1` |  |
-| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | extraEnv | list | `[]` | Environment variables to add to the flaresolverr pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the flaresolverr pods |
 | fullnameOverride | string | `""` |  |

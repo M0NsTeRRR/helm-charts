@@ -5,9 +5,7 @@ metadata:
   labels:
     {{- include "qbittorrent.labels" . | nindent 4 }}
 spec:
-  {{- if not .Values.qbittorrent.autoscaling.enabled }}
   replicas: {{ .Values.qbittorrent.replicaCount }}
-  {{- end }}
   strategy:
     type: {{ .Values.qbittorrent.strategy.type }}
   selector:
