@@ -57,6 +57,8 @@ valkey:
   enabled: true
   architecture: standalone
   primary:
+    disableCommands:
+      - FLUSHALL
     persistence:
       size: 1Gi
   auth:

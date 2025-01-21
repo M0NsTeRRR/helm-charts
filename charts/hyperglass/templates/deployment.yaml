@@ -48,11 +48,16 @@ spec:
             httpGet:
               path: /
               port: http
-            initialDelaySeconds: 120
           readinessProbe:
             httpGet:
               path: /
               port: http
+          startupProbe:
+            httpGet:
+              path: /
+              port: http
+            failureThreshold: 10
+            periodSeconds: 10
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
