@@ -18,9 +18,9 @@ job:
   failedJobsHistoryLimit: 1
   restartPolicy: "Never"
 
-# -- Environment variables to add to the bazarr pods
+# -- Environment variables to add to the recyclarr pods
 extraEnv: []
-# -- Environment variables from secrets or configmaps to add to the bazarr pods
+# -- Environment variables from secrets or configmaps to add to the recyclarr pods
 extraEnvFrom: []
 
 serviceAccount:
