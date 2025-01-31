@@ -1,0 +1,22 @@
+{{- if .Values.data.persistence.enabled -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "actualbudget.dataPersistenceName" . }}
+  labels:
+    {{- include "actualbudget.labels" . | nindent 4 }}
+spec:
+  {{- with .Values.data.persistence.accessModes }}
+  accessModes:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- if .Values.data.persistence.volumeName }}
+  volumeName: {{ .Values.data.persistence.volumeName }}
+  {{- end }}
+  {{- with .Values.data.persistence.storageClass }}
+  storageClassName: {{ if (eq "-" .) }}""{{ else }}{{ . }}{{ end }}
+  {{- end }}
+  resources:
+    requests:
+      storage: "{{ .Values.data.persistence.size }}"
+{{- end }}
