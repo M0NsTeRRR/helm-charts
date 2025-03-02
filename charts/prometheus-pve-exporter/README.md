@@ -1,6 +1,6 @@
 # prometheus-pve-exporter
 
-![Version: 2.0.2](https://img.shields.io/badge/Version-2.0.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.5.2](https://img.shields.io/badge/AppVersion-3.5.2-informational?style=flat-square)
+![Version: 2.0.3](https://img.shields.io/badge/Version-2.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.5.2](https://img.shields.io/badge/AppVersion-3.5.2-informational?style=flat-square)
 
 prometheus-pve-exporter helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install prometheus-pve-exporter oci://ghcr.io/m0nsterrr/helm-charts/prometh
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/prometheus-pve-exporter:2.0.2 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/prometheus-pve-exporter:2.0.3 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -59,6 +59,7 @@ tions.githubusercontent.com
 | podSecurityContext.fsGroup | int | `1000` |  |
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | prometheusRule.enabled | bool | `false` | If true, a PrometheusRule CRD is created for a prometheus operator |
+| prometheusRule.namespace | string | `nil` | If set create the `prometheusRule` in an alternate namespace. |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |

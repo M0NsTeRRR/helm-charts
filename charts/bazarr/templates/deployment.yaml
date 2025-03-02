@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "bazarr.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "bazarr.labels" . | nindent 4 }}
 spec:

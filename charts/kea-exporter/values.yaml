@@ -73,6 +73,8 @@ serviceMonitor:
 prometheusRule:
   # -- If true, a PrometheusRule CRD is created for a prometheus operator
   enabled: false
+  # -- If set create the `prometheusRule` in an alternate namespace.
+  namespace:
 
 ingress:
   enabled: false

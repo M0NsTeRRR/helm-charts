@@ -3,6 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "routinator.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "routinator.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}

@@ -3,6 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "hyperglass.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "hyperglass.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}

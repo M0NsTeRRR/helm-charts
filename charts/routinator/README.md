@@ -1,6 +1,6 @@
 # routinator
 
-![Version: 2.0.1](https://img.shields.io/badge/Version-2.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.14.1](https://img.shields.io/badge/AppVersion-v0.14.1-informational?style=flat-square)
+![Version: 2.0.2](https://img.shields.io/badge/Version-2.0.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.14.1](https://img.shields.io/badge/AppVersion-v0.14.1-informational?style=flat-square)
 
 routinator helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install routinator oci://ghcr.io/m0nsterrr/helm-charts/routinator
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/routinator:2.0.1 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/routinator:2.0.2 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -59,6 +59,7 @@ tions.githubusercontent.com
 | podSecurityContext.fsGroup | int | `1012` |  |
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | prometheusRule.enabled | bool | `false` | If true, a PrometheusRule CRD is created for a prometheus operator |
+| prometheusRule.namespace | string | `nil` | If set create the `PrometheusRule` in an alternate namespace. |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | rtrService.annotations | object | `{}` |  |

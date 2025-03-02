@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: {{ include "recyclarr.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "recyclarr.labels" . | nindent 4 }}
 spec:

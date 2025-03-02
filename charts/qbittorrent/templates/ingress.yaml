@@ -3,6 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "qbittorrent.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "qbittorrent.labels" . | nindent 4 }}
   {{- with .Values.qbittorrent.ingress.annotations }}

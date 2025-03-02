@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: {{ include "genericDevicePlugin.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "genericDevicePlugin.labels" . | nindent 4 }}
 spec:

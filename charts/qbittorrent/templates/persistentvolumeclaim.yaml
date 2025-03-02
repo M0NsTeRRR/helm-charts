@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ include "qbittorrent.configPersistenceName" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "qbittorrent.labels" . | nindent 4 }}
 spec:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "actualbudget.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "actualbudget.labels" . | nindent 4 }}
 spec:

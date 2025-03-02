@@ -3,6 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "prowlarr.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "prowlarr.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}

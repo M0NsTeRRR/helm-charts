@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ include "hyperglass.buildPersistenceName" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "hyperglass.labels" . | nindent 4 }}
 spec:

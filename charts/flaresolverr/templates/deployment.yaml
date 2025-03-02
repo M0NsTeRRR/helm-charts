@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "flaresolverr.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "flaresolverr.labels" . | nindent 4 }}
 spec:

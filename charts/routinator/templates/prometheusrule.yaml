@@ -3,6 +3,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   name: {{ include "routinator.fullname" . }}
+  namespace: {{ default .Release.Namespace .Values.prometheusRule.namespace }}
   labels:
     {{- include "routinator.labels" . | nindent 4 }}
 spec:

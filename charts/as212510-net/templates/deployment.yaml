@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "as212510-net.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "as212510-net.labels" . | nindent 4 }}
 spec:

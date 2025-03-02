@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ include "actualbudget.dataPersistenceName" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "actualbudget.labels" . | nindent 4 }}
 spec:

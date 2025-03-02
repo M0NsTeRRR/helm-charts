@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "prowlarr.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "prowlarr.labels" . | nindent 4 }}
 spec:

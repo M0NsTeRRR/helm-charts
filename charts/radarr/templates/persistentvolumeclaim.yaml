@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ include "radarr.configPersistenceName" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "radarr.labels" . | nindent 4 }}
 spec:

@@ -3,6 +3,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   name: {{ include "prometheus-pve-exporter.fullname" . }}
+  namespace: {{ default .Release.Namespace .Values.prometheusRule.namespace }}
   labels:
     {{- include "prometheus-pve-exporter.labels" . | nindent 4 }}
 spec:

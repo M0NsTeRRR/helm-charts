@@ -3,6 +3,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   name: {{ include "kea-exporter.fullname" . }}
+  namespace: {{ default .Release.Namespace .Values.prometheusRule.namespace }}
   labels:
     {{- include "kea-exporter.labels" . | nindent 4 }}
 spec:
