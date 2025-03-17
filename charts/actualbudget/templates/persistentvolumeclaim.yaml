@@ -6,6 +6,10 @@ metadata:
   namespace: {{ .Release.Namespace }}
   labels:
     {{- include "actualbudget.labels" . | nindent 4 }}
+  {{- with .Values.data.persistence.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- with .Values.data.persistence.accessModes }}
   accessModes:

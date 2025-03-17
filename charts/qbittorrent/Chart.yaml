@@ -3,7 +3,7 @@ kubeVersion: ">=1.23.0-0"
 name: qbittorrent
 description: qbittorrent helm chart for Kubernetes
 type: application
-version: 5.0.2
+version: 5.0.3
 # image: ghcr.io/onedr0p/qbittorrent
 appVersion: "5.0.4"
 maintainers:

@@ -6,6 +6,10 @@ metadata:
   namespace: {{ .Release.Namespace }}
   labels:
     {{- include "hyperglass.labels" . | nindent 4 }}
+  {{- with .Values.build.persistence.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- with .Values.build.persistence.accessModes }}
   accessModes:

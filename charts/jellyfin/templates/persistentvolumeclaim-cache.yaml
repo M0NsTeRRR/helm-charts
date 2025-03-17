@@ -5,6 +5,10 @@ metadata:
   namespace: {{ .Release.Namespace }}
   labels:
     {{- include "jellyfin.labels" . | nindent 4 }}
+  {{- with .Values.cache.persistence.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   {{- with .Values.cache.persistence.accessModes }}
   accessModes:
