@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+permissions: {}
 jobs:
   package-helm-chart:
     name: Package helm chart
@@ -66,7 +67,6 @@ jobs:
           name: artifacts
           include-hidden-files: true
           path: .cr-release-packages/
-
   publish:
     name: Publish to ghcr.io
     runs-on: ubuntu-latest
