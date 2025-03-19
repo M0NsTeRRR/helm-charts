@@ -1,6 +1,6 @@
 # sonarr
 
-![Version: 2.0.2](https://img.shields.io/badge/Version-2.0.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.13](https://img.shields.io/badge/AppVersion-4.0.13-informational?style=flat-square)
+![Version: 2.0.3](https://img.shields.io/badge/Version-2.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.13](https://img.shields.io/badge/AppVersion-4.0.13-informational?style=flat-square)
 
 sonarr helm chart for Kubernetes
 
@@ -27,7 +27,7 @@ helm install sonarr oci://ghcr.io/m0nsterrr/helm-charts/sonarr
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/sonarr:2.0.2 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/sonarr:2.0.3 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -47,7 +47,7 @@ tions.githubusercontent.com
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"onedr0p/sonarr"` |  |
+| image.repository | string | `"home-operations/sonarr"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
