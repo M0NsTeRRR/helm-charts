@@ -1,6 +1,6 @@
 # prometheus-pve-exporter
 
-![Version: 2.0.3](https://img.shields.io/badge/Version-2.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.5.2](https://img.shields.io/badge/AppVersion-3.5.2-informational?style=flat-square)
+![Version: 2.0.3](https://img.shields.io/badge/Version-2.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.5.3](https://img.shields.io/badge/AppVersion-3.5.3-informational?style=flat-square)
 
 prometheus-pve-exporter helm chart for Kubernetes
 
@@ -40,7 +40,7 @@ tions.githubusercontent.com
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the prometheus-pve-exporter pods |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.registry | string | `"registry.hub.docker.com"` |  |
+| image.registry | string | `"ghcr.io"` |  |
 | image.repository | string | `"prompve/prometheus-pve-exporter"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |

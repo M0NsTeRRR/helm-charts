@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  registry: registry.hub.docker.com
+  registry: ghcr.io
   repository: prompve/prometheus-pve-exporter
   pullPolicy: IfNotPresent
   # -- Overrides the image tag whose default is the chart appVersion.
