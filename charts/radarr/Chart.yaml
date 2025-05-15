@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: radarr
 description: radarr helm chart for Kubernetes
 type: application
-version: 2.6.0
+version: 2.6.1
 # image: ghcr.io/home-operations/radarr
-appVersion: "5.23.0"
+appVersion: "5.23.1"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
