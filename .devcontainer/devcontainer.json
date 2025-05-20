@@ -1,40 +1,36 @@
 // For format details, see https://aka.ms/devcontainer.json
 {
-	"name": "helm-charts",
-	"build": { "dockerfile": "Dockerfile"},
-	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
-		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-        "ghcr.io/mpriscella/features/helm-chart-testing:1": {}
-	},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	"remoteUser": "vscode",
-	"runArgs": [
-		"--userns=keep-id"
-	],
-	"containerEnv": {
-		"HOME": "/home/vscode"
-	},
-
-    "mounts": [
-        // mount kubeconfig files
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube,target=/home/vscode/.kube,type=bind,consistency=cached"
-    ],
-
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-kubernetes-tools.vscode-kubernetes-tools"
-			]
-		}
-	}
+  "name": "helm-charts",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/mpriscella/features/helm-chart-testing:1": {}
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+  // Configure tool-specific properties.
+  // "customizations": {},
+  "remoteUser": "vscode",
+  "runArgs": [
+    "--userns=keep-id"
+  ],
+  "containerEnv": {
+    "HOME": "/home/vscode"
+  },
+  "mounts": [
+    // mount kubeconfig files
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube,target=/home/vscode/.kube,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-kubernetes-tools.vscode-kubernetes-tools"
+      ]
+    }
+  }
 }
