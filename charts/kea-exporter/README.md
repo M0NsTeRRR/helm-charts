@@ -21,11 +21,13 @@ kea-exporter helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Install
+
 ```console
 helm install kea-exporter oci://ghcr.io/m0nsterrr/helm-charts/kea-exporter
 ```
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
+
 ```console
 cosign verify ghcr.io/m0nsterrr/helm-charts/kea-exporter:2.0.1 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com

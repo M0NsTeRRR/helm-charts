@@ -21,11 +21,13 @@ joal helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Install
+
 ```console
 helm install joal oci://ghcr.io/m0nsterrr/helm-charts/joal
 ```
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
+
 ```console
 cosign verify ghcr.io/m0nsterrr/helm-charts/joal:2.0.2 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com

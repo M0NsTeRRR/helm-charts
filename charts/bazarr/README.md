@@ -21,11 +21,13 @@ bazarr helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Install
+
 ```console
 helm install bazarr oci://ghcr.io/m0nsterrr/helm-charts/bazarr
 ```
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
+
 ```console
 cosign verify ghcr.io/m0nsterrr/helm-charts/bazarr:2.0.4 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com

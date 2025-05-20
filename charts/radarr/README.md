@@ -21,11 +21,13 @@ radarr helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Install
+
 ```console
 helm install radarr oci://ghcr.io/m0nsterrr/helm-charts/radarr
 ```
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
+
 ```console
 cosign verify ghcr.io/m0nsterrr/helm-charts/radarr:2.6.1 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
