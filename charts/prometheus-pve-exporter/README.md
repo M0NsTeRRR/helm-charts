@@ -21,11 +21,13 @@ prometheus-pve-exporter helm chart for Kubernetes
 Kubernetes: `>=1.23.0-0`
 
 ## Install
+
 ```console
 helm install prometheus-pve-exporter oci://ghcr.io/m0nsterrr/helm-charts/prometheus-pve-exporter
 ```
 
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
+
 ```console
 cosign verify ghcr.io/m0nsterrr/helm-charts/prometheus-pve-exporter:2.0.5 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com

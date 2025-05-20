@@ -14,12 +14,15 @@
 These are my custom Helm charts. Documentation for each chart can be found in its respective README file.
 
 ## 🛠️ Dev
+
 Install [helm](https://helm.sh/docs/intro/install/) and [helm-docs](https://github.com/norwoodj/helm-docs)
 
 ### Run linter
+
 `helm lint charts/<chart>`
 
 ### Devcontainer
+
 [Documentation](https://code.visualstudio.com/docs/devcontainers/containers)
 
 ## 🙋‍♂️ Support & Assistance
