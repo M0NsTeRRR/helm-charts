@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "homepage.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "homepage.labels" . | nindent 4 }}
+data:
+  kubernetes.yaml: |
+    {{ .Values.config.kubernetesYaml | nindent 4 }}
+  settings.yaml: |
+    {{ .Values.config.settingsYaml | nindent 4 }}
+  custom.css: |
+    {{ .Values.config.customCss | nindent 4 }}
+  custom.js: |
+    {{ .Values.config.customJs | nindent 4 }}
+  bookmarks.yaml: |
+    {{ .Values.config.bookmarksYaml | nindent 4 }}
+  services.yaml: |
+    {{ .Values.config.servicesYaml | nindent 4 }}
+  widgets.yaml: |
+    {{ .Values.config.widgetsYaml | nindent 4 }}
+  docker.yaml: |
+    {{ .Values.config.dockerYaml | nindent 4 }}
