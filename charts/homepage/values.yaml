@@ -12,6 +12,11 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+# -- Required! IP or Url - without http/https  
+# Environment variables is a comma-separated (no spaces) list of allowed hosts (sometimes with the port) 
+# that can host your homepage install.  <https://gethomepage.dev/installation/#homepage_allowed_hosts>
+envBaseUrl: homepage.example.com
+
 # -- Environment variables to add to the kea-exporter pods
 extraEnv: []
 # -- Environment variables from secrets or configmaps to add to the kea-exporter pods
@@ -58,6 +63,11 @@ ingress:
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+    ### Consider sticky-session if replicaCount > 1
+    # nginx.ingress.kubernetes.io/affinity: "cookie"
+    # nginx.ingress.kubernetes.io/session-cookie-name: "sample-cookie"
+    # nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
+    # nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
   hosts:
     - host: chart-example.local
       paths:
@@ -101,3 +111,88 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+config:
+  customJs: ""
+  # customJs: |
+  #   This is a multiline value, aka heredoc.
+
+  customCss: ""
+  # customCss: |
+  #   This is a multiline value, aka heredoc.
+
+  bookmarksYaml: |
+    ---
+    - Developer:
+        - Github:
+            - abbr: GH
+              href: https://github.com/
+
+    - Social:
+        - Reddit:
+            - icon: reddit.png
+              href: https://reddit.com/
+              description: The front page of the internet
+
+    - Entertainment:
+        - YouTube:
+            - abbr: YT
+              href: https://youtube.com/
+
+  dockerYaml: ""
+  # dockerYaml: |
+  #   ---
+  #   This is a multiline value, aka heredoc.
+
+  kubernetesYaml: |
+    ---
+    mode: cluster
+
+  servicesYaml: |
+    ---
+    - My First Group:
+        - My First Service:
+            href: http://localhost/
+            description: Homepage is awesome
+  
+    - My Second Group:
+        - My Second Service:
+            href: http://localhost/
+            description: Homepage is the best
+  
+    - My Third Group:
+        - My Third Service:
+            href: http://localhost/
+            description: Homepage is 😎
+  
+  settingsYaml: |
+    ---
+    title: My Awesome Homepage
+    description: A description of my awesome homepage
+    theme: dark
+    language: en
+  
+  widgetsYaml: |
+    ---
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+          label: "cluster"
+        nodes:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+    - resources:
+        backend: resources
+        expanded: true
+        cpu: true
+        memory: true
+        network: default
+    - search:
+        provider: duckduckgo
+        target: _blank
+  

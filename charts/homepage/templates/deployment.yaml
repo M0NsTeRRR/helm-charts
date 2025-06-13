@@ -58,6 +58,8 @@ spec:
               value: {{ .Values.securityContext.runAsUser | quote }}
             - name: PGID
               value: {{ .Values.securityContext.runAsGroup | quote }}
+            - name: HOMEPAGE_ALLOWED_HOSTS
+              value: {{ .Values.envBaseUrl | quote }}
           {{- with .Values.extraEnv }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
