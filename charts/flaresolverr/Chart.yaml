@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: flaresolverr
 description: flaresolverr helm chart for Kubernetes
 type: application
-version: 2.0.3
+version: 2.0.4
 # image: flaresolverr/flaresolverr
-appVersion: "v3.3.24"
+appVersion: "v3.3.25"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
