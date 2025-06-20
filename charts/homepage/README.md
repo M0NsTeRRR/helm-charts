@@ -38,6 +38,15 @@ tions.githubusercontent.com
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
+| config.bookmarksYaml | string | `"---\n- Developer:\n    - Github:\n        - abbr: GH\n          href: https://github.com/\n\n- Social:\n    - Reddit:\n        - icon: reddit.png\n          href: https://reddit.com/\n          description: The front page of the internet\n\n- Entertainment:\n    - YouTube:\n        - abbr: YT\n          href: https://youtube.com/\n"` |  |
+| config.customCss | string | `""` |  |
+| config.customJs | string | `""` |  |
+| config.dockerYaml | string | `""` |  |
+| config.kubernetesYaml | string | `"---\nmode: cluster\n"` |  |
+| config.servicesYaml | string | `"---\n- My First Group:\n    - My First Service:\n        href: http://localhost/\n        description: Homepage is awesome\n\n- My Second Group:\n    - My Second Service:\n        href: http://localhost/\n        description: Homepage is the best\n\n- My Third Group:\n    - My Third Service:\n        href: http://localhost/\n        description: Homepage is 😎\n"` |  |
+| config.settingsYaml | string | `"---\ntitle: My Awesome Homepage\ndescription: A description of my awesome homepage\ntheme: dark\nlanguage: en\n"` |  |
+| config.widgetsYaml | string | `"---\n- kubernetes:\n    cluster:\n      show: true\n      cpu: true\n      memory: true\n      showLabel: true\n      label: \"cluster\"\n    nodes:\n      show: true\n      cpu: true\n      memory: true\n      showLabel: true\n- resources:\n    backend: resources\n    expanded: true\n    cpu: true\n    memory: true\n    network: default\n- search:\n    provider: duckduckgo\n    target: _blank\n"` |  |
+| envBaseUrl | string | `"homepage.example.com"` | Required! IP or Url - without http/https   Environment variables is a comma-separated (no spaces) list of allowed hosts (sometimes with the port)  that can host your homepage install.  <https://gethomepage.dev/installation/#homepage_allowed_hosts> |
 | extraEnv | list | `[]` | Environment variables to add to the kea-exporter pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the kea-exporter pods |
 | fullnameOverride | string | `""` |  |
