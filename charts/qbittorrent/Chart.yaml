@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: qbittorrent
 description: qbittorrent helm chart for Kubernetes
 type: application
-version: 5.1.0
+version: 5.1.1
 # image: ghcr.io/home-operations/qbittorrent
-appVersion: "5.1.0"
+appVersion: "5.1.1"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
