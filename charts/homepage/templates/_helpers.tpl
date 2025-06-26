@@ -52,6 +52,48 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
+Generate a comma-separated list of ingress hosts, Kubernetes internal service FQDNs,
+and custom allowed hosts for homepage.allowedHosts
+*/}}
+{{- define "homepage.allowedHosts" -}}
+{{- $serviceList := list -}}
+{{- $fullName := include "homepage.fullname" . -}}
+{{- $namespace := .Release.Namespace -}}
+
+{{- /* Add ingress hosts */ -}}
+{{- if .Values.ingress.enabled -}}
+  {{- range $host := .Values.ingress.hosts -}}
+    {{- $serviceList = append $serviceList $host.host -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Add all possible FQDN variants for the internal Kubernetes service */ -}}
+{{- $shortName := printf "%s" $fullName -}}
+{{- $serviceList = append $serviceList $shortName -}}
+
+{{- $withNamespace := printf "%s.%s" $fullName $namespace -}}
+{{- $serviceList = append $serviceList $withNamespace -}}
+
+{{- $withSvc := printf "%s.%s.svc" $fullName $namespace -}}
+{{- $serviceList = append $serviceList $withSvc -}}
+
+{{- $withCluster := printf "%s.%s.svc.cluster" $fullName $namespace -}}
+{{- $serviceList = append $serviceList $withCluster -}}
+
+{{- $fullFQDN := printf "%s.%s.svc.cluster.local" $fullName $namespace -}}
+{{- $serviceList = append $serviceList $fullFQDN -}}
+
+{{- /* Add custom allowed hosts from values.yaml */ -}}
+{{- range $host := .Values.config.allowedHosts -}}
+  {{- $serviceList = append $serviceList $host -}}
+{{- end -}}
+
+{{- /* Join the list with commas */ -}}
+{{- $serviceList | join "," -}}
+{{- end -}}
+
+
+{{/*
 Create the name of the service account to use
 */}}
 {{- define "homepage.serviceAccountName" -}}

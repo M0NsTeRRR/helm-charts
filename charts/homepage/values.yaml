@@ -17,6 +17,11 @@ extraEnv: []
 # -- Environment variables from secrets or configmaps to add to the kea-exporter pods
 extraEnvFrom: []
 
+config:
+  # -- List of allowed hosts (sometimes with the port) that can host your homepage install
+  # -- see https://gethomepage.dev/installation/#homepage_allowed_hosts
+  allowedHosts: []
+
 serviceAccount:
   # -- Specifies whether a service account should be created
   create: true
