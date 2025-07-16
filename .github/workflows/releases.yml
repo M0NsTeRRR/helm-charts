@@ -71,8 +71,9 @@ jobs:
         if: steps.check-artifacts.outputs.has_artifacts == 'true'
         with:
           name: artifacts
-          include-hidden-files: true
           path: .cr-release-packages/
+          if-no-files-found: error
+          include-hidden-files: true
 
   publish:
     name: Publish to ghcr.io
