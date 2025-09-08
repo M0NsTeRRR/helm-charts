@@ -11,6 +11,10 @@
 
 </div>
 
+> [!IMPORTANT]
+> Do not open a pull request to update `appVersion`, this is already managed by Renovate and GitHub workflows.
+> If you need a recent version, update your `values.yaml` to specify the desired version.
+
 These are my custom Helm charts. Documentation for each chart can be found in its respective README file.
 
 ## 🛠️ Dev

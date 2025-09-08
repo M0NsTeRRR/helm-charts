@@ -16,6 +16,10 @@
 
 ## Install
 
+> [!IMPORTANT]
+> The Helm chart does not handle opening Gluetun firewall ports automatically. You are responsible for opening the ports you need.
+> For details, see [Firewall Environment Variables](https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md#environment-variables).
+
 ```console
 helm install {{ template "chart.name" . }} oci://ghcr.io/m0nsterrr/helm-charts/{{ template "chart.name" . }}
 ```
