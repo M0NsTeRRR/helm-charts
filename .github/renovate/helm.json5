@@ -8,7 +8,6 @@
       "matchStrings": [
         '#\\s+image:\\s+(?<depName>\\S*)\nappVersion:\\s+"(?<currentValue>\\S*)"',
       ],
-      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)",
       "datasourceTemplate": "docker",
     },
   ]
