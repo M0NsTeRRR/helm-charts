@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 5.1.2](https://img.shields.io/badge/Version-5.1.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.2](https://img.shields.io/badge/AppVersion-5.1.2-informational?style=flat-square)
+![Version: 5.1.3](https://img.shields.io/badge/Version-5.1.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.2](https://img.shields.io/badge/AppVersion-5.1.2-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -22,6 +22,10 @@ Kubernetes: `>=1.23.0-0`
 
 ## Install
 
+> [!IMPORTANT]
+> The Helm chart does not handle opening Gluetun firewall ports automatically. You are responsible for opening the ports you need.
+> For details, see [Firewall Environment Variables](https://github.com/qdm12/gluetun-wiki/blob/main/setup/options/firewall.md#environment-variables).
+
 ```console
 helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 ```
@@ -29,7 +33,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:5.1.2 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:5.1.3 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
