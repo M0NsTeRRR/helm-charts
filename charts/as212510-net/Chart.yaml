@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: as212510-net
 description: as212510.net helm chart for Kubernetes
 type: application
-version: 2.0.2
+version: 3.0.0
 # image: ghcr.io/m0nsterrr/as212510.net
-appVersion: "3.0.2"
+appVersion: "v3.1.1"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
