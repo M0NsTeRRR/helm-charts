@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# install pre-commit hooks
-pre-commit install
+# install helm-docs
+go install github.com/norwoodj/helm-docs/cmd/helm-docs@latest
 
 # nixos fix
 # see https://github.com/microsoft/vscode-remote-release/issues/11024

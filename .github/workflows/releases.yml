@@ -1,13 +1,16 @@
 name: Release Charts
+
 on:
   push:
     branches:
       - main
+
 permissions: {}
+
 jobs:
   package-helm-chart:
     name: Package helm chart
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       packages: read
