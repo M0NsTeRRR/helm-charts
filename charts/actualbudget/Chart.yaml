@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: actualbudget
 description: actualbudget helm chart for Kubernetes
 type: application
-version: 1.9.0
+version: 1.10.0
 # image: ghcr.io/actualbudget/actual-server
-appVersion: "25.10.0"
+appVersion: "25.11.0"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
