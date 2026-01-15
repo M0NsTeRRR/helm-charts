@@ -1,6 +1,6 @@
 dependencies:
 - name: valkey
-  repository: oci://registry-1.docker.io/bitnamicharts
-  version: 3.0.2
-digest: sha256:dda5d35ec1e44afb48b194c1cc73bb13d346ba3599fd870a8b07dda74506945b
-generated: "2025-04-27T11:34:43.819086687+02:00"
+  repository: oci://ghcr.io/valkey-io/valkey-helm
+  version: 0.9.3
+digest: sha256:5a59ee76cfe48f73c9918aac1a4ea9915c437edc8429748f7e1fd1fb000a64af
+generated: "2026-01-15T23:49:36.948139502+01:00"

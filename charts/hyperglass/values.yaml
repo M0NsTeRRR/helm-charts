@@ -53,18 +53,19 @@ securityContext:
     type: RuntimeDefault
 
 valkey:
-  # -- enable the Bitnami Valkey chart. Refer to https://github.com/bitnami/charts/blob/main/bitnami/valkey/ for possible values.
+  # -- enable the Valkey chart. Refer to https://github.com/valkey-io/valkey-helm/tree/main/valkey for possible values.
   enabled: true
-  architecture: standalone
-  primary:
-    disableCommands:
-      - FLUSHALL
-    persistence:
-      size: 1Gi
+  dataStorage:
+    enabled: true
+    requestedSize: 1Gi
   auth:
     enabled: false
-    existingSecret: ""
-    existingSecretPasswordKey: ""
+    # Use an existing secret for user passwords. Key defaults to username.
+    usersExistingSecret: ""
+    aclUsers:
+      default:
+        permissions: "allkeys allchannels allcommands -flushall"
+        # Password will be read from secret key "default" (defaults to username)
   metrics:
     enabled: false
     serviceMonitor:

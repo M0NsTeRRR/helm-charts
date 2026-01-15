@@ -1,6 +1,6 @@
 # hyperglass
 
-![Version: 3.0.4](https://img.shields.io/badge/Version-3.0.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.1.0](https://img.shields.io/badge/AppVersion-v2.1.0-informational?style=flat-square)
+![Version: 4.0.0](https://img.shields.io/badge/Version-4.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.1.0](https://img.shields.io/badge/AppVersion-v2.1.0-informational?style=flat-square)
 
 hyperglass helm chart for Kubernetes
 
@@ -22,7 +22,7 @@ Kubernetes: `>=1.23.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| oci://registry-1.docker.io/bitnamicharts | valkey | 3.0.* |
+| oci://ghcr.io/valkey-io/valkey-helm | valkey | 0.9.* |
 
 ## Install
 
@@ -33,7 +33,7 @@ helm install hyperglass oci://ghcr.io/m0nsterrr/helm-charts/hyperglass
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/hyperglass:3.0.4 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/hyperglass:4.0.0 --certificate-identity=https://github.com/M0NsTeRRR/helm-charts/.github/workflows/releases.yml@refs/heads/main --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -88,15 +88,14 @@ tions.githubusercontent.com
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
 | strategy | object | `{"type":"Recreate"}` | Deployment strategy |
 | tolerations | list | `[]` |  |
-| valkey.architecture | string | `"standalone"` |  |
+| valkey.auth.aclUsers.default.permissions | string | `"allkeys allchannels allcommands -flushall"` |  |
 | valkey.auth.enabled | bool | `false` |  |
-| valkey.auth.existingSecret | string | `""` |  |
-| valkey.auth.existingSecretPasswordKey | string | `""` |  |
-| valkey.enabled | bool | `true` | enable the Bitnami Valkey chart. Refer to https://github.com/bitnami/charts/blob/main/bitnami/valkey/ for possible values. |
+| valkey.auth.usersExistingSecret | string | `""` |  |
+| valkey.dataStorage.enabled | bool | `true` |  |
+| valkey.dataStorage.requestedSize | string | `"1Gi"` |  |
+| valkey.enabled | bool | `true` | enable the Valkey chart. Refer to https://github.com/valkey-io/valkey-helm/tree/main/valkey for possible values. |
 | valkey.metrics.enabled | bool | `false` |  |
 | valkey.metrics.prometheusRule.enabled | bool | `false` |  |
 | valkey.metrics.serviceMonitor.enabled | bool | `false` |  |
-| valkey.primary.disableCommands[0] | string | `"FLUSHALL"` |  |
-| valkey.primary.persistence.size | string | `"1Gi"` |  |
 | volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
 | volumes | list | `[]` | Additional volumes on the output Deployment definition. |
