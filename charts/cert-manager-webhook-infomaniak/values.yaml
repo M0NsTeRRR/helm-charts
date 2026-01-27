@@ -1,0 +1,73 @@
+# -- Name under which the webhook will be available
+groupName: acme.infomaniak.com
+
+certManager:
+  # -- Namespace under which cert-manager is installed
+  namespace: cert-manager
+  # -- Name of the cert-manager service account
+  serviceAccountName: cert-manager
+
+replicaCount: 1
+
+image:
+  registry: ghcr.io
+  repository: m0nsterrr/cert-manager-webhook-infomaniak
+  pullPolicy: IfNotPresent
+  # -- Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+  sha: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+# -- Deployment strategy
+strategy:
+  type: Recreate
+
+# -- Environment variables to add to the cert-manager-webhook-infomaniak pods
+extraEnv: []
+# -- Environment variables from secrets or configmaps to add to the cert-manager-webhook-infomaniak pods
+extraEnvFrom: []
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext:
+  fsGroup: 65532
+  fsGroupChangePolicy: OnRootMismatch
+
+securityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  privileged: false
+  runAsUser: 65532
+  runAsGroup: 65532
+  seccompProfile:
+    type: RuntimeDefault
+
+service:
+  type: ClusterIP
+  port: 443
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

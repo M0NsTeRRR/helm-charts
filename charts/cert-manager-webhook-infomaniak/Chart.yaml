@@ -1,0 +1,15 @@
+apiVersion: v2
+kubeVersion: ">=1.23.0-0"
+name: cert-manager-webhook-infomaniak
+description: cert-manager-webhook-infomaniak helm chart for Kubernetes
+type: application
+version: 1.0.0
+# image: ghcr.io/m0nsterrr/cert-manager-webhook-infomaniak
+appVersion: "v0.1.1"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
+sources:
+  - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/cert-manager-webhook-infomaniak
+home: https://github.com/M0NsTeRRR/cert-manager-webhook-infomaniak
+icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169

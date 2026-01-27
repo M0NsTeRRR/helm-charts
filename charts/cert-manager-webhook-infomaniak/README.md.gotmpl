@@ -1,0 +1,62 @@
+{{ template "chart.header" . }}
+
+{{ template "chart.deprecationWarning" . }}
+
+{{ template "chart.badgesSection" . }}
+
+{{ template "chart.description" . }}
+
+{{ template "chart.homepageLine" . }}
+
+{{ template "chart.maintainersSection" . }}
+
+{{ template "chart.sourcesSection" . }}
+
+{{ template "chart.requirementsSection" . }}
+
+## Install
+
+```console
+helm install {{ template "chart.name" . }} oci://ghcr.io/m0nsterrr/helm-charts/{{ template "chart.name" . }}
+```
+
+Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
+
+```console
+cosign verify ghcr.io/m0nsterrr/helm-charts/{{ template "chart.name" . }}:{{ template "chart.version" . }} --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+tions.githubusercontent.com
+```
+### Create the secret
+
+```console
+kubectl create secret generic cert-manager-webhook-infomaniak \
+  --namespace=cert-manager \
+  --from-literal=api-token=<INFOMANIAK API TOKEN>
+```
+
+### ClusterIssuer example
+
+```console
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: example@example.com # Replace this with your email address
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - dns01:
+        webhook:
+          solverName: infomaniak
+          groupName: acme.infomaniak.com
+          config:
+            #optional, defaults to cert-manager-webhook-infomaniak
+            secretRef: cert-manager-webhook-infomaniak
+            #optional, defaults to api-token
+            apiTokenSecretKey: api-token
+```
+
+{{ template "chart.valuesSection" . }}
