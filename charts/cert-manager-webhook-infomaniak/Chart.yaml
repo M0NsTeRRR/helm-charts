@@ -3,9 +3,9 @@ kubeVersion: ">=1.23.0-0"
 name: cert-manager-webhook-infomaniak
 description: cert-manager-webhook-infomaniak helm chart for Kubernetes
 type: application
-version: 1.0.0
+version: 1.0.1
 # image: ghcr.io/m0nsterrr/cert-manager-webhook-infomaniak
-appVersion: "v0.1.1"
+appVersion: "v0.1.3"
 maintainers:
   - name: Ludovic Ortega
     email: ludovic.ortega@adminafk.fr
