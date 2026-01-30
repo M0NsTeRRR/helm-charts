@@ -1,6 +1,6 @@
 # bazarr
 
-![Version: 2.0.5](https://img.shields.io/badge/Version-2.0.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.5.3](https://img.shields.io/badge/AppVersion-1.5.3-informational?style=flat-square)
+![Version: 2.0.6](https://img.shields.io/badge/Version-2.0.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.5.4](https://img.shields.io/badge/AppVersion-1.5.4-informational?style=flat-square)
 
 bazarr helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install bazarr oci://ghcr.io/m0nsterrr/helm-charts/bazarr
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/bazarr:2.0.5 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/bazarr:2.0.6 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
