@@ -27,6 +27,11 @@
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
+    },
+    {
+      "matchDatasources": ["docker"],
+      // https://github.com/renovatebot/renovate/issues/38656
+      "minimumReleaseAge": null,
     }
   ],
   "labels": [
