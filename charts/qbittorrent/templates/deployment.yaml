@@ -118,6 +118,7 @@ spec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+          # https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/kubernetes.md#adding-ipv6-rule--file-exists
           lifecycle:
             postStart:
               exec:

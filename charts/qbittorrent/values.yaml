@@ -136,7 +136,7 @@ qbittorrent:
       registry: docker.io
       repository: qmcgaw/gluetun
       pullPolicy: IfNotPresent
-      tag: "v3.40.4"
+      tag: "v3.41.1"
       sha: ""
     extraEnv: []
     extraEnvFrom: []
