@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 5.2.0](https://img.shields.io/badge/Version-5.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.4](https://img.shields.io/badge/AppVersion-5.1.4-informational?style=flat-square)
+![Version: 5.3.0](https://img.shields.io/badge/Version-5.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.4](https://img.shields.io/badge/AppVersion-5.1.4-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -33,7 +33,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:5.2.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:5.3.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -91,6 +91,18 @@ tions.githubusercontent.com
 | qbittorrent.prometheusQbittorrentExporter.serviceMonitor.service.port | int | `8100` | Metrics service port to scrape |
 | qbittorrent.replicaCount | int | `1` |  |
 | qbittorrent.resources | object | `{}` |  |
+| qbittorrent.route.main.additionalRules | list | `[]` |  |
+| qbittorrent.route.main.annotations | object | `{}` |  |
+| qbittorrent.route.main.apiVersion | string | `"gateway.networking.k8s.io/v1"` | Set the route apiVersion, e.g. gateway.networking.k8s.io/v1 or gateway.networking.k8s.io/v1alpha2 |
+| qbittorrent.route.main.enabled | bool | `false` | Enables or disables the Gateway API route |
+| qbittorrent.route.main.filters | list | `[]` |  |
+| qbittorrent.route.main.hostnames | list | `[]` |  |
+| qbittorrent.route.main.httpsRedirect | bool | `false` | To redirect to HTTPS, create a new route object under the main route and enable this option. This should only be used with HTTP-like routes, such as HTTPRoute or GRPCRoute. [Reference]( https://gateway-api.sigs.k8s.io/guides/http-redirect-rewrite/ ) |
+| qbittorrent.route.main.kind | string | `"HTTPRoute"` | Set the route kind. Note that experimental kinds require changing `apiVersion` |
+| qbittorrent.route.main.labels | object | `{}` |  |
+| qbittorrent.route.main.matches[0].path.type | string | `"PathPrefix"` |  |
+| qbittorrent.route.main.matches[0].path.value | string | `"/"` |  |
+| qbittorrent.route.main.parentRefs | list | `[]` |  |
 | qbittorrent.securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | qbittorrent.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | qbittorrent.securityContext.privileged | bool | `false` |  |
