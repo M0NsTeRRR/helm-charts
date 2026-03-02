@@ -35,7 +35,7 @@ spec:
             statusCode: 301
     {{- else }}
     - backendRefs:
-        - name: {{ include "qbittorrent.fullname" $ }}
+        - name: {{ include "qbittorrent.fullname" $ }}-web
           port: {{ $.Values.qbittorrent.service.web.port }}
       {{- with $route.filters }}
       filters:
