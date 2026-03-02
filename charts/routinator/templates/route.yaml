@@ -35,7 +35,7 @@ spec:
             statusCode: 301
     {{- else }}
     - backendRefs:
-        - name: {{ include "routinator.fullname" $ }}
+        - name: {{ include "routinator.fullname" $ }}-http
           port: {{ $.Values.service.port }}
       {{- with $route.filters }}
       filters:
