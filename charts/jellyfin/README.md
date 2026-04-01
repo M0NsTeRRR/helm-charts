@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 2.2.0](https://img.shields.io/badge/Version-2.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.11.6](https://img.shields.io/badge/AppVersion-10.11.6-informational?style=flat-square)
+![Version: 2.3.0](https://img.shields.io/badge/Version-2.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 10.11.6](https://img.shields.io/badge/AppVersion-10.11.6-informational?style=flat-square)
 
 jellyfin helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install jellyfin oci://ghcr.io/m0nsterrr/helm-charts/jellyfin
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/jellyfin:2.2.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/jellyfin:2.3.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -71,6 +71,7 @@ tions.githubusercontent.com
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
 | podSecurityContext | object | `{}` |  |
+| priorityClassName | string | `""` | Priority class to be assigned to the Pod(s). |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | route.main.additionalRules | list | `[]` |  |

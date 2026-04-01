@@ -8,6 +8,8 @@ image:
   tag: ""
   sha: ""
 
+# -- Priority class to be assigned to the Pod(s).
+priorityClassName: ""
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

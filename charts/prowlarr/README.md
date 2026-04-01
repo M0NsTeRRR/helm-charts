@@ -1,6 +1,6 @@
 # prowlarr
 
-![Version: 3.4.3](https://img.shields.io/badge/Version-3.4.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.3.5](https://img.shields.io/badge/AppVersion-2.3.5-informational?style=flat-square)
+![Version: 3.5.0](https://img.shields.io/badge/Version-3.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.3.5](https://img.shields.io/badge/AppVersion-2.3.5-informational?style=flat-square)
 
 prowlarr helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install prowlarr oci://ghcr.io/m0nsterrr/helm-charts/prowlarr
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/prowlarr:3.4.3 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/prowlarr:3.5.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -66,6 +66,7 @@ tions.githubusercontent.com
 | podLabels | object | `{}` |  |
 | podSecurityContext.fsGroup | int | `65534` |  |
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| priorityClassName | string | `""` | Priority class to be assigned to the Pod(s). |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | route.main.additionalRules | list | `[]` |  |

@@ -9,6 +9,8 @@ qbittorrent:
     tag: ""
     sha: ""
 
+  # -- Priority class to be assigned to the Pod(s).
+  priorityClassName: ""
   imagePullSecrets: []
   nameOverride: ""
   fullnameOverride: ""
@@ -237,6 +239,8 @@ genericDevicePlugin:
     tag: "36bfc606bba2064de6ede0ff2764cbb52edff70d"
     sha: ""
 
+  # -- Priority class to be assigned to the Pod(s).
+  priorityClassName: system-node-critical
   imagePullSecrets: []
   nameOverride: ""
   fullnameOverride: ""
@@ -268,8 +272,6 @@ genericDevicePlugin:
 
   securityContext:
     privileged: true
-
-  priorityClassName: system-node-critical
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious

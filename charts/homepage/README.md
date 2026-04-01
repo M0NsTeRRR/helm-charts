@@ -1,6 +1,6 @@
 # homepage
 
-![Version: 4.10.1](https://img.shields.io/badge/Version-4.10.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.12.1](https://img.shields.io/badge/AppVersion-v1.12.1-informational?style=flat-square)
+![Version: 4.11.0](https://img.shields.io/badge/Version-4.11.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.12.1](https://img.shields.io/badge/AppVersion-v1.12.1-informational?style=flat-square)
 
 homepage helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install homepage oci://ghcr.io/m0nsterrr/helm-charts/homepage
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/homepage:4.10.1 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/homepage:4.11.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -61,6 +61,7 @@ tions.githubusercontent.com
 | podLabels | object | `{}` |  |
 | podSecurityContext.fsGroup | int | `1000` |  |
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| priorityClassName | string | `""` | Priority class to be assigned to the Pod(s). |
 | rbac.enabled | bool | `true` |  |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |

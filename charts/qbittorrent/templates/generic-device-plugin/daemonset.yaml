@@ -24,6 +24,9 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
     spec:
+      {{- with .Values.genericDevicePlugin.priorityClassName }}
+      priorityClassName: {{ . }}
+      {{- end }}
       {{- with .Values.genericDevicePlugin.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
@@ -31,7 +34,6 @@ spec:
       serviceAccountName: {{ include "genericDevicePlugin.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.genericDevicePlugin.podSecurityContext | nindent 8 }}
-      priorityClassName: {{ .Values.genericDevicePlugin.priorityClassName }}
       containers:
         - name: generic-device-plugin
           securityContext:

@@ -1,6 +1,6 @@
 # joal
 
-![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.37](https://img.shields.io/badge/AppVersion-2.1.37-informational?style=flat-square)
+![Version: 2.2.0](https://img.shields.io/badge/Version-2.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.1.37](https://img.shields.io/badge/AppVersion-2.1.37-informational?style=flat-square)
 
 joal helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install joal oci://ghcr.io/m0nsterrr/helm-charts/joal
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/joal:2.1.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/joal:2.2.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -73,6 +73,7 @@ tions.githubusercontent.com
 | podLabels | object | `{}` |  |
 | podSecurityContext.fsGroup | int | `65534` |  |
 | podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| priorityClassName | string | `""` | Priority class to be assigned to the Pod(s). |
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | route.main.additionalRules | list | `[]` |  |

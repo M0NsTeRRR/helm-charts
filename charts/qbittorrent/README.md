@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 5.3.1](https://img.shields.io/badge/Version-5.3.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.4](https://img.shields.io/badge/AppVersion-5.1.4-informational?style=flat-square)
+![Version: 5.4.0](https://img.shields.io/badge/Version-5.4.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.4](https://img.shields.io/badge/AppVersion-5.1.4-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -33,7 +33,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:5.3.1 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:5.4.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -46,6 +46,7 @@ tions.githubusercontent.com
 | genericDevicePlugin.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
 | genericDevicePlugin.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
 | genericDevicePlugin.image.tag | string | `"36bfc606bba2064de6ede0ff2764cbb52edff70d"` | Overrides the image tag whose default is the chart appVersion. |
+| genericDevicePlugin.priorityClassName | string | `"system-node-critical"` | Priority class to be assigned to the Pod(s). |
 | genericDevicePlugin.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
 | genericDevicePlugin.serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
 | genericDevicePlugin.serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
@@ -85,6 +86,7 @@ tions.githubusercontent.com
 | qbittorrent.podLabels | object | `{}` |  |
 | qbittorrent.podSecurityContext.fsGroup | int | `65534` |  |
 | qbittorrent.podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| qbittorrent.priorityClassName | string | `""` | Priority class to be assigned to the Pod(s). |
 | qbittorrent.prometheusQbittorrentExporter | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"ghcr.io","repository":"esanchezm/prometheus-qbittorrent-exporter","sha":"","tag":"v1.6.0"},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"privileged":false,"readOnlyRootFilesystem":true,"runAsGroup":1000,"runAsNonRoot":true,"runAsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}},"serviceMonitor":{"enabled":false,"interval":"30s","labels":{},"metricRelabelings":[],"namespace":null,"path":"/metrics","relabelings":[],"scheme":"http","scrapeTimeout":"30s","service":{"port":8100},"targetLabels":[],"tlsConfig":{}},"volumeMounts":[]}` | Prometheus-qbittorrent-exporter sidecar |
 | qbittorrent.prometheusQbittorrentExporter.serviceMonitor.enabled | bool | `false` | If true, a ServiceMonitor CRD is created for a prometheus operator |
 | qbittorrent.prometheusQbittorrentExporter.serviceMonitor.namespace | string | `nil` | If set create the `ServiceMonitor` in an alternate namespace. |
