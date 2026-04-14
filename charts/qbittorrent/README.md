@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 5.4.0](https://img.shields.io/badge/Version-5.4.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.4](https://img.shields.io/badge/AppVersion-5.1.4-informational?style=flat-square)
+![Version: 6.0.0](https://img.shields.io/badge/Version-6.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.1.4](https://img.shields.io/badge/AppVersion-5.1.4-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -33,7 +33,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:5.4.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:6.0.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -41,11 +41,11 @@ tions.githubusercontent.com
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| genericDevicePlugin | object | `{"affinity":{},"enabled":true,"extraEnv":[],"extraEnvFrom":[],"fullnameOverride":"","image":{"registry":"ghcr.io","repository":"squat/generic-device-plugin","sha":"","tag":"36bfc606bba2064de6ede0ff2764cbb52edff70d"},"imagePullSecrets":[],"nameOverride":"","nodeSelector":{},"podAnnotations":{},"podLabels":{},"podSecurityContext":{},"priorityClassName":"system-node-critical","resources":{},"securityContext":{"privileged":true},"serviceAccount":{"annotations":{},"automount":true,"create":true,"name":""},"serviceMonitor":{"enabled":false,"interval":"30s","labels":{},"metricRelabelings":[],"namespace":null,"path":"/metrics","relabelings":[],"scheme":"http","scrapeTimeout":"30s","service":{"port":8080},"targetLabels":[],"tlsConfig":{}},"tolerations":[],"updateStrategy":{"type":"RollingUpdate"}}` | A Kubernetes device plugin to schedule generic Linux devices (used for /dev/tun) |
+| genericDevicePlugin | object | `{"affinity":{},"enabled":true,"extraEnv":[],"extraEnvFrom":[],"fullnameOverride":"","image":{"registry":"ghcr.io","repository":"squat/generic-device-plugin","sha":"","tag":"0.2.0"},"imagePullSecrets":[],"nameOverride":"","nodeSelector":{},"podAnnotations":{},"podLabels":{},"podSecurityContext":{},"priorityClassName":"system-node-critical","resources":{},"securityContext":{"privileged":true},"serviceAccount":{"annotations":{},"automount":true,"create":true,"name":""},"serviceMonitor":{"enabled":false,"interval":"30s","labels":{},"metricRelabelings":[],"namespace":null,"path":"/metrics","relabelings":[],"scheme":"http","scrapeTimeout":"30s","service":{"port":8080},"targetLabels":[],"tlsConfig":{}},"tolerations":[],"updateStrategy":{"type":"RollingUpdate"}}` | A Kubernetes device plugin to schedule generic Linux devices (used for /dev/tun) |
 | genericDevicePlugin.enabled | bool | `true` | Enable generic device plugin daemonset |
 | genericDevicePlugin.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
 | genericDevicePlugin.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
-| genericDevicePlugin.image.tag | string | `"36bfc606bba2064de6ede0ff2764cbb52edff70d"` | Overrides the image tag whose default is the chart appVersion. |
+| genericDevicePlugin.image.tag | string | `"0.2.0"` | Overrides the image tag whose default is the chart appVersion. |
 | genericDevicePlugin.priorityClassName | string | `"system-node-critical"` | Priority class to be assigned to the Pod(s). |
 | genericDevicePlugin.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
 | genericDevicePlugin.serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
@@ -66,7 +66,7 @@ tions.githubusercontent.com
 | qbittorrent.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
 | qbittorrent.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
 | qbittorrent.fullnameOverride | string | `""` |  |
-| qbittorrent.gluetun | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.41.1"},"resources":{"limits":{"squat.ai/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
+| qbittorrent.gluetun | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.41.1"},"resources":{"limits":{"devic.es":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
 | qbittorrent.image.pullPolicy | string | `"IfNotPresent"` |  |
 | qbittorrent.image.registry | string | `"ghcr.io"` |  |
 | qbittorrent.image.repository | string | `"home-operations/qbittorrent"` |  |

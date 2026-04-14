@@ -177,7 +177,7 @@ qbittorrent:
           - NET_ADMIN
     resources:
       limits:
-        squat.ai/tun: 1
+        devic.es: 1
 
   # -- Prometheus-qbittorrent-exporter sidecar
   prometheusQbittorrentExporter:
@@ -236,7 +236,7 @@ genericDevicePlugin:
     registry: ghcr.io
     repository: squat/generic-device-plugin
     # -- Overrides the image tag whose default is the chart appVersion.
-    tag: "36bfc606bba2064de6ede0ff2764cbb52edff70d"
+    tag: "0.2.0"
     sha: ""
 
   # -- Priority class to be assigned to the Pod(s).
