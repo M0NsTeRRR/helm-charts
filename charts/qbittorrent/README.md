@@ -56,11 +56,12 @@ tions.githubusercontent.com
 | genericDevicePlugin.serviceMonitor.service.port | int | `8080` | Metrics service port to scrape |
 | genericDevicePlugin.updateStrategy | object | `{"type":"RollingUpdate"}` | Deployment strategy |
 | qbittorrent.affinity | object | `{}` |  |
-| qbittorrent.config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","volumeName":""}}` | Creating PVC to store configuration |
+| qbittorrent.config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","storageClass":"","volumeName":""}}` | Creating PVC to store configuration |
 | qbittorrent.config.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
 | qbittorrent.config.persistence.annotations | object | `{}` | Annotations for PVCs |
 | qbittorrent.config.persistence.name | string | `""` | Config name |
 | qbittorrent.config.persistence.size | string | `"5Gi"` | Size of persistent disk |
+| qbittorrent.config.persistence.storageClass | string | `""` | Storage class for the PVC. Set to "-" to disable dynamic provisioning. Uses default storage class if no value is provided |
 | qbittorrent.config.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
 | qbittorrent.extraContainers | list | `[]` | Extra containers to add to qbittorrent deployment |
 | qbittorrent.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |

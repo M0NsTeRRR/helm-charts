@@ -83,6 +83,8 @@ qbittorrent:
       # -- Name of the permanent volume to reference in the claim.
       # Can be used to bind to existing volumes.
       volumeName: ""
+      # -- Storage class for the PVC. Set to "-" to disable dynamic provisioning. Uses default storage class if no value is provided
+      storageClass: ""
 
   ingress:
     enabled: false

@@ -42,11 +42,12 @@ tions.githubusercontent.com
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| build | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"200Mi","volumeName":""}}` | Creating PVC to store UI build artifact |
+| build | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"200Mi","storageClass":"","volumeName":""}}` | Creating PVC to store UI build artifact |
 | build.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
 | build.persistence.annotations | object | `{}` | Annotations for PVCs |
 | build.persistence.name | string | `""` | Config name |
 | build.persistence.size | string | `"200Mi"` | Size of persistent disk |
+| build.persistence.storageClass | string | `""` | Storage class for the PVC. Set to "-" to disable dynamic provisioning. Uses default storage class if no value is provided |
 | build.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
 | extraEnv | list | `[]` | Environment variables to add to the as212510.net pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the as212510.net pods |

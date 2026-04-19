@@ -38,11 +38,12 @@ tions.githubusercontent.com
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| data | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","volumeName":""}}` | Creating PVC to store configuration |
+| data | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","storageClass":"","volumeName":""}}` | Creating PVC to store configuration |
 | data.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
 | data.persistence.annotations | object | `{}` | Annotations for PVCs |
 | data.persistence.name | string | `""` | Config name |
 | data.persistence.size | string | `"5Gi"` | Size of persistent disk |
+| data.persistence.storageClass | string | `""` | Storage class for the PVC. Set to "-" to disable dynamic provisioning. Uses default storage class if no value is provided |
 | data.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
 | extraEnv | list | `[]` | Environment variables to add to the actualbudget pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the actualbudget pods |
