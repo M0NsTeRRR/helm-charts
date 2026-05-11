@@ -179,7 +179,7 @@ qbittorrent:
           - NET_ADMIN
     resources:
       limits:
-        devic.es: 1
+        "devic.es/tun": 1
 
   # -- Prometheus-qbittorrent-exporter sidecar
   prometheusQbittorrentExporter:

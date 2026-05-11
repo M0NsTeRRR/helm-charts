@@ -24,6 +24,7 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
     spec:
+      {{- $supportsSidecarContainers := semverCompare ">=1.29.0-0" .Capabilities.KubeVersion.Version }}
       {{- with .Values.qbittorrent.priorityClassName }}
       priorityClassName: {{ . }}
       {{- end }}
@@ -86,7 +87,7 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- end }}
-        {{- if .Values.qbittorrent.gluetun.enabled }}
+        {{- if and .Values.qbittorrent.gluetun.enabled (not $supportsSidecarContainers) }}
         - name: gluten
           securityContext:
             {{- toYaml .Values.qbittorrent.gluetun.securityContext | nindent 12 }}
@@ -97,7 +98,7 @@ spec:
           {{- end }}
           imagePullPolicy: {{ .Values.qbittorrent.gluetun.image.pullPolicy }}
           ports:
-            - name: http
+            - name: gluetun-http
               containerPort: 8888
               protocol: TCP
             - name: shadowsocks-tcp
@@ -191,6 +192,63 @@ spec:
         {{- with .Values.qbittorrent.extraContainers }}
           {{- toYaml . | nindent 8 }}
         {{- end }}
+      {{- if and .Values.qbittorrent.gluetun.enabled $supportsSidecarContainers }}
+      initContainers:
+        - name: gluten
+          restartPolicy: Always
+          securityContext:
+            {{- toYaml .Values.qbittorrent.gluetun.securityContext | nindent 12 }}
+          {{- if .Values.qbittorrent.gluetun.image.sha }}
+          image: "{{ .Values.qbittorrent.gluetun.image.registry }}/{{ .Values.qbittorrent.gluetun.image.repository }}:{{ .Values.qbittorrent.gluetun.image.tag }}@sha256:{{ .Values.qbittorrent.gluetun.image.sha }}"
+          {{- else }}
+          image: "{{ .Values.qbittorrent.gluetun.image.registry }}/{{ .Values.qbittorrent.gluetun.image.repository }}:{{ .Values.qbittorrent.gluetun.image.tag }}"
+          {{- end }}
+          imagePullPolicy: {{ .Values.qbittorrent.gluetun.image.pullPolicy }}
+          ports:
+            - name: gluetun-http
+              containerPort: 8888
+              protocol: TCP
+            - name: shadowsocks-tcp
+              containerPort: 8388
+              protocol: TCP
+            - name: shadowsocks-udp
+              containerPort: 8388
+              protocol: UDP
+          startupProbe:
+            exec:
+              command:
+                - /gluetun-entrypoint
+                - healthcheck
+          livenessProbe:
+            exec:
+              command:
+                - /gluetun-entrypoint
+                - healthcheck
+          readinessProbe:
+            exec:
+              command:
+                - /gluetun-entrypoint
+                - healthcheck
+          # https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/kubernetes.md#adding-ipv6-rule--file-exists
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "(ip rule del table 51820; ip -6 rule del table 51820) || true"]
+          resources:
+            {{- toYaml .Values.qbittorrent.gluetun.resources | nindent 12 }}
+          {{- with .Values.qbittorrent.gluetun.extraEnv }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.qbittorrent.gluetun.extraEnvFrom }}
+          envFrom:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.qbittorrent.gluetun.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- end }}
       {{- if or .Values.qbittorrent.config.persistence.enabled .Values.qbittorrent.volumes }}
       volumes:
       {{- if .Values.qbittorrent.config.persistence.enabled }}
