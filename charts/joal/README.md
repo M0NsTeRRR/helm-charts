@@ -65,7 +65,7 @@ tions.githubusercontent.com
 | initContainerImage.registry | string | `"docker.io"` |  |
 | initContainerImage.repository | string | `"busybox"` |  |
 | initContainerImage.sha | string | `""` |  |
-| initContainerImage.tag | string | `"1.37.0"` |  |
+| initContainerImage.tag | string | `"1.38.0"` |  |
 | joal.path_prefix | string | `"joal"` |  |
 | joal.secret_token | string | `"password"` |  |
 | nameOverride | string | `""` |  |
