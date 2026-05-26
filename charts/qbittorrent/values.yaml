@@ -188,7 +188,7 @@ qbittorrent:
       registry: ghcr.io
       repository: esanchezm/prometheus-qbittorrent-exporter
       pullPolicy: IfNotPresent
-      tag: "v1.6.0"
+      tag: "v1.7.0"
       sha: ""
     extraEnv: []
     extraEnvFrom: []
