@@ -83,6 +83,9 @@ and custom allowed hosts for homepage.allowedHosts
 {{- $fullFQDN := printf "%s.%s.svc.cluster.local" $fullName $namespace -}}
 {{- $serviceList = append $serviceList $fullFQDN -}}
 
+{{- /* Allow the pod IP so orchestrator probes (which send it as the Host header) pass host validation; POD_IP is injected via the downward API and expanded by Kubernetes at runtime */ -}}
+{{- $serviceList = append $serviceList "$(POD_IP):3000" -}}
+
 {{- /* Add custom allowed hosts from values.yaml */ -}}
 {{- range $host := .Values.config.allowedHosts -}}
   {{- $serviceList = append $serviceList $host -}}
