@@ -61,6 +61,10 @@ spec:
               value: {{ .Values.securityContext.runAsUser | quote }}
             - name: PGID
               value: {{ .Values.securityContext.runAsGroup | quote }}
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
             - name: HOMEPAGE_ALLOWED_HOSTS
               value: {{ include "homepage.allowedHosts" . }}
           {{- with .Values.extraEnv }}
