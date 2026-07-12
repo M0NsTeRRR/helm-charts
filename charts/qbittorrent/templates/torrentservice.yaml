@@ -5,6 +5,9 @@ metadata:
   namespace: {{ .Release.Namespace }}
   labels:
     {{- include "qbittorrent.labels" . | nindent 4 }}
+    {{- with .Values.qbittorrent.service.torrent.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
   {{- with .Values.qbittorrent.service.torrent.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
