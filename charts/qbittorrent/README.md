@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 7.0.3](https://img.shields.io/badge/Version-7.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.2.3](https://img.shields.io/badge/AppVersion-5.2.3-informational?style=flat-square)
+![Version: 7.1.0](https://img.shields.io/badge/Version-7.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.2.3](https://img.shields.io/badge/AppVersion-5.2.3-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -33,7 +33,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:7.0.3 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:7.1.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -115,9 +115,11 @@ tions.githubusercontent.com
 | qbittorrent.securityContext.runAsUser | int | `65534` |  |
 | qbittorrent.securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
 | qbittorrent.service.torrent.annotations | object | `{}` | Annotations to add to the torrent service |
+| qbittorrent.service.torrent.labels | object | `{}` | Labels to add to the torrent service |
 | qbittorrent.service.torrent.port | int | `8388` |  |
 | qbittorrent.service.torrent.type | string | `"ClusterIP"` |  |
 | qbittorrent.service.web.annotations | object | `{}` | Annotations to add to the web service |
+| qbittorrent.service.web.labels | object | `{}` | Labels to add to the web service |
 | qbittorrent.service.web.port | int | `80` |  |
 | qbittorrent.service.web.type | string | `"ClusterIP"` |  |
 | qbittorrent.serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
