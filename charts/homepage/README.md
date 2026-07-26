@@ -1,6 +1,6 @@
 # homepage
 
-![Version: 4.13.0](https://img.shields.io/badge/Version-4.13.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.13.2](https://img.shields.io/badge/AppVersion-v1.13.2-informational?style=flat-square)
+![Version: 4.14.0](https://img.shields.io/badge/Version-4.14.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.13.2](https://img.shields.io/badge/AppVersion-v1.13.2-informational?style=flat-square)
 
 homepage helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install homepage oci://ghcr.io/m0nsterrr/helm-charts/homepage
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/homepage:4.13.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/homepage:4.14.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -55,6 +55,7 @@ tions.githubusercontent.com
 | ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
 | ingress.ingressClassName | string | `""` |  |
 | ingress.tls | list | `[]` |  |
+| initContainers | list | `[]` | Additional InitContainers to initialize the pod [Reference]( https://kubernetes.io/docs/concepts/workloads/pods/init-containers/ ) |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |

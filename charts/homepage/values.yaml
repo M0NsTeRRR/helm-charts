@@ -103,6 +103,10 @@ route:
     # [Reference]( https://gateway-api.sigs.k8s.io/guides/http-redirect-rewrite/ )
     httpsRedirect: false
 
+# -- Additional InitContainers to initialize the pod
+# [Reference]( https://kubernetes.io/docs/concepts/workloads/pods/init-containers/ )
+initContainers: []
+
 rbac:
   enabled: true
 
