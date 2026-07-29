@@ -67,7 +67,7 @@ tions.githubusercontent.com
 | qbittorrent.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
 | qbittorrent.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
 | qbittorrent.fullnameOverride | string | `""` |  |
-| qbittorrent.gluetun | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.41.1"},"resources":{"limits":{"devic.es/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
+| qbittorrent.gluetun | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.41.2"},"resources":{"limits":{"devic.es/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
 | qbittorrent.image.pullPolicy | string | `"IfNotPresent"` |  |
 | qbittorrent.image.registry | string | `"ghcr.io"` |  |
 | qbittorrent.image.repository | string | `"home-operations/qbittorrent"` |  |
