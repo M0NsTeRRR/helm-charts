@@ -10,7 +10,6 @@
     ":dependencyDashboard",
     ":semanticCommits",
     ":timezone(Europe/Paris)",
-    "github>m0nsterrr/helm-charts//.github/renovate/devcontainers.json5",
     "github>m0nsterrr/helm-charts//.github/renovate/helm.json5",
     "github>m0nsterrr/helm-charts//.github/renovate/labels.json5",
     "github>m0nsterrr/helm-charts//.github/renovate/semantic_commits.json5",

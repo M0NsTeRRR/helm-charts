@@ -25,10 +25,6 @@ Install [helm](https://helm.sh/docs/intro/install/) and [helm-docs](https://gith
 
 `helm lint charts/<chart>`
 
-### Devcontainer
-
-[Documentation](https://code.visualstudio.com/docs/devcontainers/containers)
-
 ## 🙋‍♂️ Support & Assistance
 
 * Take a look at the [support](SUPPORT.md) document on
