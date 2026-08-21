@@ -1,6 +1,6 @@
 # homepage
 
-![Version: 5.1.0](https://img.shields.io/badge/Version-5.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.1.0](https://img.shields.io/badge/AppVersion-v2.1.0-informational?style=flat-square)
+![Version: 5.1.1](https://img.shields.io/badge/Version-5.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.1.2](https://img.shields.io/badge/AppVersion-v2.1.2-informational?style=flat-square)
 
 homepage helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install homepage oci://ghcr.io/m0nsterrr/helm-charts/homepage
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/homepage:5.1.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/homepage:5.1.1 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
