@@ -28,6 +28,8 @@ tions.githubusercontent.com
 ```
 ### Create the secret
 
+The Infomaniak API token needs the `domain:read`, `dns:read`, and `dns:write` scopes.
+
 ```console
 kubectl create secret generic cert-manager-webhook-infomaniak \
   --namespace=cert-manager \
