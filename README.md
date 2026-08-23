@@ -14,8 +14,10 @@
 > [!IMPORTANT]
 > Do not open a pull request to update `appVersion`, this is already managed by Renovate and GitHub workflows.
 > If you need a recent version, update your `values.yaml` to specify the desired version.
+> I maintain only the charts I actively use. Charts that are no longer in use will be removed. You are free to fork and restore any charts you want from the commit where they were dropped.
+> It also means I do not accept requests to add Helm charts that I do not use.
 
-These are my custom Helm charts. Documentation for each chart can be found in its respective README file.
+These are my custom Helm charts. The documentation for each chart is available in its respective README file.
 
 ## 🛠️ Dev
 
