@@ -4,7 +4,7 @@
 }:
 {
   packages = [
-    pkgs.helm
+    pkgs.kubernetes-helm
     pkgs.helm-docs
   ];
 }
