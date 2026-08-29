@@ -1,0 +1,15 @@
+apiVersion: v2
+kubeVersion: ">=1.23.0-0"
+name: looking-glass
+description: looking-glass helm chart for Kubernetes
+type: application
+version: 1.0.0
+# image: ghcr.io/as203038/looking-glass
+appVersion: "1.3.5"
+maintainers:
+  - name: Ludovic Ortega
+    email: ludovic.ortega@adminafk.fr
+sources:
+  - https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/looking-glass
+home: https://github.com/AS203038/looking-glass
+icon: https://artifacthub.io/image/e417b561-5fe4-4ee3-9b89-f67df4069169
