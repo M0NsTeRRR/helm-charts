@@ -1,6 +1,6 @@
 # looking-glass
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.3.5](https://img.shields.io/badge/AppVersion-1.3.5-informational?style=flat-square)
+![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.3.5](https://img.shields.io/badge/AppVersion-1.3.5-informational?style=flat-square)
 
 looking-glass helm chart for Kubernetes
 
@@ -20,6 +20,10 @@ looking-glass helm chart for Kubernetes
 
 Kubernetes: `>=1.23.0-0`
 
+| Repository | Name | Version |
+|------------|------|---------|
+| oci://ghcr.io/valkey-io/valkey-helm | valkey | 0.11.* |
+
 ## Install
 
 ```console
@@ -29,7 +33,7 @@ helm install looking-glass oci://ghcr.io/m0nsterrr/helm-charts/looking-glass
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/looking-glass:1.0.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/looking-glass:1.1.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -43,7 +47,7 @@ tions.githubusercontent.com
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.registry | string | `"ghcr.io"` |  |
-| image.repository | string | `"AS203038/looking-glass"` |  |
+| image.repository | string | `"as203038/looking-glass"` |  |
 | image.sha | string | `""` |  |
 | image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
@@ -91,5 +95,14 @@ tions.githubusercontent.com
 | serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
 | strategy | object | `{"type":"Recreate"}` | Deployment strategy |
 | tolerations | list | `[]` |  |
+| valkey.auth.aclUsers.default.permissions | string | `"allkeys allchannels allcommands -flushall"` |  |
+| valkey.auth.enabled | bool | `false` |  |
+| valkey.auth.usersExistingSecret | string | `""` |  |
+| valkey.dataStorage.enabled | bool | `true` |  |
+| valkey.dataStorage.requestedSize | string | `"1Gi"` |  |
+| valkey.enabled | bool | `false` | enable the Valkey chart. Refer to https://github.com/valkey-io/valkey-helm/tree/main/valkey for possible values. |
+| valkey.metrics.enabled | bool | `false` |  |
+| valkey.metrics.prometheusRule.enabled | bool | `false` |  |
+| valkey.metrics.serviceMonitor.enabled | bool | `false` |  |
 | volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
 | volumes | list | `[]` | Additional volumes on the output Deployment definition. |
