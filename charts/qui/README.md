@@ -1,0 +1,120 @@
+# qui
+
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.33.1](https://img.shields.io/badge/AppVersion-v1.33.1-informational?style=flat-square)
+
+qui helm chart for Kubernetes
+
+**Homepage:** <https://github.com/autobrr/qui>
+
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| Ludovic Ortega | <ludovic.ortega@adminafk.fr> |  |
+
+## Source Code
+
+* <https://github.com/M0NsTeRRR/helm-charts/tree/main/charts/qui>
+
+## Requirements
+
+Kubernetes: `>=1.23.0-0`
+
+## Install
+
+```console
+helm install qui oci://ghcr.io/m0nsterrr/helm-charts/qui
+```
+
+Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
+
+```console
+cosign verify ghcr.io/m0nsterrr/helm-charts/qui:1.0.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+tions.githubusercontent.com
+```
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| affinity | object | `{}` |  |
+| config | object | `{"persistence":{"accessModes":["ReadWriteOnce"],"annotations":{},"enabled":true,"name":"","size":"5Gi","storageClass":"","volumeName":""}}` | Creating PVC to store configuration |
+| config.persistence.accessModes | list | `["ReadWriteOnce"]` | Access modes of persistent disk |
+| config.persistence.annotations | object | `{}` | Annotations for PVCs |
+| config.persistence.name | string | `""` | Config name |
+| config.persistence.size | string | `"5Gi"` | Size of persistent disk |
+| config.persistence.storageClass | string | `""` | Storage class for the PVC. Set to "-" to disable dynamic provisioning. Uses default storage class if no value is provided |
+| config.persistence.volumeName | string | `""` | Name of the permanent volume to reference in the claim. Can be used to bind to existing volumes. |
+| extraEnv | list | `[]` | Environment variables to add to the qui pods |
+| extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qui pods |
+| fullnameOverride | string | `""` |  |
+| image.pullPolicy | string | `"IfNotPresent"` |  |
+| image.registry | string | `"ghcr.io"` |  |
+| image.repository | string | `"autobrr/qui"` |  |
+| image.sha | string | `""` |  |
+| image.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
+| imagePullSecrets | list | `[]` |  |
+| ingress.annotations | object | `{}` |  |
+| ingress.enabled | bool | `false` |  |
+| ingress.hosts[0].host | string | `"chart-example.local"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| ingress.hosts[0].paths[0].pathType | string | `"ImplementationSpecific"` |  |
+| ingress.ingressClassName | string | `""` |  |
+| ingress.tls | list | `[]` |  |
+| nameOverride | string | `""` |  |
+| nodeSelector | object | `{}` |  |
+| podAnnotations | object | `{}` |  |
+| podLabels | object | `{}` |  |
+| podSecurityContext.fsGroup | int | `65534` |  |
+| podSecurityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
+| priorityClassName | string | `""` | Priority class to be assigned to the Pod(s). |
+| probes.liveness.failureThreshold | int | `3` | Consecutive failures before the container is restarted |
+| probes.liveness.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
+| probes.liveness.path | string | `"/ping"` | HTTP path probed |
+| probes.liveness.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
+| probes.liveness.timeoutSeconds | int | `1` | Seconds after which the probe times out |
+| probes.readiness.failureThreshold | int | `3` | Consecutive failures before the pod is marked unready |
+| probes.readiness.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
+| probes.readiness.path | string | `"/ping"` | HTTP path probed |
+| probes.readiness.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
+| probes.readiness.successThreshold | int | `1` | Consecutive successes required to be considered ready again |
+| probes.readiness.timeoutSeconds | int | `1` | Seconds after which the probe times out |
+| probes.startup | object | `{"enabled":false,"failureThreshold":30,"initialDelaySeconds":0,"path":"/ping","periodSeconds":10,"timeoutSeconds":1}` | Startup probe, holds liveness and readiness until the first success. Useful for slow starts (database migrations). The maximum startup time is `failureThreshold * periodSeconds`. |
+| probes.startup.enabled | bool | `false` | Enable the startup probe |
+| probes.startup.failureThreshold | int | `30` | Consecutive failures before the container is restarted |
+| probes.startup.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
+| probes.startup.path | string | `"/ping"` | HTTP path probed |
+| probes.startup.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
+| probes.startup.timeoutSeconds | int | `1` | Seconds after which the probe times out |
+| replicaCount | int | `1` |  |
+| resources | object | `{}` |  |
+| route.main.additionalRules | list | `[]` |  |
+| route.main.annotations | object | `{}` |  |
+| route.main.apiVersion | string | `"gateway.networking.k8s.io/v1"` | Set the route apiVersion, e.g. gateway.networking.k8s.io/v1 or gateway.networking.k8s.io/v1alpha2 |
+| route.main.enabled | bool | `false` | Enables or disables the Gateway API route |
+| route.main.filters | list | `[]` |  |
+| route.main.hostnames | list | `[]` |  |
+| route.main.httpsRedirect | bool | `false` | To redirect to HTTPS, create a new route object under the main route and enable this option. This should only be used with HTTP-like routes, such as HTTPRoute or GRPCRoute. [Reference]( https://gateway-api.sigs.k8s.io/guides/http-redirect-rewrite/ ) |
+| route.main.kind | string | `"HTTPRoute"` | Set the route kind. Note that experimental kinds require changing `apiVersion` |
+| route.main.labels | object | `{}` |  |
+| route.main.matches[0].path.type | string | `"PathPrefix"` |  |
+| route.main.matches[0].path.value | string | `"/"` |  |
+| route.main.parentRefs | list | `[]` |  |
+| securityContext.allowPrivilegeEscalation | bool | `false` |  |
+| securityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| securityContext.privileged | bool | `false` |  |
+| securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| securityContext.runAsGroup | int | `65534` |  |
+| securityContext.runAsNonRoot | bool | `true` |  |
+| securityContext.runAsUser | int | `65534` |  |
+| securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
+| service.port | int | `80` |  |
+| service.type | string | `"ClusterIP"` |  |
+| serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| serviceAccount.automount | bool | `true` | Automatically mount a ServiceAccount's API credentials? |
+| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| serviceAccount.name | string | `""` | If not set and create is true, a name is generated using the fullname template |
+| strategy | object | `{"type":"Recreate"}` | Deployment strategy |
+| tolerations | list | `[]` |  |
+| volumeMounts | list | `[]` | Additional volumeMounts on the output Deployment definition. |
+| volumes | list | `[]` | Additional volumes on the output Deployment definition. |
