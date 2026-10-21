@@ -50,16 +50,18 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /health/liveness
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /readiness/liveness
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.extraEnv }}
           env:
+            - name: QUI__METRICS_ENABLED
+              value: {{ .Values.serviceMonitor.enabled | quote }}
+          {{- with .Values.extraEnv }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.extraEnvFrom }}

@@ -58,6 +58,24 @@ service:
   type: ClusterIP
   port: 80
 
+serviceMonitor:
+  # -- If true, a ServiceMonitor CRD is created for a prometheus operator
+  enabled: false
+  path: /
+  # -- If set create the `ServiceMonitor` in an alternate namespace.
+  namespace:
+  labels: {}
+  interval: 30s
+  scheme: http
+  tlsConfig: {}
+  scrapeTimeout: 30s
+  relabelings: []
+  metricRelabelings: []
+  targetLabels: []
+  service:
+    # -- Metrics service port to scrape
+    port: 9074
+
 # -- Creating PVC to store configuration
 config:
   persistence:
