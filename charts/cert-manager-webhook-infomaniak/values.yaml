@@ -32,6 +32,8 @@ extraEnv: []
 # -- Environment variables from secrets or configmaps to add to the cert-manager-webhook-infomaniak pods
 extraEnvFrom: []
 
+# -- Deployment annotations
+annotations: {}
 podAnnotations: {}
 podLabels: {}
 

@@ -1,6 +1,6 @@
 # cert-manager-webhook-infomaniak
 
-![Version: 1.1.3](https://img.shields.io/badge/Version-1.1.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.1.6](https://img.shields.io/badge/AppVersion-v0.1.6-informational?style=flat-square)
+![Version: 1.2.0](https://img.shields.io/badge/Version-1.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.1.6](https://img.shields.io/badge/AppVersion-v0.1.6-informational?style=flat-square)
 
 cert-manager-webhook-infomaniak helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install cert-manager-webhook-infomaniak oci://ghcr.io/m0nsterrr/helm-charts
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/cert-manager-webhook-infomaniak:1.1.3 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/cert-manager-webhook-infomaniak:1.2.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 ### Create the secret
@@ -72,6 +72,7 @@ spec:
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
+| annotations | object | `{}` | Deployment annotations |
 | certManager.namespace | string | `"cert-manager"` | Namespace under which cert-manager is installed |
 | certManager.serviceAccountName | string | `"cert-manager"` | Name of the cert-manager service account |
 | extraEnv | list | `[]` | Environment variables to add to the cert-manager-webhook-infomaniak pods |

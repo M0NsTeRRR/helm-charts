@@ -1,6 +1,6 @@
 # as212510-net
 
-![Version: 4.0.3](https://img.shields.io/badge/Version-4.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v4.0.5](https://img.shields.io/badge/AppVersion-v4.0.5-informational?style=flat-square)
+![Version: 4.1.0](https://img.shields.io/badge/Version-4.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v4.0.5](https://img.shields.io/badge/AppVersion-v4.0.5-informational?style=flat-square)
 
 as212510.net helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install as212510-net oci://ghcr.io/m0nsterrr/helm-charts/as212510-net
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/as212510-net:4.0.3 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/as212510-net:4.1.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -38,6 +38,7 @@ tions.githubusercontent.com
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
+| annotations | object | `{}` | Deployment annotations |
 | extraEnv | list | `[]` | Environment variables to add to the as212510.net pods |
 | extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the as212510.net pods |
 | fullnameOverride | string | `""` |  |
