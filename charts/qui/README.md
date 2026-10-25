@@ -1,6 +1,6 @@
 # qui
 
-![Version: 1.2.0](https://img.shields.io/badge/Version-1.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.33.1](https://img.shields.io/badge/AppVersion-v1.33.1-informational?style=flat-square)
+![Version: 1.3.0](https://img.shields.io/badge/Version-1.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.33.1](https://img.shields.io/badge/AppVersion-v1.33.1-informational?style=flat-square)
 
 qui helm chart for Kubernetes
 
@@ -29,7 +29,7 @@ helm install qui oci://ghcr.io/m0nsterrr/helm-charts/qui
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qui:1.2.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
+cosign verify ghcr.io/m0nsterrr/helm-charts/qui:1.3.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
 tions.githubusercontent.com
 ```
 
@@ -71,20 +71,20 @@ tions.githubusercontent.com
 | priorityClassName | string | `""` | Priority class to be assigned to the Pod(s). |
 | probes.liveness.failureThreshold | int | `3` | Consecutive failures before the container is restarted |
 | probes.liveness.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
-| probes.liveness.path | string | `"/ping"` | HTTP path probed |
+| probes.liveness.path | string | `"/health/liveness"` | HTTP path probed |
 | probes.liveness.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
 | probes.liveness.timeoutSeconds | int | `1` | Seconds after which the probe times out |
 | probes.readiness.failureThreshold | int | `3` | Consecutive failures before the pod is marked unready |
 | probes.readiness.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
-| probes.readiness.path | string | `"/ping"` | HTTP path probed |
+| probes.readiness.path | string | `"/readiness/liveness"` | HTTP path probed |
 | probes.readiness.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
 | probes.readiness.successThreshold | int | `1` | Consecutive successes required to be considered ready again |
 | probes.readiness.timeoutSeconds | int | `1` | Seconds after which the probe times out |
-| probes.startup | object | `{"enabled":false,"failureThreshold":30,"initialDelaySeconds":0,"path":"/ping","periodSeconds":10,"timeoutSeconds":1}` | Startup probe, holds liveness and readiness until the first success. Useful for slow starts (database migrations). The maximum startup time is `failureThreshold * periodSeconds`. |
+| probes.startup | object | `{"enabled":false,"failureThreshold":30,"initialDelaySeconds":0,"path":"/health/liveness","periodSeconds":10,"timeoutSeconds":1}` | Startup probe, holds liveness and readiness until the first success. Useful for slow starts (database migrations). The maximum startup time is `failureThreshold * periodSeconds`. |
 | probes.startup.enabled | bool | `false` | Enable the startup probe |
 | probes.startup.failureThreshold | int | `30` | Consecutive failures before the container is restarted |
 | probes.startup.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
-| probes.startup.path | string | `"/ping"` | HTTP path probed |
+| probes.startup.path | string | `"/health/liveness"` | HTTP path probed |
 | probes.startup.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
 | probes.startup.timeoutSeconds | int | `1` | Seconds after which the probe times out |
 | replicaCount | int | `1` |  |

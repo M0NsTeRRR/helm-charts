@@ -56,16 +56,36 @@ spec:
             - name: https
               containerPort: 8443
               protocol: TCP
+          {{- if .Values.probes.startup.enabled }}
+          startupProbe:
+            httpGet:
+              scheme: HTTPS
+              path: {{ .Values.probes.startup.path }}
+              port: https
+            initialDelaySeconds: {{ .Values.probes.startup.initialDelaySeconds }}
+            periodSeconds: {{ .Values.probes.startup.periodSeconds }}
+            timeoutSeconds: {{ .Values.probes.startup.timeoutSeconds }}
+            failureThreshold: {{ .Values.probes.startup.failureThreshold }}
+          {{- end }}
           livenessProbe:
             httpGet:
               scheme: HTTPS
-              path: /healthz
+              path: {{ .Values.probes.liveness.path }}
               port: https
+            initialDelaySeconds: {{ .Values.probes.liveness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.probes.liveness.periodSeconds }}
+            timeoutSeconds: {{ .Values.probes.liveness.timeoutSeconds }}
+            failureThreshold: {{ .Values.probes.liveness.failureThreshold }}
           readinessProbe:
             httpGet:
               scheme: HTTPS
-              path: /healthz
+              path: {{ .Values.probes.readiness.path }}
               port: https
+            initialDelaySeconds: {{ .Values.probes.readiness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
+            timeoutSeconds: {{ .Values.probes.readiness.timeoutSeconds }}
+            successThreshold: {{ .Values.probes.readiness.successThreshold }}
+            failureThreshold: {{ .Values.probes.readiness.failureThreshold }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:

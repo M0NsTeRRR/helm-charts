@@ -148,7 +148,7 @@ probes:
     # -- Enable the startup probe
     enabled: false
     # -- HTTP path probed
-    path: /ping
+    path: /health/liveness
     # -- Seconds after the container has started before the probe is initiated
     initialDelaySeconds: 0
     # -- How often (in seconds) to perform the probe
@@ -159,7 +159,7 @@ probes:
     failureThreshold: 30
   liveness:
     # -- HTTP path probed
-    path: /ping
+    path: /health/liveness
     # -- Seconds after the container has started before the probe is initiated
     initialDelaySeconds: 0
     # -- How often (in seconds) to perform the probe
@@ -170,7 +170,7 @@ probes:
     failureThreshold: 3
   readiness:
     # -- HTTP path probed
-    path: /ping
+    path: /readiness/liveness
     # -- Seconds after the container has started before the probe is initiated
     initialDelaySeconds: 0
     # -- How often (in seconds) to perform the probe

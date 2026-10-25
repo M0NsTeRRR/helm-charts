@@ -112,6 +112,47 @@ initContainers: []
 rbac:
   enabled: true
 
+probes:
+  # -- Startup probe, holds liveness and readiness until the first success.
+  # Useful for slow starts (database migrations). The maximum startup time is `failureThreshold * periodSeconds`.
+  startup:
+    # -- Enable the startup probe
+    enabled: false
+    # -- HTTP path probed
+    path: /api/healthcheck
+    # -- Seconds after the container has started before the probe is initiated
+    initialDelaySeconds: 0
+    # -- How often (in seconds) to perform the probe
+    periodSeconds: 10
+    # -- Seconds after which the probe times out
+    timeoutSeconds: 1
+    # -- Consecutive failures before the container is restarted
+    failureThreshold: 30
+  liveness:
+    # -- HTTP path probed
+    path: /api/healthcheck
+    # -- Seconds after the container has started before the probe is initiated
+    initialDelaySeconds: 0
+    # -- How often (in seconds) to perform the probe
+    periodSeconds: 10
+    # -- Seconds after which the probe times out
+    timeoutSeconds: 1
+    # -- Consecutive failures before the container is restarted
+    failureThreshold: 3
+  readiness:
+    # -- HTTP path probed
+    path: /api/healthcheck
+    # -- Seconds after the container has started before the probe is initiated
+    initialDelaySeconds: 0
+    # -- How often (in seconds) to perform the probe
+    periodSeconds: 10
+    # -- Seconds after which the probe times out
+    timeoutSeconds: 1
+    # -- Consecutive successes required to be considered ready again
+    successThreshold: 1
+    # -- Consecutive failures before the pod is marked unready
+    failureThreshold: 3
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little

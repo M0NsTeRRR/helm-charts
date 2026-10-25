@@ -59,18 +59,39 @@ spec:
             - name: torrent-udp
               containerPort: 50413
               protocol: UDP
+          {{- if .Values.qbittorrent.probes.startup.enabled }}
+          startupProbe:
+            exec:
+              command:
+                - sh
+                - -c
+                - "wget --no-verbose --tries=1 --spider http://localhost:8080 || exit 1"
+            initialDelaySeconds: {{ .Values.qbittorrent.probes.startup.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.probes.startup.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.probes.startup.timeoutSeconds }}
+            failureThreshold: {{ .Values.qbittorrent.probes.startup.failureThreshold }}
+          {{- end }}
           livenessProbe:
             exec:
               command:
                 - sh
                 - -c
                 - "wget --no-verbose --tries=1 --spider http://localhost:8080 || exit 1"
+            initialDelaySeconds: {{ .Values.qbittorrent.probes.liveness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.probes.liveness.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.probes.liveness.timeoutSeconds }}
+            failureThreshold: {{ .Values.qbittorrent.probes.liveness.failureThreshold }}
           readinessProbe:
             exec:
               command:
                 - sh
                 - -c
                 - "wget --no-verbose --tries=1 --spider http://localhost:8080 || exit 1"
+            initialDelaySeconds: {{ .Values.qbittorrent.probes.readiness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.probes.readiness.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.probes.readiness.timeoutSeconds }}
+            successThreshold: {{ .Values.qbittorrent.probes.readiness.successThreshold }}
+            failureThreshold: {{ .Values.qbittorrent.probes.readiness.failureThreshold }}
           resources:
             {{- toYaml .Values.qbittorrent.resources | nindent 12 }}
           {{- with .Values.qbittorrent.extraEnv }}
