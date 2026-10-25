@@ -3,7 +3,7 @@ kubeVersion: ">=1.23.0-0"
 name: radarr
 description: radarr helm chart for Kubernetes
 type: application
-version: 3.8.0
+version: 4.0.0
 # image: ghcr.io/home-operations/radarr
 appVersion: "7.0.0"
 maintainers:
