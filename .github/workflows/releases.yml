@@ -10,7 +10,7 @@ permissions: {}
 jobs:
   package-helm-chart:
     name: Package helm chart
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-26.04-arm
     permissions:
       contents: read
       packages: read
@@ -81,7 +81,7 @@ jobs:
 
   publish:
     name: Publish to ghcr.io
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04-arm
     permissions:
       packages: write # needed for pushing to github registry
       id-token: write # needed for signing the images with GitHub OIDC Token
