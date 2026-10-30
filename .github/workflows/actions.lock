@@ -13,7 +13,7 @@ workflows:
         - 'actions/upload-artifact@v7.0.2'
         - 'azure/setup-helm@v5.0.1'
         - 'docker/login-action@v4.7.0'
-        - 'oras-project/setup-oras@v2.0.2'
+        - 'oras-project/setup-oras@v2.0.3'
         - 'sigstore/cosign-installer@v4.1.2'
     '.github/workflows/renovate-custom-hooks.yml':
         - 'actions/checkout@v7.0.1'
@@ -63,9 +63,9 @@ dependencies:
         uses:
             - 'astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7'
             - 'sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6'
-    'oras-project/setup-oras@v2.0.2':
-        ref: 'v2.0.2'
-        commit: 'sha1-005458ad77f1c8facd38a094e4af2e69e5607ff4'
+    'oras-project/setup-oras@v2.0.3':
+        ref: 'v2.0.3'
+        commit: 'sha1-5e2f2482b30b0cb3e14e67f89a80c88c659a7c63'
         owner_id: 81890686
         repo_id: 590286646
     'sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6':
