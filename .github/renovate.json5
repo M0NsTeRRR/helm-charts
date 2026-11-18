@@ -1,39 +1,49 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "docker:enableMajor",
-    "replacements:k8s-registry-move",
-    ":automergePr",
-    ":automergePatch",
-    ":disableRateLimiting",
-    ":dependencyDashboard",
-    ":semanticCommits",
-    ":timezone(Europe/Paris)",
-    "github>m0nsterrr/helm-charts//.github/renovate/helm.json5",
-    "github>m0nsterrr/helm-charts//.github/renovate/labels.json5",
-    "github>m0nsterrr/helm-charts//.github/renovate/semantic_commits.json5",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:recommended',
+    'docker:enableMajor',
+    'replacements:k8s-registry-move',
+    ':automergePr',
+    ':automergePatch',
+    ':disableRateLimiting',
+    ':dependencyDashboard',
+    ':semanticCommits',
+    ':timezone(Europe/Paris)',
+    'github>m0nsterrr/helm-charts//.github/renovate/helm.json5',
+    'github>m0nsterrr/helm-charts//.github/renovate/labels.json5',
+    'github>m0nsterrr/helm-charts//.github/renovate/semantic_commits.json5',
   ],
-  "lockFileMaintenance": {
-    "enabled": true,
+  lockFileMaintenance: {
+    enabled: true,
   },
-  "dependencyDashboardTitle": "Renovate Dashboard 🤖",
-  "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
-  "rebaseWhen": "conflicted",
-  "minimumReleaseAge": "3 days",
-  "packageRules": [
+  dependencyDashboard: {
+    title: 'Renovate Dashboard 🤖',
+  },
+  suppressNotifications: [
+    'prEditedNotification',
+    'prIgnoreNotification',
+  ],
+  rebaseWhen: 'conflicted',
+  minimumReleaseAge: '3 days',
+  packageRules: [
     {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": true
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
+      matchCurrentVersion: '!/^0/',
+      automerge: true,
     },
     {
-      "matchDatasources": ["docker"],
+      matchDatasources: [
+        'docker',
+      ],
       // https://github.com/renovatebot/renovate/issues/38656
-      "minimumReleaseAge": null,
-    }
+      minimumReleaseAge: null,
+    },
   ],
-  "labels": [
-    "dependencies",
-  ]
+  labels: [
+    'dependencies',
+  ],
 }
