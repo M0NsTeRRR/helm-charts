@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 7.4.2](https://img.shields.io/badge/Version-7.4.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.3.0](https://img.shields.io/badge/AppVersion-5.3.0-informational?style=flat-square)
+![Version: 7.5.0](https://img.shields.io/badge/Version-7.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.3.0](https://img.shields.io/badge/AppVersion-5.3.0-informational?style=flat-square)
 
 qbittorrent helm chart for Kubernetes
 
@@ -33,8 +33,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:7.4.2 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
-tions.githubusercontent.com
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:7.5.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.actions.githubusercontent.com
 ```
 
 ## Values
@@ -68,7 +67,22 @@ tions.githubusercontent.com
 | qbittorrent.extraEnv | list | `[]` | Environment variables to add to the qbittorrent pods |
 | qbittorrent.extraEnvFrom | list | `[]` | Environment variables from secrets or configmaps to add to the qbittorrent pods |
 | qbittorrent.fullnameOverride | string | `""` |  |
-| qbittorrent.gluetun | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.41.3"},"resources":{"limits":{"devic.es/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
+| qbittorrent.gluetun | object | `{"enabled":false,"extraEnv":[],"extraEnvFrom":[],"image":{"pullPolicy":"IfNotPresent","registry":"docker.io","repository":"qmcgaw/gluetun","sha":"","tag":"v3.41.3"},"probes":{"liveness":{"failureThreshold":3,"initialDelaySeconds":0,"periodSeconds":10,"timeoutSeconds":1},"readiness":{"failureThreshold":3,"initialDelaySeconds":0,"periodSeconds":10,"successThreshold":1,"timeoutSeconds":1},"startup":{"enabled":true,"failureThreshold":3,"initialDelaySeconds":0,"periodSeconds":10,"timeoutSeconds":1}},"resources":{"limits":{"devic.es/tun":1}},"securityContext":{"capabilities":{"add":["NET_ADMIN"]}},"volumeMounts":[]}` | Gluetun sidecar |
+| qbittorrent.gluetun.probes.liveness.failureThreshold | int | `3` | Consecutive failures before the container is restarted |
+| qbittorrent.gluetun.probes.liveness.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
+| qbittorrent.gluetun.probes.liveness.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
+| qbittorrent.gluetun.probes.liveness.timeoutSeconds | int | `1` | Seconds after which the probe times out |
+| qbittorrent.gluetun.probes.readiness.failureThreshold | int | `3` | Consecutive failures before the pod is marked unready |
+| qbittorrent.gluetun.probes.readiness.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
+| qbittorrent.gluetun.probes.readiness.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
+| qbittorrent.gluetun.probes.readiness.successThreshold | int | `1` | Consecutive successes required to be considered ready again |
+| qbittorrent.gluetun.probes.readiness.timeoutSeconds | int | `1` | Seconds after which the probe times out |
+| qbittorrent.gluetun.probes.startup | object | `{"enabled":true,"failureThreshold":3,"initialDelaySeconds":0,"periodSeconds":10,"timeoutSeconds":1}` | Startup probe, holds liveness and readiness until the first success. WireGuard can take well over the default liveness window to establish, so the healthcheck exec targets here gate the whole pod on a native sidecar. |
+| qbittorrent.gluetun.probes.startup.enabled | bool | `true` | Enable the startup probe |
+| qbittorrent.gluetun.probes.startup.failureThreshold | int | `3` | Consecutive failures before the container is restarted |
+| qbittorrent.gluetun.probes.startup.initialDelaySeconds | int | `0` | Seconds after the container has started before the probe is initiated |
+| qbittorrent.gluetun.probes.startup.periodSeconds | int | `10` | How often (in seconds) to perform the probe |
+| qbittorrent.gluetun.probes.startup.timeoutSeconds | int | `1` | Seconds after which the probe times out |
 | qbittorrent.image.pullPolicy | string | `"IfNotPresent"` |  |
 | qbittorrent.image.registry | string | `"ghcr.io"` |  |
 | qbittorrent.image.repository | string | `"home-operations/qbittorrent"` |  |
