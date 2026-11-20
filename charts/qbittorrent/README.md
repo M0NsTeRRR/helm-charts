@@ -33,8 +33,7 @@ helm install qbittorrent oci://ghcr.io/m0nsterrr/helm-charts/qbittorrent
 Verify the signature with [cosign](https://docs.sigstore.dev/cosign/system_config/installation/) :
 
 ```console
-cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:7.5.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.ac
-tions.githubusercontent.com
+cosign verify ghcr.io/m0nsterrr/helm-charts/qbittorrent:7.5.0 --certificate-identity-regexp=^https://github.com/M0NsTeRRR/helm-charts.*$ --certificate-oidc-issuer=https://token.actions.githubusercontent.com
 ```
 
 ## Values
