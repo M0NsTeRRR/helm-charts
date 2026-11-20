@@ -132,21 +132,36 @@ spec:
             - name: shadowsocks-udp
               containerPort: 8388
               protocol: UDP
+          {{- if .Values.qbittorrent.gluetun.probes.startup.enabled }}
           startupProbe:
             exec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+            initialDelaySeconds: {{ .Values.qbittorrent.gluetun.probes.startup.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.gluetun.probes.startup.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.gluetun.probes.startup.timeoutSeconds }}
+            failureThreshold: {{ .Values.qbittorrent.gluetun.probes.startup.failureThreshold }}
+          {{- end }}
           livenessProbe:
             exec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+            initialDelaySeconds: {{ .Values.qbittorrent.gluetun.probes.liveness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.gluetun.probes.liveness.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.gluetun.probes.liveness.timeoutSeconds }}
+            failureThreshold: {{ .Values.qbittorrent.gluetun.probes.liveness.failureThreshold }}
           readinessProbe:
             exec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+            initialDelaySeconds: {{ .Values.qbittorrent.gluetun.probes.readiness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.gluetun.probes.readiness.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.gluetun.probes.readiness.timeoutSeconds }}
+            successThreshold: {{ .Values.qbittorrent.gluetun.probes.readiness.successThreshold }}
+            failureThreshold: {{ .Values.qbittorrent.gluetun.probes.readiness.failureThreshold }}
           # https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/kubernetes.md#adding-ipv6-rule--file-exists
           lifecycle:
             postStart:
@@ -239,21 +254,36 @@ spec:
             - name: shadowsocks-udp
               containerPort: 8388
               protocol: UDP
+          {{- if .Values.qbittorrent.gluetun.probes.startup.enabled }}
           startupProbe:
             exec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+            initialDelaySeconds: {{ .Values.qbittorrent.gluetun.probes.startup.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.gluetun.probes.startup.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.gluetun.probes.startup.timeoutSeconds }}
+            failureThreshold: {{ .Values.qbittorrent.gluetun.probes.startup.failureThreshold }}
+          {{- end }}
           livenessProbe:
             exec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+            initialDelaySeconds: {{ .Values.qbittorrent.gluetun.probes.liveness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.gluetun.probes.liveness.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.gluetun.probes.liveness.timeoutSeconds }}
+            failureThreshold: {{ .Values.qbittorrent.gluetun.probes.liveness.failureThreshold }}
           readinessProbe:
             exec:
               command:
                 - /gluetun-entrypoint
                 - healthcheck
+            initialDelaySeconds: {{ .Values.qbittorrent.gluetun.probes.readiness.initialDelaySeconds }}
+            periodSeconds: {{ .Values.qbittorrent.gluetun.probes.readiness.periodSeconds }}
+            timeoutSeconds: {{ .Values.qbittorrent.gluetun.probes.readiness.timeoutSeconds }}
+            successThreshold: {{ .Values.qbittorrent.gluetun.probes.readiness.successThreshold }}
+            failureThreshold: {{ .Values.qbittorrent.gluetun.probes.readiness.failureThreshold }}
           # https://github.com/qdm12/gluetun-wiki/blob/main/setup/advanced/kubernetes.md#adding-ipv6-rule--file-exists
           lifecycle:
             postStart:

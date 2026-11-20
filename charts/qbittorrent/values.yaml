@@ -221,6 +221,41 @@ qbittorrent:
     resources:
       limits:
         "devic.es/tun": 1
+    probes:
+      # -- Startup probe, holds liveness and readiness until the first success.
+      # WireGuard can take well over the default liveness window to establish,
+      # so the healthcheck exec targets here gate the whole pod on a native sidecar.
+      startup:
+        # -- Enable the startup probe
+        enabled: true
+        # -- Seconds after the container has started before the probe is initiated
+        initialDelaySeconds: 0
+        # -- How often (in seconds) to perform the probe
+        periodSeconds: 10
+        # -- Seconds after which the probe times out
+        timeoutSeconds: 1
+        # -- Consecutive failures before the container is restarted
+        failureThreshold: 3
+      liveness:
+        # -- Seconds after the container has started before the probe is initiated
+        initialDelaySeconds: 0
+        # -- How often (in seconds) to perform the probe
+        periodSeconds: 10
+        # -- Seconds after which the probe times out
+        timeoutSeconds: 1
+        # -- Consecutive failures before the container is restarted
+        failureThreshold: 3
+      readiness:
+        # -- Seconds after the container has started before the probe is initiated
+        initialDelaySeconds: 0
+        # -- How often (in seconds) to perform the probe
+        periodSeconds: 10
+        # -- Seconds after which the probe times out
+        timeoutSeconds: 1
+        # -- Consecutive successes required to be considered ready again
+        successThreshold: 1
+        # -- Consecutive failures before the pod is marked unready
+        failureThreshold: 3
 
   # -- Prometheus-qbittorrent-exporter sidecar
   prometheusQbittorrentExporter:
